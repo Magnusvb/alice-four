@@ -1,0 +1,14 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+  body {
+    font-family: $fontfamily;
+    padding: 2em;
+    max-width: 1440px;
+    margin: 0 auto; }

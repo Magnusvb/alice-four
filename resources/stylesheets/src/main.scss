@@ -1,27 +1,12 @@
-html {
-  box-sizing: border-box; }
+@import "bourbon";
+@import "neat";
+@import "settings";
+@import "base";
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit; }
 
-html {
-  box-sizing: border-box; }
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit; }
 
 figure {
   margin: 0; }
-
-body {
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  padding: 2em;
-  max-width: 1440px;
-  margin: 0 auto; }
 
 h2,h3,h4 {
   font-weight: normal; }
