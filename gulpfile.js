@@ -16,13 +16,13 @@ var jsSrc = [
         'resources/stylesheets/src/*.scss'
     ];
 
-// Compile and minify Sass 
+// Compile and minify Sass
 gulp.task('styles', function () {
     gulp.src(sassSrc)
         .pipe(sass({
             style: 'expanded',
             lineNumbers: true,
-            sourcemap: false,
+            sourcemap: true,
             includePaths: require('node-neat').includePaths
         })
         .on('error', notify.onError(
@@ -34,7 +34,7 @@ gulp.task('styles', function () {
         .pipe(minifycss())
         .pipe(gulp.dest('resources/stylesheets'))
         .pipe(notify({ message: 'Styles task complete' }));
-}); 
+});
 
 // Lint
 gulp.task('lint', function() {
@@ -65,7 +65,7 @@ gulp.task('scripts', function () {
         .pipe(uglify())
         .pipe(gulp.dest('resources/scripts'))
         .pipe(notify({ message: 'Scripts task complete' }));
-});   
+});
 
 // Watch for changes
 gulp.task('watch', function() {

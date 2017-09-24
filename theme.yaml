@@ -5,7 +5,7 @@ website: 'http://studioalice.se'
 engine: twig
 404: '404'
 customFields:
-    storeTitle: { type: text, title: 'Title of your Store', default: Bones }
+    storeTitle: { type: text, title: 'Title of your Store', default: Alice Four }
     logoImage: { type: image, title: 'Logo Image', default: '@images/bones-logo.png', comment: 'Upload your logo! Recommended height of 37px.' }
     faviconImage: { type: image, title: 'Favicon Image', default: '@images/favicon.ico', comment: 'Upload your favicon! Recommended dimmensions of 16px by 16px. You must use a .png file.' }
     footerLogo: { type: image, title: 'Footer Logo', default: '@images/lemonstand-logo.png', comment: 'Upload your footer logo! Recommended height of 40px.' }
