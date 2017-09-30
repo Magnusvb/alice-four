@@ -1,4 +1,4 @@
-# Bones - A barebones LemonStand theme
+# Alice Four - A LemonStand theme
 
 ## Running Gulp
 
