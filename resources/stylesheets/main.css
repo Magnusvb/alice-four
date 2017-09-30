@@ -1,16 +1,22 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
-/*@import "breakpoint";*/
+/*@import "bourbon";
+@import "neat";*/
 /*==================== Settings =========================================*/
 /*==================== Grids with Breakpoint =============================*/
+/*Breakpoint grid
+@include breakpoint($small) {
+  width: 50%;
+}*/
+/*Neat grids:
+@include grid-media($my-grid) {
+  border: 1px solid saddlebrown;
+}*/
 /*==================== Colors =============================================*/
 /* City */
 /*hsla(33, 42%, 96%, 1.00) */
 /* Spring */
+body, html {
+  height: 100%; }
+
 html {
   box-sizing: border-box; }
 
@@ -22,24 +28,47 @@ html {
 body {
   background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+  font-size: 16px;
   padding: 0;
   margin: 0; }
+
+img {
+  max-width: 100%; }
 
 header {
   margin: 1rem auto;
   width: 90%; }
 
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  /*max-width: 120em;
+  margin: auto;*/ }
+  @media (min-width: 43em) {
+    .container {
+      flex-direction: row; } }
+
 header {
-  border: 1px solid lavender; }
+  /*margin: 1rem auto;
+  width: 90%;*/ }
+  @media (min-width: 43em) {
+    header {
+      border-right: 1px solid #b3c1c2;
+      margin-right: 2rem;
+      flex: 1 1 25%; } }
 
 main {
-  border: 1px solid tomato;
-  max-width: 75em;
-  margin: 0 auto 2rem auto; }
+  /*border: 1px solid lime;*/
+  /*margin: 1rem auto;
+  width: 90%;*/
+  flex: 5 1 75%; }
 
 footer {
   background-color: #b3c1c2;
-  border-top: 1px solid #728492; }
+  border-top: 1px solid #728492;
+  margin-top: 3rem; }
 
 figure {
   margin: 0; }
