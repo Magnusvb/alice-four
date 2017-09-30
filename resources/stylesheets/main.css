@@ -35,15 +35,11 @@ body {
 img {
   max-width: 100%; }
 
-header {
-  margin: 1rem auto;
-  width: 90%; }
-
 .container {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0 1rem;
   /*max-width: 120em;
   margin: auto;*/ }
   @media (min-width: 43em) {
@@ -51,8 +47,7 @@ header {
       flex-direction: row; } }
 
 header {
-  /*margin: 1rem auto;
-  width: 90%;*/ }
+  padding-top: 1rem; }
   @media (min-width: 43em) {
     header {
       border-right: 1px solid #b3c1c2;
@@ -60,15 +55,21 @@ header {
       flex: 1 1 25%; } }
 
 main {
-  /*border: 1px solid lime;*/
-  /*margin: 1rem auto;
-  width: 90%;*/
   flex: 5 1 75%; }
 
 footer {
   background-color: #b3c1c2;
   border-top: 1px solid #728492;
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  padding: 3rem; }
+
+@media (min-width: 43em) {
+  nav {
+    margin-top: 10vh;
+    margin-right: -1px;
+    border: 1px solid #b3c1c2;
+    border-left: 0;
+    padding: 2rem 0; } }
 
 figure {
   margin: 0; }
