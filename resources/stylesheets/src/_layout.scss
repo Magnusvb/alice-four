@@ -1,0 +1,15 @@
+header {
+  border: 1px solid lavender;
+}
+
+main {
+  @include grid-container;
+  border: 1px solid lime;
+  max-width: 75em;
+  margin: 0 auto 2rem auto;
+}
+
+footer {
+  background-color: $color-secondary;
+  border-top: 1px solid $color-primary;
+}

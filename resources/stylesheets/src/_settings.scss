@@ -1,6 +1,36 @@
-/*Settings*/
+/*==================== Settings =========================================*/
 
 $fontfamily: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
 "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
 "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
 "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+
+/*==================== Grids with Breakpoint =============================*/
+$micro: 15em;
+$small: 24em;
+$medium: 43em;
+$large: 50em;
+$big: 75em;
+$ultra: 120em;
+
+/*==================== Colors =============================================*/
+$text-dark: hsla(195, 9%, 22%, 0.90);
+$text-medium: hsla(0, 0%, 13%, 0.54);
+$text-light: hsla(0, 0%, 100%, 0.9);
+
+/* City */
+$color-cta: hsla(356, 91%, 38%, 1.00);
+$color-bodybg: #fff; /*hsla(33, 42%, 96%, 1.00) */
+$color-primary: hsla(206, 13%, 51%, 1.00);
+$color-secondary: hsla(182, 11%, 73%, 1.00);
+$color-headlines: $color-primary;
+$color-links: $color-cta;
+
+/* Spring */
+$color-cta-s: hsla(26, 96%, 57%, 1.00);
+$color-bodybg-s: hsla(196, 37%, 95%, 1.00);
+$color-primary-s: hsla(198, 69%, 40%, 1.00);
+$color-secondary-s-1: hsla(214, 83%, 28%, 1.00);
+$color-secondary-s-2: hsla(159, 60%, 44%, 1.00);
+$color-headlines-s: $color-secondary-s-1;
+$color-links-s: $color-secondary-s-2;

@@ -70,14 +70,14 @@ description: 'Default Template'
         <li id="mini-cart">{{ partial('shop-minicart') }}</li>
       </ul>
     </nav>
-    <hr>
   </header>
   <body>
-    {{ code_block('breadcrumbs') }}
-    {{ page() }}
+    <main>
+      {{ code_block('breadcrumbs') }}
+      {{ page() }}
+    </main>
   </body>
   <footer>
-    <hr>
     <ul>
       <li><a href="{{ site_url('contact') }}">Contact</a></li>
       <li><a href="{{ site_url('blog') }}">Blog</a></li>

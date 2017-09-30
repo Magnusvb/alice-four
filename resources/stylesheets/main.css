@@ -4,7 +4,13 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-/*Settings*/
+/*@import "breakpoint";*/
+/*==================== Settings =========================================*/
+/*==================== Grids with Breakpoint =============================*/
+/*==================== Colors =============================================*/
+/* City */
+/*hsla(33, 42%, 96%, 1.00) */
+/* Spring */
 html {
   box-sizing: border-box; }
 
@@ -14,10 +20,26 @@ html {
   box-sizing: inherit; }
 
 body {
+  background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 2em;
-  max-width: 1440px;
-  margin: 0 auto; }
+  padding: 0;
+  margin: 0; }
+
+header {
+  margin: 1rem auto;
+  width: 90%; }
+
+header {
+  border: 1px solid lavender; }
+
+main {
+  border: 1px solid tomato;
+  max-width: 75em;
+  margin: 0 auto 2rem auto; }
+
+footer {
+  background-color: #b3c1c2;
+  border-top: 1px solid #728492; }
 
 figure {
   margin: 0; }

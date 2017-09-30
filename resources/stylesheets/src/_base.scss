@@ -7,8 +7,9 @@ html {
 *::before {
   box-sizing: inherit; }
 
-  body {
-    font-family: $fontfamily;
-    padding: 2em;
-    max-width: 1440px;
-    margin: 0 auto; }
+body {
+  background-color: $color-bodybg;
+  font-family: $fontfamily;
+  padding: 0;
+  margin: 0;
+}
