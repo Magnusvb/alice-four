@@ -1,6 +1,6 @@
 ---
 name: 'Alice Four'
-author: Studio Alice AB
+author: 'Studio Alice AB'
 website: 'http://studioalice.se'
 engine: twig
 404: '404'
@@ -9,6 +9,9 @@ customFields:
     logoImage: { type: image, title: 'Logo Image', default: '@images/bones-logo.png', comment: 'Upload your logo! Recommended height of 37px.' }
     faviconImage: { type: image, title: 'Favicon Image', default: '@images/favicon.ico', comment: 'Upload your favicon! Recommended dimmensions of 16px by 16px. You must use a .png file.' }
     footerLogo: { type: image, title: 'Footer Logo', default: '@images/lemonstand-logo.png', comment: 'Upload your footer logo! Recommended height of 40px.' }
+    bannerImage: { type: image, title: 'Homepage banner', default: '@images/banner-placeholder.png', comment: 'Upload the homepage banner. Width: 1380px, maxheight: 650px' }
+    homeHeadline: { type: text, title: 'Homepage headline', default: 'Welcome to my store, stranger' }
+    homeIntro: { type: text, title: 'Homepage intro', default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }
     facebookUrl: { type: text, title: 'Facebook URL', default: 'http://facebook.com/lemonstand' }
     twitterUrl: { type: text, title: 'Twitter URL', default: 'http://twitter.com/lemonstand' }
     linkedInUrl: { type: text, title: 'LinkedIn URL', default: 'http://www.linkedin.com/company/lemonstand' }

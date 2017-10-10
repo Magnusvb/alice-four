@@ -1,0 +1,22 @@
+.collection-list {
+  /*border: 1px solid lightcoral;*/
+  display: flex;
+}
+
+.collection-list_item {
+  padding: 2rem;
+
+  /*a {
+    color: $color-links;
+  }*/
+
+  /*figure {
+    border: 1px solid limegreen;
+  }*/
+}
+
+.productname-price {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}

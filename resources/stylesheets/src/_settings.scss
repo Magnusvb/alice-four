@@ -1,9 +1,8 @@
 /*==================== Settings =========================================*/
 
-$fontfamily: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-"Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-"Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-"Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+$fontfamily: "SF UI Text", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+
+$headline-fontfamily: "SF UI Display", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
 
 /*==================== Grids with Breakpoint =============================*/
 /*Breakpoint grid
@@ -64,3 +63,32 @@ $color-secondary-s-1: hsla(214, 83%, 28%, 1.00);
 $color-secondary-s-2: hsla(159, 60%, 44%, 1.00);
 $color-headlines-s: $color-secondary-s-1;
 $color-links-s: $color-secondary-s-2;
+
+$text-dark: hsla(195, 9%, 22%, 0.90);
+$text-medium: hsla(0, 0%, 13%, 0.54);
+$text-light: hsla(0, 0%, 100%, 0.9);
+
+/*==================== Mixins =============================================*/
+@mixin btn-basic {
+  background: $color-cta;
+  border: 1px solid $color-primary;
+  border-radius: 3px;
+  font-size: 1.15rem;
+  /*box-shadow: 0px 2px 2px #000000;*/
+  margin: .4em;
+  padding: .5em 1.5em .4em 1.5em;
+  -webkit-appearence: none;
+
+  &:hover {
+    background: darken($color-secondary, 25%);
+  }
+
+  &:active {
+    background: darken($color-secondary, 25%);
+    box-shadow: none;
+  }
+
+  a {
+    color: $text-light;
+  }
+}
