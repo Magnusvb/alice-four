@@ -13,12 +13,16 @@
   }
 }
 
+/*.content {
+  border: 1px solid lime;
+}*/
+
 header {
   padding-top: 1rem;
 
   @include breakpoint($medium) {
     border-right: 1px solid $color-secondary;
-    margin-right: 2rem;
+    /*margin-right: 2rem;*/
     flex: 1 1 25%;
   }
 }
@@ -28,15 +32,15 @@ main {
 }
 
 section {
-  padding-right: 1rem;
+  padding: 0 1rem 0 1rem;
 }
 
 .homebanner {
-  padding-right: 0;
+  padding: 0;
 }
 
 footer {
-  background-color: $color-secondary;
+  /*background-color: $color-secondary;*/
   border-top: 1px solid $color-primary;
   margin-top: 3rem;
   padding: 3rem;
@@ -44,10 +48,30 @@ footer {
 
 nav {
   @include breakpoint($medium) {
-    margin-top: 12vh;
+    margin-top: 15vh;
     margin-right: -1px;
     border: 1px solid $color-secondary;
     border-left: 0;
     padding: 2rem 1rem 0 1rem;
   }
+}
+
+.featured-collection {
+  margin-top: 5rem;
+}
+
+.shop-intro {
+  margin: 0 auto;
+
+  @include breakpoint($large) {
+    width: 80%;
+  }
+
+  @include breakpoint($big) {
+    width: 70%;
+  }
+}
+
+.shopnow-button {
+  text-align: right;
 }

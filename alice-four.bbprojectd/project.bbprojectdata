@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HierarchyData</key>
+	<array>
+		<string>B95507FB-B393-49B2-9DD7-9384E7F37219</string>
+	</array>
+	<key>ProjectItems</key>
+	<dict>
+		<key>B95507FB-B393-49B2-9DD7-9384E7F37219</key>
+		<dict>
+			<key>ItemData</key>
+			<dict>
+				<key>BookmarkData</key>
+				<data>
+				Ym9va6gDAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAmAIAAAUAAAABAQAAVXNlcnMA
+				AAAGAAAAAQEAAG1hZ251cwAACQAAAAEBAABEb2N1bWVu
+				dHMAAAAPAAAAAQEAAHdlYnNpdGVzLXN0YXRpYwAKAAAA
+				AQEAAGFsaWNlLWZvdXIAABQAAAABBgAABAAAABQAAAAk
+				AAAAOAAAAFAAAAAIAAAABAMAAA+FHwAAAAAACAAAAAQD
+				AAARhR8AAAAAAAgAAAAEAwAAGrUiAAAAAAAIAAAABAMA
+				AJDYJQAAAAAACAAAAAQDAABAQPkAAAAAABQAAAABBgAA
+				gAAAAJAAAACgAAAAsAAAAMAAAAAIAAAAAAQAAEG+bt3l
+				AAAAGAAAAAECAAACAAAAAAAAAA8AAAAAAAAAAAAAAAAA
+				AAAAAAAAAQUAAAQAAAADAwAAAwAAAAQAAAADAwAA9QEA
+				AAgAAAABCQAAZmlsZTovLy8EAAAAAQEAAGlDYXQIAAAA
+				BAMAAAAABN4CAQAACAAAAAAEAABBtlJI/gAAACQAAAAB
+				AQAAMEQyRTI1RUYtNkYyQy0zRjhCLUFCODEtOEM5MkJD
+				MkU3MEM1GAAAAAECAACBAAAAAQAAAO8TAAABAAAAAAAA
+				AAAAAAABAAAAAQEAAC8AAAC9AAAAAQIAADU1MDVkODM2
+				MWRiMGY2NzNmMDZiNTZiZWZhZmQzNWU3Y2RkZTE0Njc7
+				MDAwMDAwMDA7MDAwMDAwMDA7MDAwMDAwMDAwMDAwMDAy
+				MDtjb20uYXBwbGUuYXBwLXNhbmRib3gucmVhZC13cml0
+				ZTswMTswMTAwMDAwODswMDAwMDAwMDAwZjk0MDQwOy91
+				c2Vycy9tYWdudXMvZG9jdW1lbnRzL3dlYnNpdGVzLXN0
+				YXRpYy9hbGljZS1mb3VyAAAAANgAAAD+////AQAAAAAA
+				AAARAAAABBAAAGQAAAAAAAAABRAAANAAAAAAAAAAEBAA
+				APwAAAAAAAAAQBAAAOwAAAAAAAAAAiAAAMQBAAAAAAAA
+				BSAAADwBAAAAAAAAECAAAEwBAAAAAAAAESAAAHgBAAAA
+				AAAAEiAAAFgBAAAAAAAAEyAAAGgBAAAAAAAAICAAAKQB
+				AAAAAAAAMCAAABwBAAAAAAAAAcAAACQBAAAAAAAAEcAA
+				ABQAAAAAAAAAEsAAADABAAAAAAAAAdAAABwBAAAAAAAA
+				gPAAANABAAAAAAAA
+				</data>
+				<key>FileURL</key>
+				<string>file:///Users/magnus/Documents/websites-static/alice-four/</string>
+				<key>RelativePath</key>
+				<string>./</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+			<key>ItemName</key>
+			<string>alice-four</string>
+			<key>ItemType</key>
+			<string>FolderReference</string>
+		</dict>
+	</dict>
+	<key>com.barebones.DocumentFormatVersion</key>
+	<integer>5</integer>
+	<key>com.barebones.DocumentType</key>
+	<string>Project</string>
+</dict>
+</plist>

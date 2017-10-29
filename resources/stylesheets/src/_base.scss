@@ -29,30 +29,54 @@ figure {
 
 p {
   color: $text-dark;
+  font-family: $fontfamily;
   line-height: 1.5;
 }
 
-h2,h3,h4 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $text-dark;
   font-family: $headline-fontfamily;
   font-weight: normal;
+  line-height: 1;
+  margin: .5rem 0 .8rem 0;
+}
+
+h5,
+h6 {
+  font-family: $fontfamily;
 }
 
 h1 {
   font-family: $headline-fontfamily;
-  font-size: 3.4em;
-  font-weight: 400;
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1;
   color: $color-headlines;
+  margin: 1rem 0 .4rem 0;
 }
 
 h2 {
-  font-size: 2.5em; }
+  font-size: 3.175em; }
 
 h3 {
-  font-size: 1.75em; }
+  font-size: 2.52em; }
 
 h4 {
-  font-size: 1.25em;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.587em;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1.26em;
   font-weight: 500;
 }
 
@@ -63,7 +87,8 @@ a {
 }
 
 a:hover {
-  color: #009DF2; }
+  color: #009DF2;
+}
 
 ul {
   padding: 0;

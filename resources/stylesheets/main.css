@@ -31,7 +31,7 @@ html {
 
 body {
   background-color: #fff;
-  font-family: "Droid Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 16px;
   padding: 0;
   margin: 0; }
@@ -44,27 +44,48 @@ figure {
 
 p {
   color: rgba(51, 59, 61, 0.9);
+  font-family: "Noto Sans", sans-serif;
   line-height: 1.5; }
 
-h2, h3, h4 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: rgba(51, 59, 61, 0.9);
-  font-family: "Droid Sans", sans-serif;
-  font-weight: normal; }
+  font-family: "Noto Serif", serif;
+  font-weight: normal;
+  line-height: 1;
+  margin: .5rem 0 .8rem 0; }
+
+h5,
+h6 {
+  font-family: "Noto Sans", sans-serif; }
 
 h1 {
-  font-family: "Droid Sans", sans-serif;
-  font-size: 3.4em;
-  font-weight: 400;
-  color: #728492; }
+  font-family: "Noto Serif", serif;
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1;
+  color: #728492;
+  margin: 1rem 0 .4rem 0; }
 
 h2 {
-  font-size: 2.5em; }
+  font-size: 3.175em; }
 
 h3 {
-  font-size: 1.75em; }
+  font-size: 2.52em; }
 
 h4 {
-  font-size: 1.25em;
+  font-size: 2em;
+  font-weight: 500; }
+
+h5 {
+  font-size: 1.587em;
+  font-weight: 500; }
+
+h6 {
+  font-size: 1.26em;
   font-weight: 500; }
 
 a {
@@ -129,20 +150,34 @@ input, textarea, select {
   color: gold; }
 
 .intro {
-  font-size: 1.4rem; }
+  font-size: 1.2rem;
+  line-height: 1.8; }
+
+.oldprice {
+  color: #728492;
+  text-decoration: line-through; }
+
+.onsaleprice {
+  /*border: 1px solid lightsalmon;
+  color: $color-cta;*/ }
+
+.product-name {
+  font-weight: 700; }
 
 /***************** BUTTONS ***********************/
 button {
   background: #b90914;
-  border: 1px solid #728492;
-  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
   font-size: 1.15rem;
-  /*box-shadow: 0px 2px 2px #000000;*/
+  font-weight: 700;
+  box-shadow: 0 1px 6px rgba(33, 33, 33, 0.54);
   margin: .4em;
   padding: .5em 1.5em .4em 1.5em;
   -webkit-appearence: none; }
   button:hover {
-    background: #6d8788; }
+    background: #3f0307;
+    color: rgba(255, 255, 255, 0.9); }
   button:active {
     background: #6d8788;
     box-shadow: none; }
@@ -151,10 +186,13 @@ button {
 
 .collection-list {
   /*border: 1px solid lightcoral;*/
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
 .collection-list_item {
   padding: 2rem;
+  flex: 0 1 33%;
   /*a {
     color: $color-links;
   }*/
@@ -166,6 +204,15 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: baseline; }
+
+.productlist {
+  /*border: 1px solid lime;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.productlist-item {
+  flex: 0 1 25%; }
 
 .container {
   border-left: 1px solid #b3c1c2;
@@ -180,36 +227,54 @@ button {
     .container {
       flex-direction: row; } }
 
+/*.content {
+  border: 1px solid lime;
+}*/
 header {
   padding-top: 1rem; }
   @media (min-width: 43em) {
     header {
       border-right: 1px solid #b3c1c2;
-      margin-right: 2rem;
+      /*margin-right: 2rem;*/
       flex: 1 1 25%; } }
 
 main {
   flex: 5 1 75%; }
 
 section {
-  padding-right: 1rem; }
+  padding: 0 1rem 0 1rem; }
 
 .homebanner {
-  padding-right: 0; }
+  padding: 0; }
 
 footer {
-  background-color: #b3c1c2;
+  /*background-color: $color-secondary;*/
   border-top: 1px solid #728492;
   margin-top: 3rem;
   padding: 3rem; }
 
 @media (min-width: 43em) {
   nav {
-    margin-top: 12vh;
+    margin-top: 15vh;
     margin-right: -1px;
     border: 1px solid #b3c1c2;
     border-left: 0;
     padding: 2rem 1rem 0 1rem; } }
+
+.featured-collection {
+  margin-top: 5rem; }
+
+.shop-intro {
+  margin: 0 auto; }
+  @media (min-width: 55em) {
+    .shop-intro {
+      width: 80%; } }
+  @media (min-width: 75em) {
+    .shop-intro {
+      width: 70%; } }
+
+.shopnow-button {
+  text-align: right; }
 
 nav {
   background-color: #f9fafa; }

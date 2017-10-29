@@ -4,8 +4,8 @@
 
 $headline-fontfamily: "SF UI Display", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;*/
 
-$fontfamily: 'Droid Sans', sans-serif;
-$headline-fontfamily: $fontfamily;
+$fontfamily: 'Noto Sans', sans-serif;
+$headline-fontfamily: 'Noto Serif', serif;
 
 /*==================== Grids with Breakpoint =============================*/
 /*Breakpoint grid
@@ -16,7 +16,7 @@ $headline-fontfamily: $fontfamily;
 $micro: 15em;
 $small: 24em;
 $medium: 43em;
-$large: 50em;
+$large: 55em;
 $big: 75em;
 $ultra: 120em;
 
@@ -67,23 +67,21 @@ $color-secondary-s-2: hsla(159, 60%, 44%, 1.00);
 $color-headlines-s: $color-secondary-s-1;
 $color-links-s: $color-secondary-s-2;
 
-$text-dark: hsla(195, 9%, 22%, 0.90);
-$text-medium: hsla(0, 0%, 13%, 0.54);
-$text-light: hsla(0, 0%, 100%, 0.9);
-
 /*==================== Mixins =============================================*/
 @mixin btn-basic {
   background: $color-cta;
-  border: 1px solid $color-primary;
-  border-radius: 3px;
+  border: 1px solid $text-light;
+  border-radius: 5px;
   font-size: 1.15rem;
-  /*box-shadow: 0px 2px 2px #000000;*/
+  font-weight: 700;
+  box-shadow: 0 1px 6px $text-medium;
   margin: .4em;
   padding: .5em 1.5em .4em 1.5em;
   -webkit-appearence: none;
 
   &:hover {
-    background: darken($color-secondary, 25%);
+    background: darken($color-cta, 25%);
+    color: $text-light;
   }
 
   &:active {

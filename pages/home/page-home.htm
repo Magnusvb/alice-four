@@ -9,58 +9,68 @@ url: /
 <section class="homebanner">
   {{ partial("partial-homebanner") }}
 </section>
+
 <section>
-	<h1>{{ theme.homeHeadline }}</h1>
-	<p class="intro">{{ theme.homeIntro }}</p>
-	<button><a href="/shop">Shop Now</a></button>
-	<h3>Developers favorites</h3>
+  <article class="shop-intro">
+    <h1>{{ theme.homeHeadline }}</h1>
+    <p class="intro">{{ theme.homeIntro }}</p>
+    <div class="shopnow-button">
+      <button><a href="/shop">Shop Now &raquo;</a></button>
+    </div>
+  </article>
 
-	{% set featuredCollection = 'display'|collection %}
-	{% paginate featuredCollection.products by 3 %}
-    <ul class="collection-list">
-		{% for product in pagination.items %}
-			{% set on_sale = product.onSale %}
+  <article class="featured-collection">
+    <h4>Developers favorites</h4>
+    {% set featuredCollection = 'display'|collection %}
+    {% paginate featuredCollection.products by 3 %}
+      <ul class="collection-list">
+      {% for product in pagination.items %}
+        {% set on_sale = product.onSale %}
 
-      <li class="collection-list_item">
-				<figure>
-				  <a href="/product/{{ product.url_name }}"><img src="{{ product.images.first.thumbnail('400', '400')|default('http://placehold.it/400x400') }}" alt="{{ product.images.first.description }}" title="{{ product.images.first.title }}"/></a>
-				  <figcaption class="productname-price">
-					  <h3><a href="/product/{{ product.url_name }}">{{ product.name }}</a></h3>
-						<h4>{{ product.price|currency }}</h4>
-						{% if on_sale %}
-							<h4 class="salesprice"><s>{{ product.fullPrice|currency }}</s></h4>
-						{% endif %}
-					</figcaption>
-				</figure>
-      </li>
+        <li class="collection-list_item">
+          <figure>
+            <a href="/product/{{ product.url_name }}"><img src="{{ product.images.first.thumbnail('400', '400')|default('http://placehold.it/400x400') }}" alt="{{ product.images.first.description }}" title="{{ product.images.first.title }}"/></a>
+            <figcaption class="xproductname-price">
+              <h6 class="product-name"><a href="/product/{{ product.url_name }}">{{ product.name }}</a></h6>
+              <h5>{{ product.price|currency }}</h5>
+              {% if on_sale %}
+                <h5 class="salesprice">{{ product.fullPrice|currency }}</h5>
+              {% endif %}
+            </figcaption>
+          </figure>
+        </li>
 
-		{% endfor %}
-    </ul>
-	{% endpaginate %}
+      {% endfor %}
+      </ul>
+    {% endpaginate %}
+  </article>
 </section>
 
+<!--<section>
+  <h6>How Does It Work?</h6>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+</section>-->
 <section>
-	<h3>How Does It Work?</h3>
-	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
-</section>
-<section>
-	<h1>Check These Out</h1>
-	<h3>Set up a featured collection below by using the API code <strong>featured</strong>.</h3>
+  <h4>Check These Out</h4>
+  <!--<h5>Set up a featured collection below by using the API code <strong>featured</strong>.</h5>-->
+<section class="productlist">
+  {% set featuredCollection = 'featured'|collection %}
+  {% paginate featuredCollection.products by 4 %}
+    {% for product in pagination.items %}
+      {% set on_sale = product.onSale %}
 
-	{% set featuredCollection = 'featured'|collection %}
-	{% paginate featuredCollection.products by 4 %}
-		{% for product in pagination.items %}
-			{% set on_sale = product.onSale %}
-			<div class="product">
-				<a href="/product/{{ product.url_name }}">
-					<img src="{{ product.images.first.thumbnail('280', '280') }}" >
-				</a>
-				<h3><a href="/product/{{ product.url_name }}" class="btn btn-default">{{ product.name }}</a></h3>
-				<h2>{{ product.price|currency }}</h2>
-				{% if on_sale %}
-					<h2><s>{{ product.fullPrice|currency }}</s></h2>
-				{% endif %}
-			</div>
-		{% endfor %}
-	{% endpaginate %}
+        <div class="product productlist-item">
+          <a href="/product/{{ product.url_name }}">
+            <img src="{{ product.images.first.thumbnail('280', '280') }}" >
+          </a>
+            <h6 class="product-name"><a href="/product/{{ product.url_name }}" class="btn btn-default">{{ product.name }}</a></h6>
+            <h5 class="salesprice">{{ product.price|currency }}</h5>
+            {% if on_sale %}
+              <h5 class="oldprice">{{ product.fullPrice|currency }}</h5>
+            {% endif %}
+        </div>
+
+    {% endfor %}
+  {% endpaginate %}
+  </section>
 </section>
