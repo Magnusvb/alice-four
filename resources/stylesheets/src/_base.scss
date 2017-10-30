@@ -52,11 +52,15 @@ h6 {
 
 h1 {
   font-family: $headline-fontfamily;
-  font-size: 4em;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1;
   color: $color-headlines;
   margin: 1rem 0 .4rem 0;
+
+  @include breakpoint($small) {
+    font-size: 4rem;
+  }
 }
 
 h2 {

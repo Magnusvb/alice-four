@@ -44,18 +44,18 @@ url: /
       </ul>
     {% endpaginate %}
   </article>
-</section>
+
 
 <!--<section>
   <h6>How Does It Work?</h6>
   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
 </section>-->
-<section>
+<article class="featured-products">
   <h4>Check These Out</h4>
   <!--<h5>Set up a featured collection below by using the API code <strong>featured</strong>.</h5>-->
 <section class="productlist">
   {% set featuredCollection = 'featured'|collection %}
-  {% paginate featuredCollection.products by 4 %}
+  {% paginate featuredCollection.products by 6 %}
     {% for product in pagination.items %}
       {% set on_sale = product.onSale %}
 
@@ -73,4 +73,5 @@ url: /
     {% endfor %}
   {% endpaginate %}
   </section>
+</aricle>
 </section>

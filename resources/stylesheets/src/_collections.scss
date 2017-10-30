@@ -1,21 +1,18 @@
 .collection-list {
-  /*border: 1px solid lightcoral;*/
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @include breakpoint($small) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .collection-list_item {
   padding: 2rem;
-  flex: 0 1 33%;
 
-  /*a {
-    color: $color-links;
-  }*/
-
-  /*figure {
-    border: 1px solid limegreen;
-  }*/
+  @include breakpoint($small) {
+    border: 1px solid pink;
+    flex: 0 1 33%;
+  }
 }
 
 .productname-price {
@@ -25,12 +22,16 @@
 }
 
 .productlist {
+  /*padding: 2rem;*/
   /*border: 1px solid lime;*/
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @include breakpoint($small) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .productlist-item {
-  flex: 0 1 25%;
+  border: 1px solid lime;
+  flex: 0 1 33%;
 }

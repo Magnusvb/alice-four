@@ -64,11 +64,14 @@ h6 {
 
 h1 {
   font-family: "Noto Serif", serif;
-  font-size: 4em;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1;
   color: #728492;
   margin: 1rem 0 .4rem 0; }
+  @media (min-width: 33em) {
+    h1 {
+      font-size: 4rem; } }
 
 h2 {
   font-size: 3.175em; }
@@ -184,21 +187,18 @@ button {
   button a {
     color: rgba(255, 255, 255, 0.9); }
 
-.collection-list {
-  /*border: 1px solid lightcoral;*/
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
+@media (min-width: 33em) {
+  .collection-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; } }
 
 .collection-list_item {
-  padding: 2rem;
-  flex: 0 1 33%;
-  /*a {
-    color: $color-links;
-  }*/
-  /*figure {
-    border: 1px solid limegreen;
-  }*/ }
+  padding: 2rem; }
+  @media (min-width: 33em) {
+    .collection-list_item {
+      border: 1px solid pink;
+      flex: 0 1 33%; } }
 
 .productname-price {
   display: flex;
@@ -206,13 +206,17 @@ button {
   align-items: baseline; }
 
 .productlist {
-  /*border: 1px solid lime;*/
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
+  /*padding: 2rem;*/
+  /*border: 1px solid lime;*/ }
+  @media (min-width: 33em) {
+    .productlist {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; } }
 
 .productlist-item {
-  flex: 0 1 25%; }
+  border: 1px solid lime;
+  flex: 0 1 33%; }
 
 .container {
   border-left: 1px solid #b3c1c2;
@@ -248,10 +252,16 @@ section {
   padding: 0; }
 
 footer {
-  /*background-color: $color-secondary;*/
   border-top: 1px solid #728492;
-  margin-top: 3rem;
+  /*margin-top: 3rem;*/
   padding: 3rem; }
+
+.footerlinks-store {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: .9rem;
+  padding: 0 1rem; }
 
 @media (min-width: 43em) {
   nav {
@@ -261,7 +271,8 @@ footer {
     border-left: 0;
     padding: 2rem 1rem 0 1rem; } }
 
-.featured-collection {
+.featured-collection,
+.featured-products {
   margin-top: 5rem; }
 
 .shop-intro {
