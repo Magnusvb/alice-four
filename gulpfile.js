@@ -1,6 +1,8 @@
 // Load plugins
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
     minifycss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
@@ -30,6 +32,7 @@ gulp.task('styles', function () {
             return "Problem file : " + error.message;
         })))
         .pipe(gulp.dest('resources/stylesheets'))
+        .pipe(postcss([ autoprefixer() ]))
         .pipe(rename({ suffix: '.min' }))
         .pipe(minifycss())
         .pipe(gulp.dest('resources/stylesheets'))

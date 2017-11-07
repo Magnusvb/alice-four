@@ -1,3 +1,7 @@
+body, html {
+  height: 100%;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -7,8 +11,137 @@ html {
 *::before {
   box-sizing: inherit; }
 
-  body {
-    font-family: $fontfamily;
-    padding: 2em;
-    max-width: 1440px;
-    margin: 0 auto; }
+body {
+  background-color: $color-bodybg;
+  font-family: $fontfamily;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  color: $text-dark;
+  font-family: $fontfamily;
+  line-height: 1.5;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-dark;
+  font-family: $headline-fontfamily;
+  font-weight: normal;
+  line-height: 1;
+  margin: .5rem 0 .8rem 0;
+}
+
+h5,
+h6 {
+  font-family: $fontfamily;
+}
+
+h1 {
+  font-family: $headline-fontfamily;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: $color-headlines;
+  margin: 1rem 0 .4rem 0;
+
+  @include breakpoint($small) {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 3.175em; }
+
+h3 {
+  font-size: 2.52em; }
+
+h4 {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.587em;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1.26em;
+  font-weight: 500;
+}
+
+a {
+  color: $color-links;
+  /*border-bottom: 1px dotted $color-links;*/
+  text-decoration: none;
+}
+
+a:hover {
+  color: #009DF2;
+}
+
+ul {
+  padding: 0;
+  list-style: none; }
+
+ul ul {
+  padding-left: 40px; }
+
+.image-grid-item {
+  display: inline-block; }
+
+.product {
+  display: inline-block; }
+
+.product h2 {
+  display: inline; }
+
+.product-added {
+  color: #F0C332; }
+
+s {
+  text-decoration: line-through;
+  color: red; }
+
+.breadcrumbs :not(:last-child):after {
+  content: ">";
+  margin-left: 5px; }
+
+.crumb {
+  display: inline; }
+
+.cart-item td {
+  padding-right: 20px ; }
+
+input, textarea, select {
+  font-size: 1em; }
+
+.error {
+  color: red; }
+
+#order-table {
+  text-align: left; }
+
+#order-table th {
+  width: 100px; }
+
+.rating span.select {
+  color: transparent; }
+.rating span.select:before {
+  content: "\2605";
+  position: absolute;
+  color: gold; }

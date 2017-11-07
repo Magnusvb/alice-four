@@ -1,0 +1,11 @@
+header {
+
+}
+
+nav {
+  background-color: lighten($color-secondary, 25%);
+
+  a {
+    color: $text-dark;
+  }
+}

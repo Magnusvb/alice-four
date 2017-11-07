@@ -1,10 +1,26 @@
-html {
-  box-sizing: border-box; }
+/*@import "bourbon";
+@import "neat";*/
+/*==================== Settings =========================================*/
+/*$fontfamily: "SF UI Text", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
 
-*, *::after, *::before {
-  box-sizing: inherit; }
+$headline-fontfamily: "SF UI Display", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;*/
+/*==================== Grids with Breakpoint =============================*/
+/*Breakpoint grid
+@include breakpoint($small) {
+  width: 50%;
+}*/
+/*Neat grids:
+@include grid-media($my-grid) {
+  border: 1px solid saddlebrown;
+}*/
+/*==================== Colors =============================================*/
+/* City */
+/*hsla(33, 42%, 96%, 1.00) */
+/* Spring */
+/*==================== Mixins =============================================*/
+body, html {
+  height: 100%; }
 
-/*Settings*/
 html {
   box-sizing: border-box; }
 
@@ -14,32 +30,70 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 2em;
-  max-width: 1440px;
-  margin: 0 auto; }
+  background-color: #fff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0; }
+
+img {
+  max-width: 100%; }
 
 figure {
   margin: 0; }
 
-h2, h3, h4 {
-  font-weight: normal; }
+p {
+  color: rgba(51, 59, 61, 0.9);
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.5; }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgba(51, 59, 61, 0.9);
+  font-family: "Noto Serif", serif;
+  font-weight: normal;
+  line-height: 1;
+  margin: .5rem 0 .8rem 0; }
+
+h5,
+h6 {
+  font-family: "Noto Sans", sans-serif; }
 
 h1 {
+  font-family: "Noto Serif", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #728492;
+  margin: 1rem 0 .4rem 0; }
+  @media (min-width: 33em) {
+    h1 {
+      font-size: 4rem; } }
+
+h2 {
+  font-size: 3.175em; }
+
+h3 {
+  font-size: 2.52em; }
+
+h4 {
   font-size: 2em;
   font-weight: 500; }
 
-h2 {
-  font-size: 1.5em; }
+h5 {
+  font-size: 1.587em;
+  font-weight: 500; }
 
-h3 {
-  font-size: 1.25em; }
-
-h4 {
-  font-size: 0.75em; }
+h6 {
+  font-size: 1.26em;
+  font-weight: 500; }
 
 a {
-  color: #0084cd;
+  color: #b90914;
+  /*border-bottom: 1px dotted $color-links;*/
   text-decoration: none; }
 
 a:hover {
@@ -97,3 +151,141 @@ input, textarea, select {
   content: "\2605";
   position: absolute;
   color: gold; }
+
+.intro {
+  font-size: 1.2rem;
+  line-height: 1.8; }
+
+.oldprice {
+  color: #728492;
+  text-decoration: line-through; }
+
+.onsaleprice {
+  /*border: 1px solid lightsalmon;
+  color: $color-cta;*/ }
+
+.product-name {
+  font-weight: 700; }
+
+/***************** BUTTONS ***********************/
+button {
+  background: #b90914;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  box-shadow: 0 1px 6px rgba(33, 33, 33, 0.54);
+  margin: .4em;
+  padding: .5em 1.5em .4em 1.5em;
+  -webkit-appearence: none; }
+  button:hover {
+    background: #3f0307;
+    color: rgba(255, 255, 255, 0.9); }
+  button:active {
+    background: #6d8788;
+    box-shadow: none; }
+  button a {
+    color: rgba(255, 255, 255, 0.9); }
+
+@media (min-width: 33em) {
+  .collection-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; } }
+
+.collection-list_item {
+  padding: 2rem; }
+  @media (min-width: 33em) {
+    .collection-list_item {
+      flex: 0 1 33%; } }
+
+.productname-price {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline; }
+
+.productlist {
+  padding: 0; }
+  @media (min-width: 33em) {
+    .productlist {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; } }
+
+.productlist-item {
+  flex: 0 1 33%;
+  padding: 2rem; }
+
+.container {
+  border-left: 1px solid #b3c1c2;
+  border-right: 1px solid #b3c1c2;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  /*padding: 0 1rem;*/
+  max-width: 120em;
+  margin: auto; }
+  @media (min-width: 43em) {
+    .container {
+      flex-direction: row; } }
+
+/*.content {
+  border: 1px solid lime;
+}*/
+header {
+  padding-top: 1rem; }
+  @media (min-width: 43em) {
+    header {
+      border-right: 1px solid #b3c1c2;
+      /*margin-right: 2rem;*/
+      flex: 1 1 25%; } }
+
+main {
+  flex: 5 1 75%; }
+
+section {
+  padding: 0 1rem 0 1rem; }
+
+.homebanner {
+  padding: 0; }
+
+footer {
+  border-top: 1px solid #728492;
+  /*margin-top: 3rem;*/
+  padding: 3rem; }
+
+.footerlinks-store {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: .9rem;
+  padding: 0 1rem; }
+
+@media (min-width: 43em) {
+  nav {
+    margin-top: 15vh;
+    margin-right: -1px;
+    border: 1px solid #b3c1c2;
+    border-left: 0;
+    padding: 2rem 1rem 0 1rem; } }
+
+.featured-collection,
+.featured-products {
+  margin-top: 5rem; }
+
+.shop-intro {
+  margin: 0 auto; }
+  @media (min-width: 55em) {
+    .shop-intro {
+      width: 80%; } }
+  @media (min-width: 75em) {
+    .shop-intro {
+      width: 70%; } }
+
+.shopnow-button {
+  text-align: right; }
+
+nav {
+  background-color: #f9fafa; }
+  nav a {
+    color: rgba(51, 59, 61, 0.9); }

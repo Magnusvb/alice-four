@@ -1,6 +1,95 @@
-/*Settings*/
+/*==================== Settings =========================================*/
 
-$fontfamily: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-"Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-"Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-"Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+/*$fontfamily: "SF UI Text", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+
+$headline-fontfamily: "SF UI Display", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;*/
+
+$fontfamily: 'Noto Sans', sans-serif;
+$headline-fontfamily: 'Noto Serif', serif;
+
+/*==================== Grids with Breakpoint =============================*/
+/*Breakpoint grid
+@include breakpoint($small) {
+  width: 50%;
+}*/
+
+$micro: 15em;
+$small: 33em;
+$medium: 43em;
+$large: 55em;
+$big: 75em;
+$ultra: 120em;
+
+/*Neat grids:
+@include grid-media($my-grid) {
+  border: 1px solid saddlebrown;
+}*/
+
+$small-grid: (
+  media: 24em,
+);
+
+$medium-grid: (
+  media: 43em,
+);
+
+$large-grid: (
+  media: 50em,
+);
+
+$big-grid: (
+  75: 24em,
+);
+
+$ultra-grid: (
+  media: 110em,
+);
+
+/*==================== Colors =============================================*/
+$text-dark: hsla(195, 9%, 22%, 0.90);
+$text-medium: hsla(0, 0%, 13%, 0.54);
+$text-light: hsla(0, 0%, 100%, 0.9);
+
+/* City */
+$color-cta: hsla(356, 91%, 38%, 1.00);
+$color-bodybg: #fff; /*hsla(33, 42%, 96%, 1.00) */
+$color-primary: hsla(206, 13%, 51%, 1.00);
+$color-secondary: hsla(182, 11%, 73%, 1.00);
+$color-headlines: $color-primary;
+$color-links: $color-cta;
+
+/* Spring */
+$color-cta-s: hsla(26, 96%, 57%, 1.00);
+$color-bodybg-s: hsla(196, 37%, 95%, 1.00);
+$color-primary-s: hsla(198, 69%, 40%, 1.00);
+$color-secondary-s-1: hsla(214, 83%, 28%, 1.00);
+$color-secondary-s-2: hsla(159, 60%, 44%, 1.00);
+$color-headlines-s: $color-secondary-s-1;
+$color-links-s: $color-secondary-s-2;
+
+/*==================== Mixins =============================================*/
+@mixin btn-basic {
+  background: $color-cta;
+  border: 1px solid $text-light;
+  border-radius: 5px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  box-shadow: 0 1px 6px $text-medium;
+  margin: .4em;
+  padding: .5em 1.5em .4em 1.5em;
+  -webkit-appearence: none;
+
+  &:hover {
+    background: darken($color-cta, 25%);
+    color: $text-light;
+  }
+
+  &:active {
+    background: darken($color-secondary, 25%);
+    box-shadow: none;
+  }
+
+  a {
+    color: $text-light;
+  }
+}
