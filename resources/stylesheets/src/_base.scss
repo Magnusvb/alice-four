@@ -1,5 +1,7 @@
 body, html {
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -15,8 +17,6 @@ body {
   background-color: $color-bodybg;
   font-family: $fontfamily;
   font-size: 16px;
-  padding: 0;
-  margin: 0;
 }
 
 img {
@@ -86,20 +86,20 @@ h6 {
 
 a {
   color: $color-links;
-  /*border-bottom: 1px dotted $color-links;*/
+  /*border-bottom: 1px solid lighten($color-primary, 50%);*/
   text-decoration: none;
 }
 
 a:hover {
-  color: #009DF2;
+  /*color: $color-primary;*/
 }
 
 ul {
   padding: 0;
   list-style: none; }
 
-ul ul {
-  padding-left: 40px; }
+/*ul ul {
+  padding-left: 40px; }*/
 
 .image-grid-item {
   display: inline-block; }
@@ -126,9 +126,6 @@ s {
 
 .cart-item td {
   padding-right: 20px ; }
-
-input, textarea, select {
-  font-size: 1em; }
 
 .error {
   color: red; }

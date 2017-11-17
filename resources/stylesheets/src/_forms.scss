@@ -1,0 +1,20 @@
+input,
+textarea,
+select {
+  font-size: 1em;
+}
+
+input {
+  font-size: 1.2rem;
+  font-family: $fontfamily;
+  padding: .3rem;
+  border: 1px solid $text-light;
+  border-radius: 5px;
+  background-color: lighten($color-secondary, 20%);
+  width: 100%;
+}
+
+input[type=submit] {
+  @extend button;
+  margin-left: -0.5rem;
+}

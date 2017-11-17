@@ -34,16 +34,17 @@ description: 'Default Template'
           <a href="{{ site_url('/') }}"><img src="{{ theme.logoImage.thumbnail('auto', 'auto') }}" alt="" class="logo"></a>
         </div>
 
-        <ul>
-          <li>
+        <ul class="mainmenu">
+          <li class="searchfield">
             {{ open_form({'class': 'search', 'method': 'get', 'action': site_url('search')}) }}
-              <input type="text" name="query" value="{{query|unescape}}" placeholder="Search store&hellip;"/>
+              <input type="text" class="field search-item" name="query" value="{{query|unescape}}" placeholder="Search store&hellip;"/>
+              <input type="submit" value="Search" class="submit search-item">
             {{ close_form() }}
           </li>
-          <li>
+          <li class="shopmenu">
             <a href="/shop">Shop ▾</a>
             {% tree categories %}
-            <ul>
+            <ul class="shopmenu-items">
               {% for category in tree.items %}
               <li>
                 <a href="/category/{{ category.fullUrlName }}">{{ category.name }}</a>
@@ -54,7 +55,7 @@ description: 'Default Template'
             {% endtree %}
           </li>
           {% if customer %}
-            <li>
+            <li class="customermenu">
               <a href="/profile">Your Account ▾</a>
               <ul>
                 <li>
