@@ -1,108 +1,99 @@
 {% set on_sale = product.onSale %}
 
   <div itemscope itemtype="http://schema.org/Product">
-    <h1 itemprop="name">{{ product.name }}</h1>
-    {% if product.short_description %}
-      <p itemprop="description">{{ product.short_description|unescape }}</p>
-    {% endif %}
-    <meta itemprop="sku" content="{{ product.sku }}" />
-    <link itemprop="url" href="{{ '/product/' ~ product.url_name }}" />
+    <section class="producttitle">
+      <h1 itemprop="name">{{ product.name }}</h1>
+      {% if product.short_description %}
+        <p class="product-short" itemprop="description">{{ product.short_description|unescape }}</p>
+      {% endif %}
+      <meta itemprop="sku" content="{{ product.sku }}" />
+      <link itemprop="url" href="{{ '/product/' ~ product.url_name }}" />
+    </section>
 
     <!-- product cost -->
-    <h2>
-      {% if on_sale %}
-      <s>{{ product.fullPrice|currency }}</s>
-      {% endif %}
-      <span itemprop="price" content="{{ product.price }}">{{ product.price|currency }}</span>
-    </h2>
-
-    <!-- product ratings -->
-    {% set product_rating = product.rating() %}
-    <p itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" style="display: inline;">
-      {% if product_rating.total_reviews %}
-        <span style="margin-right: -4px">
-          {% for i in range(1, product_rating.average_int) %}&starf;{% endfor %}
-        </span>
-        {% if product_rating.average_int != 5 %}{% for i in range(1, 5 - product_rating.average_int) %}&star;{% endfor %}{% endif %}
-        ({{ product_rating.total_reviews }})
-      {% else %}
-        &star;&star;&star;&star;&star;
-        (no reviews yet)
-      {% endif %}
-    </p>
+    <section class="productprice">
+      <h3>
+        {% if on_sale %}
+        <s>{{ product.fullPrice|currency }}</s>
+        {% endif %}
+        <span itemprop="price" content="{{ product.price }}">{{ product.price|currency }}</span>
+      </h3>
+    </section>  
 
     <!-- product attributes -->
-    {% if product.productAttributes.count %}
-      {% for attribute in product.productAttributes %}
-        <p>{{ attribute.name }} - {{ attribute.value }}</p>
-      {% endfor %}
-    {% endif %}
-
-    <!-- product options -->
-    {% if product.options.count %}
-      {% for index, option in product.options %}
-        <p><label for="{{ 'option-'~index }}">{{ option.name }}</label>
-        <select id="{{ 'option-'~index }}" name="options[{{ option.id }}]" data-ajax-handler="shop:product" data-ajax-update="">
-          {% for key, value in option.values %}
-            <option value='{{ key }}' {{ option_state(postedOptions[option.id], key) }}>{{ value }}</option>
-          {% endfor %}
-        </select></p>
-      {% endfor %}
-    {% endif %}
-
-    <!-- product extras -->
-    {% if product.extras.count %}
-    <h2>Extras</h2>
-      {% for index, extra in product.extras|slice(0, 2) %}
-      <div class="product">
-        <img src="{{ extra.images.first.thumbnail(230, 230)|default('http://placehold.it/230x230') }}" width="230" height="230" alt="{{ extra.images.first.description }}" title="{{ extra.images.first.title }}"/>
-        <p><label for="{{ 'extra-'~index }}">{{ extra.name }}</label>
-        {% if extra.enabled %}
-          <input type="checkbox" id="{{ 'extra-'~index }}" {{ checkbox_state(postedExtras[extra.id], extra.id) }} name="extras[{{ extra.id }}]" data-ajax-handler="shop:product" data-ajax-update="">
-        {% else %}
-          <input type="checkbox" disabled="disabled">
-        {% endif %}
-        </p>
-        <p>Add {{ extra.price|currency }}</p>
-      </div>
-      {% endfor %}
-    {% endif %}
-
-    <!-- quantity & add-to-cart -->
-    {% if product.enabled %}
-      {% if not product.isOutOfStock() or product.allow_preorder %}
-      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-        <link itemprop="availability" href="http://schema.org/InStock" />
-        <meta itemprop="priceCurrency" content="USD" /> <!-- Should get currency code through variable -->
-        <meta itemprop="price" content="{{ product.price }}" />
-      </div>
-      <label>Quantity</label>
-      <input type="text" value="{{ quantity|default("1") }}" name="quantity">
-      <input type="hidden" name="productId" value="{{ product.id }}"/>
-      <a id="product-add" href="#" >Add to Cart</a>
-      <a id="product-added" href="#" disabled="disabled" style="display: none;">Added!</a>
-      {% else %}
-        <p>
-        This product is temporarily unavailable.
-        {% if product.om('expected_availability_date', posted_options) %}
-        <br/>The expected availability date is <time><strong>{{ product.om('expected_availability_date', posted_options).format('%x') }}</strong></time>
-        {% endif %}
-        </p>
+    <section class="productattributes">
+      {% if product.productAttributes.count %}
+        {% for attribute in product.productAttributes %}
+          <p>{{ attribute.name }} - {{ attribute.value }}</p>
+        {% endfor %}
       {% endif %}
-    {% else %}
-      <link itemprop="availability" href="http://schema.org/OutOfStock"/>
-      <h2>This product is not available.</h2>
-    {% endif %}
+    </section>
 
-    <time itemprop="releaseDate" datetime="{{ product.om('expected_availability_date', posted_options).format('%x') }}"></time>
+    <!-- product options here -->
+
+    <!-- product extras here -->
+
+    <!-- options, quantity & add-to-cart -->
+    <section class="addtocart">
+      <!-- product options -->
+      <div class="productoptions">
+        {% if product.options.count %}
+          {% for index, option in product.options %}
+            <p><label for="{{ 'option-'~index }}">{{ option.name }}</label>
+            <select id="{{ 'option-'~index }}" name="options[{{ option.id }}]" data-ajax-handler="shop:product" data-ajax-update="">
+              {% for key, value in option.values %}
+                <option value='{{ key }}' {{ option_state(postedOptions[option.id], key) }}>{{ value }}</option>
+              {% endfor %}
+            </select></p>
+          {% endfor %}
+        {% endif %}
+      </div>
+      
+      {% if product.enabled %}
+        {% if not product.isOutOfStock() or product.allow_preorder %}
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <link itemprop="availability" href="http://schema.org/InStock" />
+          <meta itemprop="priceCurrency" content="USD" /> <!-- Should get currency code through variable -->
+          <meta itemprop="price" content="{{ product.price }}" />
+        </div>
+        <div class="qty-control">
+          <div class="qty-control-item">
+            <label for="qty">Quantity</label>
+            <input type="number" id="qty" class="numberfield" value="{{ quantity|default("1") }}" name="quantity">
+            <input type="hidden" name="productId" value="{{ product.id }}"/>
+          </div>
+          <div class="qty-control-item">
+            <button class="btn-addcart"><a id="product-add" href="#" >Add to Cart</a>
+            <a id="product-added" href="#" disabled="disabled" style="display: none;">Added!</a></button>
+          </div>
+          {% else %}
+            <div class="qty-control-item">
+              <p class="outofstock">
+              This product is temporarily unavailable.
+              {% if product.om('expected_availability_date', posted_options) %}
+              <br/>The expected availability date is <time><strong>{{ product.om('expected_availability_date', posted_options).format('%x') }}</strong></time>
+              {% endif %}
+              </p>
+            </div>
+          </div>
+        {% endif %}
+      {% else %}
+        <link itemprop="availability" href="http://schema.org/OutOfStock"/>
+        <h2>This product is not available.</h2>
+      {% endif %}
+  
+      <time itemprop="releaseDate" datetime="{{ product.om('expected_availability_date', posted_options).format('%x') }}"></time>
+    </section>
 
     <!-- picture grid -->
-    <figure>
-      <img itemprop="image" src="{{ product.images.first.thumbnail(350, 'auto')|default('http://placehold.it/460x300') }}" alt="{{ product.name }}"/>
-    </figure>
+    <section class="mainimage">
+      <figure>
+        <img itemprop="image" src="{{ product.images.first.thumbnail(350, 'auto')|default('http://placehold.it/460x300') }}" alt="{{ product.name }}"/>
+      </figure>
+    </section>
     
     {% if product.images.count > 1 %}
-    <ul>
+    <ul class="image-grid">
       {% for image in product.images %}
         <li class="image-grid-item"><a href="{{ image.thumbnail(746, 'auto') }}"><img src="{{ image.thumbnail(150, 150) }}"/></a></li>
       {% endfor %}
@@ -112,10 +103,49 @@
     <hr>
 
     <!-- product details -->
-    <h1>Product Details</h1>
-    <div itemprop="description">
-      <h3>{{ product.description|unescape }}</h3>
-    </div>
+    <section class="productdetails">
+      <h5>About {{ product.name }}</h5>
+      <div itemprop="description">
+        <p>{{ product.description|unescape }}</p>
+      </div>
+    </section>
+    
+    <!-- product ratings -->
+    <section class="productratings">
+      {% set product_rating = product.rating() %}
+      <p itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" style="display: inline;">
+        {% if product_rating.total_reviews %}
+          <span style="margin-right: -4px">
+            {% for i in range(1, product_rating.average_int) %}&starf;{% endfor %}
+          </span>
+          {% if product_rating.average_int != 5 %}{% for i in range(1, 5 - product_rating.average_int) %}&star;{% endfor %}{% endif %}
+          ({{ product_rating.total_reviews }})
+        {% else %}
+          &star;&star;&star;&star;&star;
+          (no reviews yet)
+        {% endif %}
+      </p>
+    </section>
+    
+    <!-- product extras -->
+    <section class="productextras">
+      {% if product.extras.count %}
+      <h6>Extras</h6>
+        {% for index, extra in product.extras|slice(0, 2) %}
+        <div class="product">
+          <img src="{{ extra.images.first.thumbnail(230, 230)|default('http://placehold.it/230x230') }}" width="230" height="230" alt="{{ extra.images.first.description }}" title="{{ extra.images.first.title }}"/>
+          <p><label for="{{ 'extra-'~index }}">{{ extra.name }}</label>
+          {% if extra.enabled %}
+            <input type="checkbox" id="{{ 'extra-'~index }}" {{ checkbox_state(postedExtras[extra.id], extra.id) }} name="extras[{{ extra.id }}]" data-ajax-handler="shop:product" data-ajax-update="">
+          {% else %}
+            <input type="checkbox" disabled="disabled">
+          {% endif %}
+          </p>
+          <p>Add {{ extra.price|currency }}</p>
+        </div>
+        {% endfor %}
+      {% endif %}
+    </section>
 
     <!-- related products -->
     {% if product.related.count %}

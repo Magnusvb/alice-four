@@ -16,3 +16,31 @@
 .product-name {
   font-weight: 700;
 }
+
+.breadcrumbs {
+  ul {
+  	display: flex;
+  	margin-left: 2rem;
+  	font-size: .9rem;
+  }
+}
+
+.breadcrumbs :not(:last-child):after {
+  content: ">";
+  margin-left: 5px; 
+}
+
+.crumb {
+  margin: .3rem;
+  /*display: inline; */
+}
+
+.outofstock {
+  color: $color-primary;
+}
+
+.product-short {
+  font-size: 1.2;
+  line-height: 1.8;
+  font-style: italic;
+}

@@ -13,7 +13,10 @@
 }
 
 header {
-  /*padding-top: 1rem;*/
+
+  @include breakpoint($small) {
+
+  }
 
   @include breakpoint($medium) {
     border-right: 1px solid $color-secondary;
@@ -49,6 +52,7 @@ footer {
 }
 
 nav {
+  padding: 1rem;
   @include breakpoint($medium) {
     margin-top: 15vh;
     margin-right: -1px;
@@ -77,4 +81,74 @@ nav {
 
 .shopnow-button {
   text-align: right;
+}
+
+/*===================== Product page =======================*/
+#product-page {
+  /*border: 1px solid greenyellow;*/
+  padding: 0 2rem;
+}
+
+.producttitle {
+  /*border: 1px solid pink;*/
+}
+
+.productprice {
+  /*border: 1px solid green;*/
+}
+
+.productratings {
+  border: 1px solid red;
+}
+
+.productattributes {
+  /*border: 1px solid lime;
+  height: 3rem;*/
+}
+
+.productoptions {
+  /*border: 1px solid red;*/
+  flex: 1 1 auto;
+}
+
+.productextras {
+  /*border: 1px solid blue;
+  height: 3rem;*/
+}
+
+.addtocart {
+  border: 1px solid purple;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  .addtocart-item {
+    border: 1px solid silver;
+    flex: 1 1 auto;
+  }
+  
+  & > div {
+    flex: 1 1 auto;
+    /*padding: 0 1rem;*/
+  }
+}
+
+.qty-control {
+  border: 1px solid lime;
+  display: flex;
+  align-items: center;
+  flex: 3 1 auto;
+  
+  .qty-control-item {
+    border: 1px solid silver;
+  }
+}
+
+.image-grid {
+  display: flex;
+  
+  &-item {
+    /*border: 1px solid silver;*/
+    /*flex: 1;*/
+  }
 }
