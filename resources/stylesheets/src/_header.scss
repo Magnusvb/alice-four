@@ -30,7 +30,7 @@ nav {
 
 #logo {
   text-align: center;
-  
+
   @include breakpoint($medium) {
     text-align: left;
   }
@@ -58,6 +58,6 @@ nav {
 
   .field {
     flex: 4;
-    width: 100%;
+    // width: 100%;
   }
 }

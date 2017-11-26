@@ -18,7 +18,7 @@
         {% endif %}
         <span itemprop="price" content="{{ product.price }}">{{ product.price|currency }}</span>
       </h3>
-    </section>  
+    </section>
 
     <!-- product attributes -->
     <section class="productattributes">
@@ -36,19 +36,19 @@
     <!-- options, quantity & add-to-cart -->
     <section class="addtocart">
       <!-- product options -->
-      <div class="productoptions">
+      <div class="addtocart-item productoptions">
         {% if product.options.count %}
           {% for index, option in product.options %}
-            <p><label for="{{ 'option-'~index }}">{{ option.name }}</label>
+            <label for="{{ 'option-'~index }}">{{ option.name }}</label>
             <select id="{{ 'option-'~index }}" name="options[{{ option.id }}]" data-ajax-handler="shop:product" data-ajax-update="">
               {% for key, value in option.values %}
                 <option value='{{ key }}' {{ option_state(postedOptions[option.id], key) }}>{{ value }}</option>
               {% endfor %}
-            </select></p>
+            </select>
           {% endfor %}
         {% endif %}
       </div>
-      
+
       {% if product.enabled %}
         {% if not product.isOutOfStock() or product.allow_preorder %}
         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -56,51 +56,52 @@
           <meta itemprop="priceCurrency" content="USD" /> <!-- Should get currency code through variable -->
           <meta itemprop="price" content="{{ product.price }}" />
         </div>
-        <div class="qty-control">
-          <div class="qty-control-item">
-            <label for="qty">Quantity</label>
-            <input type="number" id="qty" class="numberfield" value="{{ quantity|default("1") }}" name="quantity">
-            <input type="hidden" name="productId" value="{{ product.id }}"/>
-          </div>
-          <div class="qty-control-item">
-            <button class="btn-addcart"><a id="product-add" href="#" >Add to Cart</a>
-            <a id="product-added" href="#" disabled="disabled" style="display: none;">Added!</a></button>
-          </div>
-          {% else %}
-            <div class="qty-control-item">
-              <p class="outofstock">
-              This product is temporarily unavailable.
-              {% if product.om('expected_availability_date', posted_options) %}
-              <br/>The expected availability date is <time><strong>{{ product.om('expected_availability_date', posted_options).format('%x') }}</strong></time>
-              {% endif %}
-              </p>
-            </div>
+
+        <div class="addtocart-item qty-control-item">
+          <label for="qty">Quantity</label>
+          <input type="number" id="qty" class="numberfield" value="{{ quantity|default("1") }}" name="quantity">
+          <input type="hidden" name="productId" value="{{ product.id }}"/>
+        </div>
+
+        <div class="addtocart-item qty-control-item">
+          <button class="btn-addcart"><a id="product-add" href="#" >Add to Cart</a>
+          <a id="product-added" href="#" disabled="disabled" style="display: none;">Added!</a></button>
+        </div>
+
+        {% else %}
+          <div class="addtocart-item qty-control-item">
+            <p class="outofstock">
+            This product is temporarily unavailable.
+            {% if product.om('expected_availability_date', posted_options) %}
+            <br/>The expected availability date is <time><strong>{{ product.om('expected_availability_date', posted_options).format('%x') }}</strong></time>
+            {% endif %}
+            </p>
           </div>
         {% endif %}
       {% else %}
         <link itemprop="availability" href="http://schema.org/OutOfStock"/>
         <h2>This product is not available.</h2>
       {% endif %}
-  
+
       <time itemprop="releaseDate" datetime="{{ product.om('expected_availability_date', posted_options).format('%x') }}"></time>
     </section>
 
     <!-- picture grid -->
+    <div class="pictureblock">
     <section class="mainimage">
       <figure>
-        <img itemprop="image" src="{{ product.images.first.thumbnail(350, 'auto')|default('http://placehold.it/460x300') }}" alt="{{ product.name }}"/>
+        <img itemprop="image" src="{{ product.images.first.thumbnail(600, 'auto')|default('http://placehold.it/460x300') }}" alt="{{ product.name }}"/>
       </figure>
     </section>
-    
+
     {% if product.images.count > 1 %}
     <ul class="image-grid">
       {% for image in product.images %}
-        <li class="image-grid-item"><a href="{{ image.thumbnail(746, 'auto') }}"><img src="{{ image.thumbnail(150, 150) }}"/></a></li>
+        <li class="image-grid-item"><a href="{{ image.thumbnail(600, 'auto') }}"><img src="{{ image.thumbnail(150, 150) }}"/></a></li>
       {% endfor %}
     </ul>
     {% endif %}
-
-    <hr>
+    </div>
 
     <!-- product details -->
     <section class="productdetails">
@@ -109,7 +110,7 @@
         <p>{{ product.description|unescape }}</p>
       </div>
     </section>
-    
+
     <!-- product ratings -->
     <section class="productratings">
       {% set product_rating = product.rating() %}
@@ -126,7 +127,7 @@
         {% endif %}
       </p>
     </section>
-    
+
     <!-- product extras -->
     <section class="productextras">
       {% if product.extras.count %}

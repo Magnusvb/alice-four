@@ -27,6 +27,10 @@ header {
 
 main {
   flex: 5 1 75%;
+
+  @include breakpoint($medium) {
+    @include shadow;
+  }
 }
 
 section {
@@ -98,7 +102,7 @@ nav {
 }
 
 .productratings {
-  border: 1px solid red;
+  border-top: 1px solid $color-cta;
 }
 
 .productattributes {
@@ -116,39 +120,79 @@ nav {
   height: 3rem;*/
 }
 
-.addtocart {
-  border: 1px solid purple;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  
-  .addtocart-item {
-    border: 1px solid silver;
-    flex: 1 1 auto;
-  }
-  
-  & > div {
-    flex: 1 1 auto;
-    /*padding: 0 1rem;*/
+.productdetails {
+  @include breakpoint($medium) {
+    width: 80%;  
   }
 }
 
-.qty-control {
+.addtocart {
+  // border: 1px solid purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+
+  @include breakpoint($medium) {
+    flex-direction: row;
+  }
+}
+
+.addtocart-item {
+  /*border: 1px solid silver;*/
+  flex: 0 1 auto;
+
+  @include breakpoint($medium) {
+    margin-right: 3rem;
+  }
+}
+
+/*.qty-control {
   border: 1px solid lime;
   display: flex;
   align-items: center;
   flex: 3 1 auto;
-  
+
   .qty-control-item {
     border: 1px solid silver;
   }
+}*/
+
+.pictureblock {
+  // border: 1px solid #333;
+
+  @include breakpoint($medium) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.mainimage {
+  // border: 1px solid lime;
+  flex: 2;
 }
 
 .image-grid {
+  // border: 1px solid red;
+  flex: 1;
   display: flex;
-  
-  &-item {
-    /*border: 1px solid silver;*/
-    /*flex: 1;*/
+  justify-content: space-between;
+  margin: 0;
+
+  @include breakpoint($medium) {
+    flex-flow: column;
+  }
+}
+
+.image-grid-item {
+  // border: 1px dotted $color-secondary;
+  /*flex: 1 1 0px;*/
+  /*margin: 0 .3rem;*/
+
+  @include breakpoint($medium) {
+    flex: 1 1 0px;
+    margin: .3rem;
   }
 }

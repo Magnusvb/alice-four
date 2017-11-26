@@ -7,7 +7,7 @@ select {
 input {
   font-size: 1.1rem;
   font-family: $fontfamily;
-  padding: .3rem;
+  padding: .4rem;
   border: 1px solid $text-medium;
   border-radius: 5px;
   background-color: lighten($color-secondary, 20%);
@@ -30,4 +30,14 @@ input[type=submit] {
 .btn-addcart {
   @extend button;
   /*margin-left: -0.5rem;*/
+}
+
+select {
+  // -webkit-appearence: none;
+  // appearence: none;
+  // border: 1px solid $text-medium;
+  // background-color: lighten($color-secondary, 20%);
+  // border-radius: 5px;
+  // font-size: 1.15rem;
+  // padding-right: .5rem;
 }

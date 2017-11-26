@@ -51,10 +51,10 @@ $text-medium: hsla(0, 0%, 13%, 0.54);
 $text-light: hsla(0, 0%, 100%, 0.9);
 
 /* City */
-$color-cta: hsla(356, 91%, 38%, 1.00);
+$color-cta: hsla(356, 91%, 38%, 1.00); //Red
 $color-bodybg: #fff; /*hsla(33, 42%, 96%, 1.00) */
-$color-primary: hsla(206, 13%, 51%, 1.00);
-$color-secondary: hsla(182, 11%, 73%, 1.00);
+$color-primary: hsla(206, 13%, 51%, 1.00); //Dark grey
+$color-secondary: hsla(182, 11%, 73%, 1.00); // Medium grey
 $color-headlines: $color-primary;
 $color-links: $color-cta;
 
@@ -94,4 +94,8 @@ $color-links-s: $color-secondary-s-2;
   a {
     color: $text-light;
   }
+}
+
+@mixin shadow {
+  box-shadow: -1px 0 10px rgba(0, 0, 0, 0.2);
 }
