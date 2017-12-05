@@ -80,6 +80,7 @@ $color-links-s: $color-secondary-s-2;
   margin: .4em;
   padding: .4em 1.5em .4em 1.5em;
   -webkit-appearence: none;
+  white-space: nowrap;
 
   &:hover {
     background: darken($color-cta, 15%);

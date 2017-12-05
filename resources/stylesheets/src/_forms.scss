@@ -1,17 +1,16 @@
 input,
 textarea,
 select {
-  font-size: 1em;
+  font-size: 1.1rem;
+  font-family: $fontfamily;
 }
 
 input {
-  font-size: 1.1rem;
-  font-family: $fontfamily;
   padding: .4rem;
   border: 1px solid $text-medium;
   border-radius: 5px;
   background-color: lighten($color-secondary, 20%);
-  /*width: 100%;*/
+  min-width: 0;
 }
 
 .numberfield {
@@ -24,7 +23,7 @@ label {
 
 input[type=submit] {
   @extend button;
-  margin-left: -0.5rem;
+  /*margin-left: -0.5rem;*/
 }
 
 .btn-addcart {

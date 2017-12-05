@@ -49,15 +49,24 @@ nav {
 
 .search {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+  justify-content: center;
+  flex-direction: column;
+  
+  @include breakpoint($big) {
+    flex-direction: row;
+    align-items: center;
+  }
+  
   .submit {
-    flex: 1;
+    flex: none;
+    
+    @include breakpoint($big) {
+      margin-left: -1rem;
+    }
   }
 
   .field {
-    flex: 4;
-    // width: 100%;
+    flex: 1 1 0px;
+    max-width: 100%;
   }
 }

@@ -21,7 +21,8 @@ header {
   @include breakpoint($medium) {
     border-right: 1px solid $color-secondary;
     /*margin-right: 2rem;*/
-    flex: 1 1 25%;
+    flex: none;
+    width: 25%;
   }
 }
 
@@ -102,7 +103,7 @@ nav {
 }
 
 .productratings {
-  border-top: 1px solid $color-cta;
+  /*border-top: 1px solid $color-cta;*/
 }
 
 .productattributes {
