@@ -22,9 +22,10 @@
 
     <!-- product attributes -->
     <section class="productattributes">
+      <p>Attribut here - XXX Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas corporis fugit sit numquam consequuntur rem ipsa inventore. Beatae neque adipisci nihil suscipit, libero odio corrupti animi veniam, eligendi reprehenderit doloribus.</p>
       {% if product.productAttributes.count %}
         {% for attribute in product.productAttributes %}
-          <p>{{ attribute.name }} - {{ attribute.value }}</p>
+          <p>{{ attribute.name }} - {{ attribute.value }} </p>
         {% endfor %}
       {% endif %}
     </section>
@@ -39,12 +40,14 @@
       <div class="addtocart-item productoptions">
         {% if product.options.count %}
           {% for index, option in product.options %}
-            <label for="{{ 'option-'~index }}">{{ option.name }}</label>
-            <select id="{{ 'option-'~index }}" name="options[{{ option.id }}]" data-ajax-handler="shop:product" data-ajax-update="">
-              {% for key, value in option.values %}
-                <option value='{{ key }}' {{ option_state(postedOptions[option.id], key) }}>{{ value }}</option>
-              {% endfor %}
-            </select>
+            <div class="productoptions-item">
+            	<label for="{{ 'option-'~index }}">{{ option.name }}</label><br>
+              <select id="{{ 'option-'~index }}" name="options[{{ option.id }}]" data-ajax-handler="shop:product" data-ajax-update="">
+                {% for key, value in option.values %}
+                  <option value='{{ key }}' {{ option_state(postedOptions[option.id], key) }}>{{ value }}</option>
+                {% endfor %}
+              </select>
+            </div>
           {% endfor %}
         {% endif %}
       </div>
@@ -58,7 +61,7 @@
         </div>
 
         <div class="addtocart-item qty-control-item">
-          <label for="qty">Quantity</label>
+          <label for="qty">Quantity</label><br>
           <input type="number" id="qty" class="numberfield" value="{{ quantity|default("1") }}" name="quantity">
           <input type="hidden" name="productId" value="{{ product.id }}"/>
         </div>

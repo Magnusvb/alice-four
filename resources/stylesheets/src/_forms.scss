@@ -6,7 +6,7 @@ select {
 }
 
 input {
-  padding: .4rem;
+  padding: .3rem;
   border: 1px solid $text-medium;
   border-radius: 5px;
   background-color: lighten($color-secondary, 20%);
@@ -18,7 +18,9 @@ input {
 }
 
 label {
-  margin-right: .5rem;
+  margin-right: .3rem;
+  text-transform: uppercase;
+  font-size: .9rem;
 }
 
 input[type=submit] {
@@ -32,11 +34,13 @@ input[type=submit] {
 }
 
 select {
-  // -webkit-appearence: none;
-  // appearence: none;
-  // border: 1px solid $text-medium;
-  // background-color: lighten($color-secondary, 20%);
-  // border-radius: 5px;
-  // font-size: 1.15rem;
-  // padding-right: .5rem;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: 1px solid $text-medium;
+  background-color: lighten($color-secondary, 20%);
+  /*background: url(./images/select-arrow.png) no-repeat right;*/
+  padding: .3rem;
+  padding-right: 1rem;
+  border-radius: 5px;
+  margin-right: .5rem;
 }
