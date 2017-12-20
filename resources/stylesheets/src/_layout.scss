@@ -108,19 +108,18 @@ nav {
 }
 
 .productattributes {
-  /*border: 1px solid lime;*/
-  /*height: 3rem;*/
+  width: 50%;
 }
 
 .productoptions {
-  /*border: 1px solid red;*/
+  border: 1px solid red;
   flex: 1 1 auto;
   display: flex;
   justify-content: space-between;
 }
 
 .productoptions-item {
-  /*border: 1px solid blue;*/
+  border: 1px solid blue;
   flex: 1 1 50%;
 
   label {
