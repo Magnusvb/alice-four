@@ -16,7 +16,8 @@ $headline-fontfamily: 'Noto Serif', serif;
 $micro: 15em;
 $small: 33em;
 $medium: 43em;
-$large: 55em;
+$large: 53em; //55
+$large-big: 58em;
 $big: 75em;
 $ultra: 120em;
 
@@ -80,6 +81,7 @@ $color-links-s: $color-secondary-s-2;
   margin: .4em;
   padding: .4em 1.5em .4em 1.5em;
   -webkit-appearence: none;
+  appearance: none;
   white-space: nowrap;
 
   &:hover {

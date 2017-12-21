@@ -38,7 +38,7 @@ description: 'Default Template'
           <li class="searchfield">
             {{ open_form({'class': 'search', 'method': 'get', 'action': site_url('search')}) }}
               <input type="text" class="field search-item" name="query" value="{{query|unescape}}" placeholder="Search store&hellip;"/>
-              <input type="submit" value="Search" class="submit search-item">
+              <button type="submit" value="Search" class="submit search-item">Search</button>
             {{ close_form() }}
           </li>
           <li class="shopmenu">

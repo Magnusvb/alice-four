@@ -65,7 +65,7 @@
             <input type="hidden" name="productId" value="{{ product.id }}"/>
           </div>
 
-          <div class="xaddtocart-item qty-control-item productoptions-item">
+          <div class="xaddtocart-item qty-control-item productoptions-item add-button">
             <button type="button" name="button" id="product-add">Add to Cart</button>
             <!-- <a id="product-add" class="btn-addcart" href="#" >Add to Cart</a> -->
             <a id="product-added" href="#" disabled="disabled" style="display: none;">Added!</a>
@@ -83,7 +83,7 @@
           {% endif %}
         {% else %}
           <link itemprop="availability" href="http://schema.org/OutOfStock"/>
-          <h2>This product is not available.</h2>
+          <h4>This product is not available.</h4>
         {% endif %}
 
         <time itemprop="releaseDate" datetime="{{ product.om('expected_availability_date', posted_options).format('%x') }}"></time>

@@ -52,21 +52,44 @@ nav {
   justify-content: center;
   flex-direction: column;
   
+  @include breakpoint($small) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  @include breakpoint($medium) {
+    flex-direction: column;
+  }
+  
   @include breakpoint($big) {
     flex-direction: row;
     align-items: center;
-  }
-  
-  .submit {
-    flex: none;
-    
-    @include breakpoint($big) {
-      margin-left: -1rem;
-    }
   }
 
   .field {
     flex: 1 1 0px;
     max-width: 100%;
+  }
+}
+
+.submit {
+  /*flex: none;*/
+  /*width: 50%;*/
+  flex-basis: auto;
+  margin: 1rem auto;
+  
+  @include breakpoint($small) {
+    margin: 0;
+    /*width: 30%;*/
+    /*flex-basis: auto;*/
+  }
+  
+  @include breakpoint($medium) {
+    margin-top: .5rem;
+  }
+  
+  @include breakpoint($big) {
+    margin-left: -1rem;
+    margin-top: 0;
   }
 }
