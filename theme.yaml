@@ -12,6 +12,8 @@ customFields:
     bannerImage: { type: image, title: 'Homepage banner', default: '@images/banner-placeholder.png', comment: 'Upload the homepage banner. Width: 1380px, maxheight: 650px' }
     homeHeadline: { type: text, title: 'Homepage headline', default: 'Welcome to my store, stranger' }
     homeIntro: { type: text, title: 'Homepage intro', default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }
+    primaryColor: { type: color, title: 'Primary color', default: '#728492', comment: 'Color used for the background of the header block and also for headlines.' }
+    buttonColor: { type: color, title: 'Button color', default: '#b90914', comment: 'Color used for buttons and links.' }
     facebookUrl: { type: text, title: 'Facebook URL', default: 'http://facebook.com/lemonstand' }
     twitterUrl: { type: text, title: 'Twitter URL', default: 'http://twitter.com/lemonstand' }
     linkedInUrl: { type: text, title: 'LinkedIn URL', default: 'http://www.linkedin.com/company/lemonstand' }

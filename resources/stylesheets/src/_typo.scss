@@ -27,7 +27,7 @@
 
 .breadcrumbs :not(:last-child):after {
   content: ">";
-  margin-left: 5px; 
+  margin-left: 5px;
 }
 
 .crumb {
@@ -40,7 +40,7 @@
 }
 
 .product-short {
-  font-size: 1.2;
+  font-family: $fontfamily;
+  font-size: 1.2rem;
   line-height: 1.8;
-  font-style: italic;
 }

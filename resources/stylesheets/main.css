@@ -31,7 +31,7 @@ body {
 
 body {
   background-color: #fff;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px; }
 
 img {
@@ -42,7 +42,7 @@ figure {
 
 p {
   color: rgba(51, 59, 61, 0.9);
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.5; }
 
 h2,
@@ -51,19 +51,15 @@ h4,
 h5,
 h6 {
   color: rgba(51, 59, 61, 0.9);
-  font-family: "Noto Serif", serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: normal;
   line-height: 1;
   margin: .5rem 0 .8rem 0; }
 
-h5,
-h6 {
-  font-family: "Noto Sans", sans-serif; }
-
 h1 {
-  font-family: "Noto Serif", serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   color: #728492;
   margin: 1rem 0 .4rem 0; }
@@ -101,16 +97,6 @@ ul {
   padding: 0;
   list-style: none; }
 
-/*ul ul {
-  padding-left: 40px; }*/
-/*.image-grid-item {
-  display: inline-block; }
-
-.product {
-  display: inline-block; }
-
-.product h2 {
-  display: inline; }*/
 .product-added {
   color: #F0C332; }
 
@@ -170,9 +156,9 @@ s {
   color: #728492; }
 
 .product-short {
-  font-size: 1.2;
-  line-height: 1.8;
-  font-style: italic; }
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8; }
 
 /***************** BUTTONS ***********************/
 button, input[type=submit], .btn-addcart {
@@ -184,7 +170,7 @@ button, input[type=submit], .btn-addcart {
   font-size: 1.15rem;
   font-weight: 700;
   box-shadow: 0 1px 6px rgba(33, 33, 33, 0.54);
-  margin: .4em;
+  /*margin: .4em;*/
   padding: .4em 1.5em .4em 1.5em;
   -webkit-appearence: none;
   appearance: none;
@@ -207,7 +193,7 @@ button, input[type=submit], .btn-addcart {
   font-size: 1.15rem;
   font-weight: 700;
   box-shadow: 0 1px 6px rgba(33, 33, 33, 0.54);
-  margin: .4em;
+  /*margin: .4em;*/
   padding: .4em 1.5em .4em 1.5em;
   -webkit-appearence: none;
   appearance: none;
@@ -225,7 +211,7 @@ input,
 textarea,
 select {
   font-size: 1.1rem;
-  font-family: "Noto Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 input {
   padding: .3rem;
@@ -371,7 +357,7 @@ nav {
 
 @media (min-width: 58em) {
   .add-button {
-    margin-left: auto; } }
+    /*margin-left: auto;*/ } }
 
 .productextras {
   /*border: 1px solid blue;*/

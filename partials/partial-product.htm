@@ -22,7 +22,6 @@
 
     <!-- product attributes -->
     <section class="productattributes">
-      <p>Attribut here - XXX Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas corporis fugit sit numquam consequuntur rem ipsa inventore. Beatae neque adipisci nihil suscipit, libero odio corrupti animi veniam, eligendi reprehenderit doloribus.</p>
       {% if product.productAttributes.count %}
         {% for attribute in product.productAttributes %}
           <p>{{ attribute.name }} - {{ attribute.value }} </p>
@@ -109,7 +108,7 @@
 
     <!-- product details -->
     <section class="productdetails">
-      <h5>About {{ product.name }}</h5>
+      <h6>About {{ product.name }}</h6>
       <div itemprop="description">
         <p>{{ product.description|unescape }}</p>
       </div>

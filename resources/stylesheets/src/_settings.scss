@@ -4,8 +4,8 @@
 
 $headline-fontfamily: "SF UI Display", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;*/
 
-$fontfamily: 'Noto Sans', sans-serif;
-$headline-fontfamily: 'Noto Serif', serif;
+$fontfamily: 'Open Sans', sans-serif;
+$headline-fontfamily: 'Work Sans', sans-serif;
 
 /*==================== Grids with Breakpoint =============================*/
 /*Breakpoint grid
@@ -78,7 +78,7 @@ $color-links-s: $color-secondary-s-2;
   font-size: 1.15rem;
   font-weight: 700;
   box-shadow: 0 1px 6px $text-medium;
-  margin: .4em;
+  /*margin: .4em;*/
   padding: .4em 1.5em .4em 1.5em;
   -webkit-appearence: none;
   appearance: none;
