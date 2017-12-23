@@ -4,6 +4,7 @@ header {
 
 nav {
   background-color: $color-primary;
+  border-top: 10px solid darken($color-primary, 20%);
   a {
     color: $text-light;
 

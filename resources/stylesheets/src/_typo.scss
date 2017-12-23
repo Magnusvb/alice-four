@@ -3,6 +3,10 @@
   line-height: 1.8;
 }
 
+.regular-price {
+  color: $text-dark;
+}
+
 .oldprice {
   color: $color-primary;
   text-decoration: line-through;

@@ -16,7 +16,7 @@
         {% if on_sale %}
         <s>{{ product.fullPrice|currency }}</s>
         {% endif %}
-        <span itemprop="price" content="{{ product.price }}">{{ product.price|currency }}</span>
+        <span class="regular-price" itemprop="price" content="{{ product.price }}">{{ product.price|currency }}</span>
       </h3>
     </section>
 
@@ -154,7 +154,7 @@
     <!-- related products -->
     {% if product.related.count %}
     <hr>
-    <h2>You Might be Into These</h2>
+    <h3>You Might be Into These</h3>
     <article class="upsell-collection">
       <ul class="collection-list">
         {% for product in product.related %}

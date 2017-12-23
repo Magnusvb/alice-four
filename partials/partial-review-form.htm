@@ -1,4 +1,4 @@
-<h2>Review {{ product.name }}</h2>
+<h5>Review {{ product.name }}</h5>
 
 {{ flash() }}
 {{ open_form({'data-ajax-handler': 'system:onSendMessage'}) }}
@@ -31,7 +31,7 @@
 		<option value="5">&starf;&starf;&starf;&starf;&starf;</option>
 	</select>
 	<span class="error"></span>
-	
+
 	<input type="submit" value="Submit"/>
 	<input type="text" name="hp" value="" style="display: none"/>
 	<input type="hidden" name="fields[shop_customer_id]" value="{{customer.id}}"/>
