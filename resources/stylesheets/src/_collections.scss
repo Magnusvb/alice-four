@@ -2,15 +2,15 @@
   @include breakpoint($small) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
 
 .collection-list_item {
-  padding: 2rem;
+  padding: 1rem;
 
   @include breakpoint($small) {
-    flex: 0 1 33%;
+    flex: 0 1 30%;
   }
 }
 
@@ -22,7 +22,7 @@
 
 .productlist {
   padding: 0;
-  
+
   @include breakpoint($small) {
     display: flex;
     flex-wrap: wrap;

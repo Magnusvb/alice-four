@@ -154,27 +154,31 @@
     <!-- related products -->
     {% if product.related.count %}
     <hr>
-    <h1>You Might be Into These</h1>
-    <ul>
-      {% for product in product.related %}
-        {% set page_url = '/product/' ~ product.url_name %}
-        {% set on_sale = product.onSale %}
-        <li class="product">
-          <figure>
-            <a href="{{ page_url }}">
-            <img src="{{ product.images.first.thumbnail(200, 200)|default('http://placehold.it/200x200') }}" width="200" height="200" alt="{{ product.images.first.description }}" title="{{ product.images.first.title }}"/>
-            </a>
-            <figcaption>
-              <h3><a href="/product/{{ product.url_name }}">{{ product.name }}</a></h3>
-              <h2>{{ product.price|currency }}</h2>
-              {% if on_sale %}
-                <h2><s>{{ product.fullPrice|currency }}</s></h2>
-              {% endif %}
-            </figcaption>
-          </figure>
-        </li>
-      {% endfor %}
-    </ul>
+    <h2>You Might be Into These</h2>
+    <article class="upsell-collection">
+      <ul class="collection-list">
+        {% for product in product.related %}
+          {% set page_url = '/product/' ~ product.url_name %}
+          {% set on_sale = product.onSale %}
+          <li class="xproduct collection-list_item">
+            <figure>
+              <a href="{{ page_url }}">
+              <img src="{{ product.images.first.thumbnail(400, 400)|default('http://placehold.it/400x400') }}" alt="{{ product.images.first.description }}" title="{{ product.images.first.title }}"/>
+              </a>
+              <figcaption class="xproductname-price">
+                <h6 class="product-name">
+                  <a href="/product/{{ product.url_name }}">{{ product.name }}</a>
+                </h6>
+                <h5>{{ product.price|currency }}</h5>
+                {% if on_sale %}
+                <h5 class="salesprice">{{ product.fullPrice|currency }}</h5>
+                {% endif %}
+              </figcaption>
+            </figure>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
     {% endif %}
 
   </div>

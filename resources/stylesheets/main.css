@@ -52,7 +52,7 @@ h5,
 h6 {
   color: rgba(51, 59, 61, 0.9);
   font-family: "Work Sans", sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1;
   margin: .5rem 0 .8rem 0; }
 
@@ -68,22 +68,26 @@ h1 {
       font-size: 4rem; } }
 
 h2 {
-  font-size: 3.175em; }
+  font-size: 2.7em;
+  font-weight: 700;
+  color: #728492; }
 
 h3 {
-  font-size: 2.52em; }
+  font-size: 2.4em;
+  font-weight: 700;
+  color: #728492; }
 
 h4 {
   font-size: 2em;
-  font-weight: 500; }
+  font-weight: 800; }
 
 h5 {
   font-size: 1.587em;
-  font-weight: 500; }
+  font-weight: 800; }
 
 h6 {
   font-size: 1.26em;
-  font-weight: 500; }
+  font-weight: 800; }
 
 a {
   color: #b90914;
@@ -270,9 +274,6 @@ main {
     main {
       box-shadow: -1px 0 10px rgba(0, 0, 0, 0.2); } }
 
-section {
-  /*padding: 0 1rem 0 1rem;*/ }
-
 .homebanner {
   padding: 0; }
 
@@ -389,25 +390,12 @@ nav {
   /*display: flex;*/
   /*flex-wrap: column;*/
   margin-bottom: 1rem; }
-  @media (min-width: 43em) {
-    .addtocart-item {
-      /*margin-right: 3rem;*/ } }
   @media (min-width: 53em) {
     .addtocart-item {
       align-items: flex-end;
       /*display: flex;
     flex-wrap: wrap;*/ } }
 
-/*.qty-control {
-  border: 1px solid lime;
-  display: flex;
-  align-items: center;
-  flex: 3 1 auto;
-
-  .qty-control-item {
-    border: 1px solid silver;
-  }
-}*/
 @media (min-width: 43em) {
   .pictureblock {
     display: flex;
@@ -502,13 +490,13 @@ nav {
   .collection-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; } }
+    justify-content: flex-start; } }
 
 .collection-list_item {
-  padding: 2rem; }
+  padding: 1rem; }
   @media (min-width: 33em) {
     .collection-list_item {
-      flex: 0 1 33%; } }
+      flex: 0 1 30%; } }
 
 .productname-price {
   display: flex;

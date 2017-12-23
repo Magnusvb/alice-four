@@ -34,10 +34,6 @@ main {
   }
 }
 
-section {
-  /*padding: 0 1rem 0 1rem;*/
-}
-
 .homebanner {
   padding: 0;
 }
@@ -110,7 +106,7 @@ nav {
 .productattributes {
   width: 90%;
   margin: auto;
-  
+
   @include breakpoint($medium) {
     width: 70%;
     margin: inherit;
@@ -124,7 +120,7 @@ nav {
   flex-direction: column;
   /*justify-content: flex-start;*/
   /*align-items: flex-end;*/
-  
+
   @include breakpoint($medium) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -166,11 +162,11 @@ nav {
   /*align-items: flex-end;*/
   margin: 1rem auto;
   width: 90%;
-  
+
   @include breakpoint($medium) {
     width: 100%;
   }
-  
+
   @include breakpoint($large) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -185,10 +181,6 @@ nav {
   /*flex-wrap: column;*/
   margin-bottom: 1rem;
 
-  @include breakpoint($medium) {
-    /*margin-right: 3rem;*/
-  }
-  
   @include breakpoint($large) {
     align-items: flex-end;
     /*display: flex;
@@ -196,20 +188,7 @@ nav {
   }
 }
 
-/*.qty-control {
-  border: 1px solid lime;
-  display: flex;
-  align-items: center;
-  flex: 3 1 auto;
-
-  .qty-control-item {
-    border: 1px solid silver;
-  }
-}*/
-
 .pictureblock {
-  // border: 1px solid #333;
-
   @include breakpoint($medium) {
     display: flex;
     justify-content: space-between;
@@ -218,12 +197,10 @@ nav {
 }
 
 .mainimage {
-  // border: 1px solid lime;
   flex: 2;
 }
 
 .image-grid {
-  // border: 1px solid red;
   flex: 1;
   display: flex;
   justify-content: space-between;
@@ -235,7 +212,6 @@ nav {
 }
 
 .image-grid-item {
-  // border: 1px dotted $color-secondary;
   /*flex: 1 1 0px;*/
   /*margin: 0 .3rem;*/
 
@@ -247,4 +223,8 @@ nav {
 
 .product-review {
   padding: 0 2rem;
+}
+
+.upsell-collection {
+
 }
