@@ -1,13 +1,5 @@
 header {
 
-
-  @include breakpoint($medium) {
-
-  }
-
-  @include breakpoint($large) {
-
-  }
 }
 
 nav {
@@ -20,11 +12,17 @@ nav {
     }
   }
   .shopmenu {
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 1rem 2rem;
+    text-transform: uppercase;
   }
 
   .shopmenu-items {
-    margin-left: .8rem;
+    text-transform: initial;
+    a {
+      display: block;
+      padding: .1rem;
+      /*border-bottom: 1px solid $text-medium;*/
+    }
   }
 }
 
@@ -43,24 +41,29 @@ nav {
   }
 }
 
+.menu-link {
+  margin-left: 2rem;
+}
+
 .customermenu {
   margin-top: 1rem;
+  margin-left: 2rem;
 }
 
 .search {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  
+
   @include breakpoint($small) {
     flex-direction: row;
     align-items: flex-start;
   }
-  
+
   @include breakpoint($medium) {
     flex-direction: column;
   }
-  
+
   @include breakpoint($big) {
     flex-direction: row;
     align-items: center;
@@ -77,17 +80,17 @@ nav {
   /*width: 50%;*/
   flex-basis: auto;
   margin: 1rem auto;
-  
+
   @include breakpoint($small) {
     margin: 0;
     /*width: 30%;*/
     /*flex-basis: auto;*/
   }
-  
+
   @include breakpoint($medium) {
     margin-top: .5rem;
   }
-  
+
   @include breakpoint($big) {
     margin-left: -1rem;
     margin-top: 0;

@@ -73,12 +73,12 @@ description: 'Default Template'
               </ul>
             </li>
           {% else %}
-            <li>
+            <li class="menu-link">
               <a href="/sign-in">Login</a>
             </li>
           {% endif %}
-          <li><a href="/blog">Blog</a></li>
-          <li id="mini-cart">{{ partial('shop-minicart') }}</li>
+          <li class="menu-link"><a href="/blog">Blog</a></li>
+          <li class="menu-link" id="mini-cart">{{ partial('shop-minicart') }}</li>
         </ul>
       </nav>
     </header>

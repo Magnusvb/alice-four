@@ -58,35 +58,45 @@ h6 {
 
 h1 {
   font-family: "Work Sans", sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 600;
   line-height: 1;
+  letter-spacing: -3px;
   color: #728492;
   margin: 1rem 0 .4rem 0; }
   @media (min-width: 33em) {
     h1 {
-      font-size: 4rem; } }
+      font-size: 4.768rem; } }
 
 h2 {
-  font-size: 2.7em;
+  font-size: 3.4em;
   font-weight: 700;
   color: #728492; }
+  @media (min-width: 33em) {
+    h2 {
+      font-size: 3.815rem; } }
 
 h3 {
-  font-size: 2.4em;
+  font-size: 2.8em;
   font-weight: 700;
   color: #728492; }
+  @media (min-width: 33em) {
+    h3 {
+      font-size: 3.052rem; } }
 
 h4 {
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: 800; }
+  @media (min-width: 33em) {
+    h4 {
+      font-size: 2.441rem; } }
 
 h5 {
-  font-size: 1.587em;
+  font-size: 1.953em;
   font-weight: 800; }
 
 h6 {
-  font-size: 1.26em;
+  font-size: 1.563em;
   font-weight: 800; }
 
 a {
@@ -432,9 +442,14 @@ nav {
     nav a:hover {
       color: #b3c1c2; }
   nav .shopmenu {
-    margin: 1rem 0 1rem 0; }
+    margin: 1rem 0 1rem 2rem;
+    text-transform: uppercase; }
   nav .shopmenu-items {
-    margin-left: .8rem; }
+    text-transform: initial; }
+    nav .shopmenu-items a {
+      display: block;
+      padding: .1rem;
+      /*border-bottom: 1px solid $text-medium;*/ }
 
 #logo {
   text-align: center; }
@@ -446,8 +461,12 @@ nav {
   font-weight: bold;
   line-height: 2; }
 
+.menu-link {
+  margin-left: 2rem; }
+
 .customermenu {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  margin-left: 2rem; }
 
 .search {
   display: flex;
