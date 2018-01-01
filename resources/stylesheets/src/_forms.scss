@@ -5,7 +5,8 @@ select {
   font-family: $fontfamily;
 }
 
-input {
+input,
+textarea {
   padding: .3rem;
   border: 1px solid $text-medium;
   border-radius: 5px;
