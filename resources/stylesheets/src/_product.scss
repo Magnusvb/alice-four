@@ -156,6 +156,30 @@
   }
 }
 
+.review-item p {
+  display: flex;
+  align-items: flex-start;
+  
+  label {
+    flex: 1 1 4rem;
+    white-space: nowrap;
+  }
+  
+  input,
+  textarea {
+    flex: 1 1 auto;
+  }
+  
+  .error {
+    /*font-size: .8rem;*/
+    margin-left: 3px;
+  }
+}
+
+.rating {
+  margin-bottom: 1rem;
+}
+
 .upsell-collection {
 
 }
