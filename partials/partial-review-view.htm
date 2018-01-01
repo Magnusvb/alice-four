@@ -1,5 +1,7 @@
 <hr>
-  <h3>{{ product.name }} Reviews</h3>
+{% set product_rating = product.rating() %}
+  {% if product_rating.total_reviews %}
+  <h6>{{ product.name }} Reviews</h6>
   {% set product_rating = product.rating() %}
 
   {% for review in product.reviews() %}
@@ -27,3 +29,4 @@
   	<hr>
 
   {% endfor %}
+{% endif %}
