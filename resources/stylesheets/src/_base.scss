@@ -1,9 +1,12 @@
-body, html {
-  height: 100%;
-}
-
 html {
   box-sizing: border-box;
+
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 *,
@@ -15,8 +18,6 @@ body {
   background-color: $color-bodybg;
   font-family: $fontfamily;
   font-size: 16px;
-  padding: 0;
-  margin: 0;
 }
 
 img {
@@ -33,102 +34,92 @@ p {
   line-height: 1.5;
 }
 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: $text-dark;
+  color: $color-headlines;
   font-family: $headline-fontfamily;
-  font-weight: normal;
+  font-weight: 700;
   line-height: 1;
   margin: .5rem 0 .8rem 0;
 }
 
-h5,
-h6 {
-  font-family: $fontfamily;
-}
-
 h1 {
-  font-family: $headline-fontfamily;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1;
-  color: $color-headlines;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: -3px;
   margin: 1rem 0 .4rem 0;
 
   @include breakpoint($small) {
-    font-size: 4rem;
+    font-size: 4.768rem;
   }
 }
 
 h2 {
-  font-size: 3.175em; }
+  font-size: 3.4em;
+
+  @include breakpoint($small) {
+    font-size: 3.815rem;
+  }
+}
 
 h3 {
-  font-size: 2.52em; }
+  font-size: 2.8em;
+
+  @include breakpoint($small) {
+    font-size: 3.052rem;
+  }
+}
 
 h4 {
-  font-size: 2em;
-  font-weight: 500;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: $text-dark;
+
+  @include breakpoint($small) {
+    font-size: 2.441rem;
+  }
 }
 
 h5 {
-  font-size: 1.587em;
-  font-weight: 500;
+  color: $text-dark;
+  font-size: 1.953em;
+  font-weight: 900;
 }
 
 h6 {
-  font-size: 1.26em;
-  font-weight: 500;
+  color: $text-dark;
+  font-size: 1.563em;
+  font-weight: 900;
 }
 
 a {
   color: $color-links;
-  /*border-bottom: 1px dotted $color-links;*/
+  /*border-bottom: 1px solid lighten($color-primary, 50%);*/
   text-decoration: none;
 }
 
 a:hover {
-  color: #009DF2;
+  /*color: $color-primary;*/
 }
 
 ul {
   padding: 0;
   list-style: none; }
 
-ul ul {
-  padding-left: 40px; }
-
-.image-grid-item {
-  display: inline-block; }
-
-.product {
-  display: inline-block; }
-
-.product h2 {
-  display: inline; }
-
 .product-added {
   color: #F0C332; }
 
 s {
   text-decoration: line-through;
-  color: red; }
-
-.breadcrumbs :not(:last-child):after {
-  content: ">";
-  margin-left: 5px; }
-
-.crumb {
-  display: inline; }
+  color: $color-secondary;
+}
 
 .cart-item td {
   padding-right: 20px ; }
-
-input, textarea, select {
-  font-size: 1em; }
 
 .error {
   color: red; }

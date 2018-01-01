@@ -9,7 +9,7 @@ url: '/product/:urlName'
 {{ open_form({'class': 'custom', 'onsubmit': 'return false'}) }}
   {% if product %}
     <div id="product-page">
-      {{ partial('partial-product') }}      
+      {{ partial('partial-product') }}
     </div>
   {% else %}
     <h2>We are sorry, the requested product was not found.</h2>
@@ -17,7 +17,9 @@ url: '/product/:urlName'
 {{ close_form() }}
 
 <!-- product reviews -->
-{{ partial('partial-review-view') }}
+<div class="product-review">
+  {{ partial('partial-review-view') }}
 
-<!-- product review form -->
-{{ partial('partial-review-form') }}
+  <!-- product review form -->
+  {{ partial('partial-review-form') }}
+</div>

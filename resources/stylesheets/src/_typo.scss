@@ -3,6 +3,10 @@
   line-height: 1.8;
 }
 
+.regular-price {
+  color: $text-dark;
+}
+
 .oldprice {
   color: $color-primary;
   text-decoration: line-through;
@@ -15,4 +19,32 @@
 
 .product-name {
   font-weight: 700;
+}
+
+.breadcrumbs {
+  ul {
+  	display: flex;
+  	margin-left: 2rem;
+  	font-size: .9rem;
+  }
+}
+
+.breadcrumbs :not(:last-child):after {
+  content: ">";
+  margin-left: 5px;
+}
+
+.crumb {
+  margin: .3rem;
+  /*display: inline; */
+}
+
+.outofstock {
+  color: $color-primary;
+}
+
+.product-short {
+  font-family: $fontfamily;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }

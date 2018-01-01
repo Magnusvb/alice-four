@@ -1,0 +1,47 @@
+input,
+textarea,
+select {
+  font-size: 1.1rem;
+  font-family: $fontfamily;
+}
+
+input,
+textarea {
+  padding: .3rem;
+  border: 1px solid $text-medium;
+  border-radius: 5px;
+  background-color: lighten($color-secondary, 20%);
+  min-width: 0;
+}
+
+.numberfield {
+  width: 5rem;
+}
+
+label {
+  margin-right: .3rem;
+  /*text-transform: uppercase;*/
+  font-size: .9rem;
+}
+
+input[type=submit] {
+  @extend button;
+  /*margin-left: -0.5rem;*/
+}
+
+.btn-addcart {
+  @extend button;
+  /*margin-left: -0.5rem;*/
+}
+
+select {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: 1px solid $text-medium;
+  background-color: lighten($color-secondary, 20%);
+  /*background: url(./images/select-arrow.png) no-repeat right;*/
+  padding: .3rem;
+  padding-right: 1rem;
+  border-radius: 5px;
+  margin-right: .5rem;
+}

@@ -16,7 +16,7 @@ description: 'Default Template'
 
     <title>{{ page.title }}</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="/cms/core.css">
     <link rel="stylesheet" type="text/css" href="{{ 'stylesheets/main.css'|theme_resource }}">
@@ -24,6 +24,12 @@ description: 'Default Template'
     <script type="text/javascript" src="{{ 'scripts/jquery.js'|theme_resource }}"></script>
     <script type="text/javascript" src="{{ 'scripts/app.js'|theme_resource }}"></script>
     <script type="text/javascript" src="/cms/core.js"></script>
+
+    <style>
+      button {
+        background-color: {{ theme.buttonColor }}:
+      }
+    </style>
 
   </head>
   <body>
@@ -34,16 +40,17 @@ description: 'Default Template'
           <a href="{{ site_url('/') }}"><img src="{{ theme.logoImage.thumbnail('auto', 'auto') }}" alt="" class="logo"></a>
         </div>
 
-        <ul>
-          <li>
+        <ul class="mainmenu">
+          <li class="searchfield">
             {{ open_form({'class': 'search', 'method': 'get', 'action': site_url('search')}) }}
-              <input type="text" name="query" value="{{query|unescape}}" placeholder="Search store&hellip;"/>
+              <input type="text" class="field search-item" name="query" value="{{query|unescape}}" placeholder="Search store&hellip;"/>
+              <button type="submit" value="Search" class="submit search-item">Search</button>
             {{ close_form() }}
           </li>
-          <li>
+          <li class="shopmenu">
             <a href="/shop">Shop ▾</a>
             {% tree categories %}
-            <ul>
+            <ul class="shopmenu-items">
               {% for category in tree.items %}
               <li>
                 <a href="/category/{{ category.fullUrlName }}">{{ category.name }}</a>
@@ -54,7 +61,7 @@ description: 'Default Template'
             {% endtree %}
           </li>
           {% if customer %}
-            <li>
+            <li class="customermenu">
               <a href="/profile">Your Account ▾</a>
               <ul>
                 <li>
@@ -66,12 +73,12 @@ description: 'Default Template'
               </ul>
             </li>
           {% else %}
-            <li>
+            <li class="menu-link">
               <a href="/sign-in">Login</a>
             </li>
           {% endif %}
-          <li><a href="/blog">Blog</a></li>
-          <li id="mini-cart">{{ partial('shop-minicart') }}</li>
+          <li class="menu-link"><a href="/blog">Blog</a></li>
+          <li class="menu-link" id="mini-cart">{{ partial('shop-minicart') }}</li>
         </ul>
       </nav>
     </header>
@@ -98,7 +105,7 @@ description: 'Default Template'
         <li><a href="{{ theme.facebookUrl }}">Facebook</a></li>
         <li><a href="{{ site_url('privacy') }}">Privacy</a></li>
       </ul>-->
-        <!--<p id="copyright">Made by <a href="https://lemonstand.com">LemonStand</a></p>-->
+        <p id="copyright">Made by <a href="https://studioalice.se">Studio Alice</a></p>
     </footer>
   </body>
 </html>

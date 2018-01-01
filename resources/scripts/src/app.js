@@ -20,8 +20,8 @@
     // 
     // Handle thumbnail clicks on the Product page
     //
-    $('#product-page').on('click', 'div.product-image-grid ul a', function(){
-      $('figure.big-image img', $(this).closest('.product-image-grid')).attr('src', this.href);
+    $('#product-page').on('click', 'div.pictureblock ul a', function(){
+      $('div.mainimage figure img', $(this).closest('.pictureblock')).attr('src', this.href);
 
       return false;
     });

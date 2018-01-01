@@ -3,9 +3,97 @@ header {
 }
 
 nav {
-  background-color: lighten($color-secondary, 25%);
-
+  background-color: $color-primary;
+  border-top: 10px solid darken($color-primary, 20%);
   a {
-    color: $text-dark;
+    color: $text-light;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+  .shopmenu {
+    margin: 1rem 0 1rem 2rem;
+    text-transform: uppercase;
+  }
+
+  .shopmenu-items {
+    text-transform: initial;
+    a {
+      display: block;
+      padding: .1rem;
+      /*border-bottom: 1px solid $text-medium;*/
+    }
+  }
+}
+
+#logo {
+  text-align: center;
+
+  @include breakpoint($medium) {
+    text-align: left;
+  }
+}
+
+.mainmenu {
+  li {
+    font-weight: bold;
+    line-height: 2;
+  }
+}
+
+.menu-link {
+  margin-left: 2rem;
+}
+
+.customermenu {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include breakpoint($small) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  @include breakpoint($medium) {
+    flex-direction: column;
+  }
+
+  @include breakpoint($big) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .field {
+    flex: 1 1 0px;
+    max-width: 100%;
+  }
+}
+
+.submit {
+  /*flex: none;*/
+  /*width: 50%;*/
+  flex-basis: auto;
+  margin: 1rem auto;
+
+  @include breakpoint($small) {
+    margin: 0;
+    /*width: 30%;*/
+    /*flex-basis: auto;*/
+  }
+
+  @include breakpoint($medium) {
+    margin-top: .5rem;
+  }
+
+  @include breakpoint($big) {
+    margin-left: -1rem;
+    margin-top: 0;
   }
 }

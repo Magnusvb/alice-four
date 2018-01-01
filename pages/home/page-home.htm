@@ -64,9 +64,9 @@ url: /
             <img src="{{ product.images.first.thumbnail('280', '280') }}" >
           </a>
             <h6 class="product-name"><a href="/product/{{ product.url_name }}" class="btn btn-default">{{ product.name }}</a></h6>
-            <h5 class="salesprice">{{ product.price|currency }}</h5>
+            <h5 class="salesprice">{{ product.price|currency }}
             {% if on_sale %}
-              <h5 class="oldprice">{{ product.fullPrice|currency }}</h5>
+              <span class="oldprice">{{ product.fullPrice|currency }}</span></h5>
             {% endif %}
         </div>
 
