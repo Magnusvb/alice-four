@@ -34,3 +34,39 @@
   flex: 0 1 33%;
   padding: 2rem;
 }
+
+.category-page {
+  margin: 0 2rem;
+}
+.category {
+  /*border: 1px solid tomato;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.category-item {
+  @include shadow;
+  /*border: 1px solid $color-primary;*/
+  border-top: 10px solid $color-secondary;
+  flex: 0 1 30%;
+  /*margin: 1%;*/
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.category .category {
+  .category-item {
+    border: none;
+    /*border-top: 1px solid $color-secondary;*/
+    box-shadow: none;
+    flex: 1 1 100%;
+    margin-bottom: 0;
+    padding: .4rem;
+    
+    h3 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+  }
+}
