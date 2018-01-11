@@ -19,11 +19,18 @@ nav {
 
   .shopmenu-items {
     text-transform: initial;
+    padding-left: .5rem;
     a {
       display: block;
       padding: .1rem;
-      /*border-bottom: 1px solid $text-medium;*/
+      border-bottom: 1px solid lighten($color-primary, 5%);
     }
+  }
+}
+
+.shopmenu-items .shopmenu-items {
+  a {
+    color: darken($text-light, 15%);
   }
 }
 

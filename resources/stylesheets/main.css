@@ -22,9 +22,7 @@ html {
 body {
   height: 100%;
   padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column; }
+  margin: 0; }
 
 *,
 *::after,
@@ -176,6 +174,11 @@ s {
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
   line-height: 1.8; }
+
+.micro {
+  font-size: .8em;
+  color: rgba(33, 33, 33, 0.54);
+  margin-left: 1rem; }
 
 /***************** BUTTONS ***********************/
 button, input[type=submit], .btn-addcart {
@@ -341,11 +344,15 @@ nav {
     margin: 1rem 0 1rem 2rem;
     text-transform: uppercase; }
   nav .shopmenu-items {
-    text-transform: initial; }
+    text-transform: initial;
+    padding-left: .5rem; }
     nav .shopmenu-items a {
       display: block;
       padding: .1rem;
-      /*border-bottom: 1px solid $text-medium;*/ }
+      border-bottom: 1px solid #80919d; }
+
+.shopmenu-items .shopmenu-items a {
+  color: rgba(217, 217, 217, 0.9); }
 
 #logo {
   text-align: center; }
@@ -405,7 +412,7 @@ nav {
   .collection-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; } }
+    justify-content: space-between; } }
 
 .collection-list_item {
   padding: 1rem; }
@@ -433,31 +440,44 @@ nav {
 .category-page {
   margin: 0 2rem; }
 
-.category {
-  /*border: 1px solid tomato;*/
+.topmenu-category {
+  background-color: #ebefef; }
+
+.top-category {
+  border-bottom: 1px solid #cfd8d8;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
 
-.category-item {
-  box-shadow: -1px 0 10px rgba(0, 0, 0, 0.2);
+.top-category-item {
+  /*@include shadow;*/
+  /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
   /*border: 1px solid $color-primary;*/
-  border-top: 10px solid #b3c1c2;
-  flex: 0 1 30%;
+  border-left: 1px solid #cfd8d8;
+  flex: 1;
   /*margin: 1%;*/
-  margin-bottom: 1rem;
-  padding: 1rem; }
+  margin: 0 1rem;
+  padding: .6rem; }
+  .top-category-item h6 {
+    margin: 0; }
+  .top-category-item:first-of-type {
+    border-left: none; }
 
-.category .category .category-item {
+.top-category .top-category {
+  border-bottom: none; }
+
+.top-category .top-category .top-category-item {
   border: none;
-  /*border-top: 1px solid $color-secondary;*/
   box-shadow: none;
   flex: 1 1 100%;
   margin-bottom: 0;
-  padding: .4rem; }
-  .category .category .category-item h3 {
-    font-size: 1.8em;
+  padding: .3rem 0; }
+  .top-category .top-category .top-category-item h6 {
+    font-size: 1.1em;
     margin: 0; }
+
+.childmenu {
+  display: none; }
 
 /*===================== Product page =======================*/
 #product-page {
