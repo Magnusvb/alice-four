@@ -48,3 +48,13 @@
   font-size: 1.2rem;
   line-height: 1.8;
 }
+
+.micro {
+  border: 1px solid $color-secondary;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: .8em;
+  color: $text-medium;
+  margin-left: 1rem;
+  padding: 0 .3rem;
+}

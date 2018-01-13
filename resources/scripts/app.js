@@ -153,6 +153,13 @@
         }
         console.log($('#item_rating').val());
     });
+    
+    //
+    // Show hide category child menu
+    //
+    $('.micro').click(function() {
+      $('.childmenu').toggleClass('show');
+    })
 
   });
 })(jQuery);
