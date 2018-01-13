@@ -68,19 +68,19 @@ h1 {
       font-size: 4.768rem; } }
 
 h2 {
-  font-size: 3.4em; }
+  font-size: 3.4rem; }
   @media (min-width: 33em) {
     h2 {
       font-size: 3.815rem; } }
 
 h3 {
-  font-size: 2.8em; }
+  font-size: 2.8rem; }
   @media (min-width: 33em) {
     h3 {
       font-size: 3.052rem; } }
 
 h4 {
-  font-size: 2.2em;
+  font-size: 2.2rem;
   font-weight: 700;
   color: rgba(51, 59, 61, 0.9); }
   @media (min-width: 33em) {
@@ -89,12 +89,12 @@ h4 {
 
 h5 {
   color: rgba(51, 59, 61, 0.9);
-  font-size: 1.953em;
+  font-size: 1.853rem;
   font-weight: 900; }
 
 h6 {
   color: rgba(51, 59, 61, 0.9);
-  font-size: 1.563em;
+  font-size: 1.563rem;
   font-weight: 900; }
 
 a {
@@ -176,9 +176,13 @@ s {
   line-height: 1.8; }
 
 .micro {
+  border: 1px solid #b3c1c2;
+  border-radius: 2px;
+  cursor: pointer;
   font-size: .8em;
   color: rgba(33, 33, 33, 0.54);
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  padding: 0 .3rem; }
 
 /***************** BUTTONS ***********************/
 button, input[type=submit], .btn-addcart {
@@ -478,6 +482,9 @@ nav {
 
 .childmenu {
   display: none; }
+
+.show {
+  display: block; }
 
 /*===================== Product page =======================*/
 #product-page {

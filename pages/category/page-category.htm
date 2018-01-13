@@ -11,10 +11,10 @@ url: '/category/:urlName@/:page?'
   {% tree categories %}
   <ul class="top-category">
     {% for category in tree.items %}
-    <li class="top-category-item">
+    <li class="top-category-item" id="js-top-category">
       <h6><a href="/category/{{ category.fullUrlName }}">{{ category.name }}</a>
         {% if category.children|length > 0 %}
-        <span class="micro">↓</span>
+        <span class="micro">+</span>
         {% endif %}
       </h6>
       <div class="childmenu">{% branch category.children %}</div>
