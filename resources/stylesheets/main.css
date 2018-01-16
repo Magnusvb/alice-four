@@ -184,6 +184,9 @@ s {
   margin-left: 1rem;
   padding: 0 .3rem; }
 
+/*.error {
+  font-size: .8rem;
+}*/
 /***************** BUTTONS ***********************/
 button, input[type=submit], .btn-addcart {
   background: #b90914;
@@ -651,10 +654,20 @@ nav {
 .login-forms-item {
   /*border: 1px solid blue;*/
   margin: 0 1rem; }
-  .login-forms-item p {
-    border: 1px solid green;
-    display: flex; }
-    .login-forms-item p label {
-      flex: 1 1 30%; }
-    .login-forms-item p input {
-      flex: 1 1 70%; }
+  .login-forms-item .input-component {
+    /*border: 1px solid green;*/
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem; }
+    .login-forms-item .input-component label {
+      flex: 1 1 35%; }
+    .login-forms-item .input-component input {
+      /*font-size: 1rem;*/
+      flex: 1 1 60%; }
+    .login-forms-item .input-component span {
+      font-size: .7rem;
+      flex: 1 1 auto;
+      padding-left: .2rem; }
+
+.input-component:last-of-type {
+  margin-bottom: 1rem; }
