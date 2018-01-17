@@ -1,9 +1,4 @@
-.customer-page {
-  margin: 0 2rem;
-}
-
 .login-forms {
-  /*border: 1px solid lime;*/
   display: flex;
   flex-direction: column;
 
@@ -13,11 +8,9 @@
 }
 
 .login-forms-item {
-  /*border: 1px solid blue;*/
   margin: 0 1rem;
 
   .input-component {
-    /*border: 1px solid green;*/
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;

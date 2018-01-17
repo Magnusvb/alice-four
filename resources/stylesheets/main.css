@@ -347,6 +347,11 @@ nav {
 .shopnow-button {
   text-align: right; }
 
+.category-page,
+.customer-page,
+.cart-page {
+  margin: 0 2rem; }
+
 nav {
   background-color: #728492;
   border-top: 10px solid #455059; }
@@ -450,9 +455,6 @@ nav {
 .productlist-item {
   flex: 0 1 33%;
   padding: 2rem; }
-
-.category-page {
-  margin: 0 2rem; }
 
 .topmenu-category {
   background-color: #ebefef; }
@@ -640,11 +642,7 @@ nav {
 .rating {
   margin-bottom: 1rem; }
 
-.customer-page {
-  margin: 0 2rem; }
-
 .login-forms {
-  /*border: 1px solid lime;*/
   display: flex;
   flex-direction: column; }
   @media (min-width: 75em) {
@@ -652,10 +650,8 @@ nav {
       flex-direction: row; } }
 
 .login-forms-item {
-  /*border: 1px solid blue;*/
   margin: 0 1rem; }
   .login-forms-item .input-component {
-    /*border: 1px solid green;*/
     display: flex;
     justify-content: space-between;
     margin-top: 1rem; }

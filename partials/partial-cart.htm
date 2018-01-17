@@ -14,7 +14,7 @@
 					{% set description = item.optionsString() %}
 					{% if description %}<p>{{ description|unescape }}</p>{% endif %}
 				</td>
-				<td class="cart-item-price"><h2>{{ item.fullPrice()|currency }}</h2></td> 
+				<td class="cart-item-price"><h2>{{ item.fullPrice()|currency }}</h2></td>
 				{% if cart.getDiscountTotal() > 0 %}
 					<td><h2>{{ item.totalDiscount()|currency }}</h2></td>
 					<td><h2>{{ item.price()|currency }}</h2></td>
@@ -38,10 +38,11 @@
 
 	{% if totals.discountTotal > 0 %}
 		<h4><strong>Coupon discount:</strong> {{ totals.discountTotal|currency }}</h4>
-	{% endif %}	
+	{% endif %}
 
 {% else %}
-	<h1>{{ page.title }}</h1>
-	<hr>
-	<h3>Your cart is empty!<a href="{{ site_url('shop') }}"> Continue shopping.</a></h3>
+	<div class="cart-page">
+    <h1>{{ page.title }}</h1>
+    <h3>Your cart is empty!<a href="{{ site_url('shop') }}"> Continue shopping.</a></h3>
+  </div>
 {% endif %}
