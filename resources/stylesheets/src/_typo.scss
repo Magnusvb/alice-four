@@ -59,6 +59,16 @@
   padding: 0 .3rem;
 }
 
+.success {
+  font-size: .8rem;
+  /*background-color: $color-secondary;*/
+  color: $color-cta;
+}
+
 /*.error {
   font-size: .8rem;
 }*/
+
+.large-icon {
+  font-size: 1.3em;
+}

@@ -184,9 +184,17 @@ s {
   margin-left: 1rem;
   padding: 0 .3rem; }
 
+.success {
+  font-size: .8rem;
+  /*background-color: $color-secondary;*/
+  color: #b90914; }
+
 /*.error {
   font-size: .8rem;
 }*/
+.large-icon {
+  font-size: 1.3em; }
+
 /***************** BUTTONS ***********************/
 button, input[type=submit], .btn-addcart {
   background: #b90914;
@@ -234,6 +242,32 @@ button, input[type=submit], .btn-addcart {
   .button a {
     color: rgba(255, 255, 255, 0.9); }
 
+.checkout-btn {
+  background: #b90914;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 700;
+  box-shadow: 0 1px 6px rgba(33, 33, 33, 0.54);
+  /*margin: .4em;*/
+  padding: .4em 1.5em .4em 1.5em;
+  -webkit-appearence: none;
+  appearance: none;
+  white-space: nowrap;
+  background-color: orange; }
+  .checkout-btn:hover {
+    background: #70050c;
+    /*color: $text-light;*/ }
+  .checkout-btn:active {
+    background: #6d8788;
+    box-shadow: none; }
+  .checkout-btn a {
+    color: rgba(255, 255, 255, 0.9); }
+  .checkout-btn a {
+    color: rgba(51, 59, 61, 0.9); }
+
 input,
 textarea,
 select {
@@ -272,6 +306,9 @@ select {
   padding-right: 1rem;
   border-radius: 5px;
   margin-right: .5rem; }
+
+.qty-field {
+  width: 5rem; }
 
 .container {
   border-left: 1px solid #b3c1c2;
@@ -350,7 +387,7 @@ nav {
 .category-page,
 .customer-page,
 .cart-page {
-  margin: 0 2rem; }
+  margin: 0 2rem 1rem 2rem; }
 
 nav {
   background-color: #728492;
@@ -673,3 +710,25 @@ nav {
   margin-bottom: 2rem;
   width: 99%;
   text-align: right; }
+
+.cart {
+  border: 1px solid rebeccapurple; }
+
+.cart-item {
+  border: 1px solid lime; }
+
+.cart-remove {
+  border-bottom: 1px solid #b3c1c2;
+  margin-bottom: 1rem;
+  text-align: center; }
+
+.cart-image {
+  text-align: center; }
+  .cart-image img {
+    border: 1px solid #b3c1c2; }
+
+.cart-price {
+  display: flex;
+  justify-content: space-between; }
+  .cart-price h6 {
+    line-height: 1.5; }

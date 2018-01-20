@@ -1,0 +1,29 @@
+.cart {
+  border: 1px solid rebeccapurple;
+}
+
+.cart-item {
+  border: 1px solid lime;
+}
+
+.cart-remove {
+  border-bottom: 1px solid $color-secondary;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cart-image {
+  text-align: center;
+  img {
+    border: 1px solid $color-secondary;
+  }
+}
+
+.cart-price {
+  display: flex;
+  justify-content: space-between;
+
+  h6 {
+    line-height: 1.5;
+  }
+}

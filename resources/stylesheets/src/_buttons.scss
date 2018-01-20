@@ -6,3 +6,12 @@ button {
 .button {
   @include btn-basic;
 }
+
+.checkout-btn {
+  @include btn-basic;
+  background-color: orange;
+  
+  a {
+    color: $text-dark;
+  }
+}
