@@ -186,8 +186,11 @@ s {
 
 .success {
   font-size: .8rem;
-  /*background-color: $color-secondary;*/
-  color: #b90914; }
+  background-color: #ebefef;
+  border: 1px solid #b3c1c2;
+  color: green;
+  padding: 3px;
+  text-align: center; }
 
 /*.error {
   font-size: .8rem;
@@ -268,12 +271,17 @@ button, input[type=submit], .btn-addcart {
   .checkout-btn a {
     color: rgba(51, 59, 61, 0.9); }
 
-.ghost-btn {
+.update-btn {
   border: 1px solid #b90914;
   border-radius: 5px;
-  padding: 0 5px;
+  padding: 5px;
+  margin-top: 1rem;
   background-color: transparent;
-  text-align: center; }
+  text-align: center;
+  white-space: nowrap; }
+  @media (min-width: 43em) {
+    .update-btn {
+      margin-top: 0; } }
 
 input,
 textarea,
@@ -308,9 +316,12 @@ select {
   box-shadow: none;
   border: 1px solid rgba(33, 33, 33, 0.54);
   background-color: #ebefef;
-  /*background: url(./images/select-arrow.png) no-repeat right;*/
+  background-image: url("../images/select-arrow-gray.png");
+  background-position: 90%;
+  background-size: 10px;
+  background-repeat: no-repeat;
   padding: .3rem;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
   border-radius: 5px;
   margin-right: .5rem; }
 
@@ -319,12 +330,17 @@ select {
 
 .input-discount {
   /*border: 1px solid tomato;*/
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  @media (min-width: 43em) {
+    .input-discount {
+      flex-direction: row; } }
   .input-discount #coupon {
-    flex: 3; }
-  .input-discount .ghost-btn {
-    flex: 1;
-    white-space: nowrap; }
+    flex: 0 0 60%;
+    max-width: 20rem; }
+  .input-discount .update-btn {
+    flex: 0; }
 
 .container {
   border-left: 1px solid #b3c1c2;
@@ -763,3 +779,9 @@ nav {
   justify-content: space-between; }
   .cart-price h6 {
     line-height: 1.5; }
+
+.cart-discount {
+  margin-bottom: 2rem; }
+  @media (min-width: 43em) {
+    .cart-discount {
+      /*width: 50%;*/ } }

@@ -61,8 +61,11 @@
 
 .success {
   font-size: .8rem;
-  /*background-color: $color-secondary;*/
-  color: $color-cta;
+  background-color: lighten($color-secondary, 20%);
+  border: 1px solid $color-secondary;
+  color: green;
+  padding: 3px;
+  text-align: center;
 }
 
 /*.error {

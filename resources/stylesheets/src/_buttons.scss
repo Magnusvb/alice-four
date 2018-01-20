@@ -16,10 +16,16 @@ button {
   }
 }
 
-.ghost-btn {
+.update-btn {
   border: 1px solid $color-cta;
   border-radius: 5px;
-  padding: 0 5px;
+  padding: 5px;
+  margin-top: 1rem;
   background-color: transparent;
   text-align: center;
+  white-space: nowrap;
+
+  @include breakpoint($medium) {
+    margin-top: 0;
+  }
 }

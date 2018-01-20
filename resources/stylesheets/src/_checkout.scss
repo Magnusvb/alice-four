@@ -47,3 +47,10 @@
     line-height: 1.5;
   }
 }
+
+.cart-discount {
+  margin-bottom: 2rem;
+  @include breakpoint($medium) {
+    /*width: 50%;*/
+  }
+}

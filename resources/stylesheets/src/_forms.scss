@@ -39,9 +39,12 @@ select {
   box-shadow: none;
   border: 1px solid $text-medium;
   background-color: lighten($color-secondary, 20%);
-  /*background: url(./images/select-arrow.png) no-repeat right;*/
+  background-image: url("../images/select-arrow-gray.png");
+  background-position: 90%;
+  background-size: 10px;
+  background-repeat: no-repeat;
   padding: .3rem;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
   border-radius: 5px;
   margin-right: .5rem;
 }
@@ -53,13 +56,19 @@ select {
 .input-discount {
   /*border: 1px solid tomato;*/
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  #coupon {
-    flex: 3;
+  @include breakpoint($medium) {
+    flex-direction: row;
   }
 
-  .ghost-btn {
-    flex: 1;
-    white-space: nowrap;
+  #coupon {
+    flex: 0 0 60%;
+    max-width: 20rem;
+  }
+
+  .update-btn {
+    flex: 0;
   }
 }
