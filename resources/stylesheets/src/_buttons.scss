@@ -10,8 +10,16 @@ button {
 .checkout-btn {
   @include btn-basic;
   background-color: orange;
-  
+
   a {
     color: $text-dark;
   }
+}
+
+.ghost-btn {
+  border: 1px solid $color-cta;
+  border-radius: 5px;
+  padding: 0 5px;
+  background-color: transparent;
+  text-align: center;
 }

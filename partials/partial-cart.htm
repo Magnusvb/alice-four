@@ -3,85 +3,57 @@
 <h1>{{ page.title }}</h1>
 {{ flash() }}
 
-<ul class="cart">
-  {% for item in items %}
-  <li class="cart-item cart-image">
+{% for item in items %}
+<section class="cart">
+
+  <div class="cart-item cart-image">
     <p><a href="/product/{{ item.product.url_name }}"><img src="{{ item.product.images.first.thumbnail(160, 160)|default('http://placehold.it/160x160') }}"/></a></p>
-  </li>
-  <li class="cart-item cart-title">
-    <h6><a href="/product/{{ item.product.url_name }}">{{ item.product.name }}</a></h6>
-    {% set description = item.optionsString() %}
-    {% if description %}
-    <p>{{ description|unescape }}</p>
-    {% endif %}
-  </li>
-  <li class="cart-item cart-quantity">
-    
-    <label for="item_quantity[{{ item.key }}]">Quantity</label>
-    <input type="number" class="qty-field" name="item_quantity[{{ item.key }}]" value="{{ item.quantity }}">
-  </li>
-  <li class="cart-item cart-price">
-    <div class="singel-price">
-      <p>Price: {{ item.fullPrice()|currency }}</p>
-      {% if cart.getDiscountTotal() > 0 %}
-    	<p>{{ item.totalDiscount()|currency }}</p>
-    	<p>Price: {{ item.price()|currency }}</p>
+  </div>
+  <article class="cart-info">
+    <div class="cart-item cart-title">
+      <h6><a href="/product/{{ item.product.url_name }}">{{ item.product.name }}</a></h6>
+      {% set description = item.optionsString() %}
+      {% if description %}
+      <p>{{ description|unescape }}</p>
       {% endif %}
     </div>
-    <div class="total-price">
-      <h6>Total: {{ item.total()|currency }}</h6>
+    <div class="cart-item cart-quantity">
+      <label for="item_quantity[{{ item.key }}]">Quantity</label>
+      <input type="number" class="qty-field" name="item_quantity[{{ item.key }}]" value="{{ item.quantity }}">
     </div>
-  </li>
-  <!--<li class="cart-item cart-total">
-    <h6>Total: {{ item.total()|currency }}</h6>
-  </li>-->
-  <li class="cart-item cart-remove">
-    <p><a href="#" data-ajax-handler="shop:cart" {# data-ajax-confirm="Do you really want to remove this item from the cart?" #} data-ajax-update="#cart-content=partial-cart, #mini-cart=shop-minicart"data-ajax-extra-fields="delete_item='{{ item.key }}'"><span class="large-icon">☒</span> Remove</a></p>
-  </li>
-  {% endfor %}
-</ul>
-<p class="cart-discount">
+    <div class="cart-item cart-price">
+      <div class="singel-price">
+        <p>Price: {{ item.fullPrice()|currency }}</p>
+        {% if cart.getDiscountTotal() > 0 %}
+      	<p>{{ item.totalDiscount()|currency }}</p>
+      	<p>Price: {{ item.price()|currency }}</p>
+        {% endif %}
+      </div>
+      <div class="total-price">
+        <h6>Total: {{ item.total()|currency }}</h6>
+      </div>
+      </div>
+      <div class="cart-item cart-remove">
+        <p>
+          <a href="#" data-ajax-handler="shop:cart" {# data-ajax-confirm="Do you really want to remove this item from the cart?" #}
+            data-ajax-update="#cart-content=partial-cart, #mini-cart=shop-minicart" data-ajax-extra-fields="delete_item='{{ item.key }}'">
+            <span class="large-icon">☒</span> Remove</a>
+        </p>
+      </div>
+  </article>
+</section>
+{% endfor %}
+<section class="cart-discount">
   <label for="coupon">Enter discount code</label>
-  <input type="text" id="coupon" name="coupon" value="{{ coupon_code }}" placeholder="Discount code" /><a href="#" data-ajax-handler="shop:cart" data-ajax-update="#cart-content=partial-cart, #mini-cart=shop-minicart"><br /> 
-  <span class="large-icon">⟳</span> Update cart</a>
-</p>
+  <div class="input-discount">
+    <input type="text" id="coupon" name="coupon" value="{{ coupon_code }}" placeholder="Discount code" />
+    <div class="ghost-btn"><a href="#" data-ajax-handler="shop:cart" data-ajax-update="#cart-content=partial-cart, #mini-cart=shop-minicart">
+    <span class="large-icon">⟳</span> Update cart</a></div>
+  </div>
+</section>
 <h4>Subtotal: {{ totals.total|currency }}</h4>
 <button><a href="{{ site_url('shop') }}">Continue shopping</a></button>
 <button class="checkout-btn"><a href="{{ site_url('/checkout') }}">Checkout &raquo;</a></button>
-
-	<!--<table>
-
-		{% for item in items %}
-			<tr class="cart-item">
-				<td class="cart-image">
-					<a href="/product/{{ item.product.url_name }}"><img src="{{ item.product.images.first.thumbnail(160, 160)|default('http://placehold.it/160x160') }}"/></a>
-				</td>
-				<td class="cart-name">
-					<h2><a href="/product/{{ item.product.url_name }}">{{ item.product.name }}</a></h2>
-					{% set description = item.optionsString() %}
-					{% if description %}<p>{{ description|unescape }}</p>{% endif %}
-				</td>
-				<td class="cart-item-price"><h2>{{ item.fullPrice()|currency }}</h2></td>
-				{% if cart.getDiscountTotal() > 0 %}
-					<td><h2>{{ item.totalDiscount()|currency }}</h2></td>
-					<td><h2>{{ item.price()|currency }}</h2></td>
-				{% endif %}
-				<td class="cart-item-total"><h2>{{ item.total()|currency }}</h2></td>
-				<td class="cart-quantity">
-					<input type="text" name="item_quantity[{{ item.key }}]" value="{{ item.quantity }}">
-				</td>
-				<td class="cart-remove">
-					<h4><a href="#" data-ajax-handler="shop:cart" {# data-ajax-confirm="Do you really want to remove this item from the cart?" #} data-ajax-update="#cart-content=partial-cart, #mini-cart=shop-minicart"data-ajax-extra-fields="delete_item='{{ item.key }}'">Remove</a></h4>
-				</td>
-			</tr>
-			<tr><td><hr></td></tr>
-		{% endfor %}
-
-		<tr><td><input type="text" id="coupon" name="coupon" value="{{ coupon_code }}" placeholder="Coupon code" /><a href="#" data-ajax-handler="shop:cart" data-ajax-update="#cart-content=partial-cart, #mini-cart=shop-minicart">&nbsp; &#8635; Update cart</a></td></tr>
-		<tr><td class="cart-subtotal"><h2>Subtotal: <strong>{{ totals.total|currency }}</strong></h2></td></tr>
-		<tr><td><a href="{{ site_url('shop') }}">Continue shopping</a></td></tr>
-		<tr><td><a href="{{ site_url('/checkout') }}">Checkout</a></td></tr>
-	</table>-->
 
 	{% if totals.discountTotal > 0 %}
 		<h4><strong>Coupon discount:</strong> {{ totals.discountTotal|currency }}</h4>

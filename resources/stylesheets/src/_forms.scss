@@ -49,3 +49,17 @@ select {
 .qty-field {
   width: 5rem;
 }
+
+.input-discount {
+  /*border: 1px solid tomato;*/
+  display: flex;
+
+  #coupon {
+    flex: 3;
+  }
+
+  .ghost-btn {
+    flex: 1;
+    white-space: nowrap;
+  }
+}
