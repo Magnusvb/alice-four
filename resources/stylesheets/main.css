@@ -270,6 +270,8 @@ button, input[type=submit], .btn-addcart {
     color: rgba(255, 255, 255, 0.9); }
   .checkout-btn a {
     color: rgba(51, 59, 61, 0.9); }
+  .checkout-btn:hover {
+    background-color: #daa84d; }
 
 .update-btn {
   border: 1px solid #b90914;
