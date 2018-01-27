@@ -790,9 +790,6 @@ nav {
 
 .cart-discount {
   margin-bottom: 2rem; }
-  @media (min-width: 43em) {
-    .cart-discount {
-      /*width: 50%;*/ } }
 
 .input-discount {
   /*border: 1px solid tomato;*/
@@ -807,6 +804,21 @@ nav {
     max-width: 20rem; }
   .input-discount .update-btn {
     flex: 0; }
+
+.cart-total-group {
+  /*border: 1px solid lime;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  @media (min-width: 43em) {
+    .cart-total-group {
+      flex-direction: row; } }
+
+.cart-button-group {
+  text-align: right; }
+  .cart-button-group button, .cart-button-group .btn-addcart, .cart-button-group input[type=submit] {
+    margin-left: 1rem;
+    margin-top: .4rem; }
 
 /*----------------------- CHECKOUT -------------------*/
 .checkout-info {

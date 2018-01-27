@@ -50,7 +50,7 @@
   </div>
 </section>
 <section class="cart-total-group">
-  <h4>Subtotal: {{ totals.total|currency }}</h4>
+  <h5>Subtotal: {{ totals.total|currency }}</h5>
   <div class="cart-button-group">
     <button class="update-btn"><a href="#" data-ajax-handler="shop:cart" data-ajax-update="#cart-content=partial-cart, #mini-cart=shop-minicart"> Update cart</a></button>
     <button><a href="{{ site_url('shop') }}">Continue shopping</a></button>

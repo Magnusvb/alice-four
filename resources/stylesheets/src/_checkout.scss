@@ -51,7 +51,6 @@
 .cart-discount {
   margin-bottom: 2rem;
   @include breakpoint($medium) {
-    /*width: 50%;*/
   }
 }
 
@@ -69,6 +68,26 @@
   }
   .update-btn {
     flex: 0;
+  }
+}
+
+.cart-total-group {
+  /*border: 1px solid lime;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  @include breakpoint($medium) {
+    flex-direction: row;
+  }
+}
+
+.cart-button-group {
+  text-align: right;
+  
+  button {
+    margin-left: 1rem;
+    margin-top: .4rem;
   }
 }
 
