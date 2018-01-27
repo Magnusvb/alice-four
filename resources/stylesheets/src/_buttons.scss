@@ -20,14 +20,22 @@ button {
   }
 }
 
+.btn-addcart {
+  @extend button;
+}
+
 .update-btn {
-  border: 1px solid $color-cta;
-  border-radius: 5px;
-  padding: 5px;
+  @include btn-basic;
   margin-top: 1rem;
-  background-color: transparent;
-  text-align: center;
-  white-space: nowrap;
+  background-color: $color-secondary;
+  
+  a {
+      color: $text-dark;
+    }
+  
+    &:hover {
+      background-color: $color-primary;
+    }
 
   @include breakpoint($medium) {
     margin-top: 0;

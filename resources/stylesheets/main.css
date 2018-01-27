@@ -199,7 +199,7 @@ s {
   font-size: 1.3em; }
 
 /***************** BUTTONS ***********************/
-button, input[type=submit], .btn-addcart {
+button, .btn-addcart, input[type=submit] {
   background: #b90914;
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 5px;
@@ -213,13 +213,13 @@ button, input[type=submit], .btn-addcart {
   -webkit-appearence: none;
   appearance: none;
   white-space: nowrap; }
-  button:hover, input[type=submit]:hover, .btn-addcart:hover {
+  button:hover, .btn-addcart:hover, input[type=submit]:hover {
     background: #70050c;
     /*color: $text-light;*/ }
-  button:active, input[type=submit]:active, .btn-addcart:active {
+  button:active, .btn-addcart:active, input[type=submit]:active {
     background: #6d8788;
     box-shadow: none; }
-  button a, input[type=submit] a, .btn-addcart a {
+  button a, .btn-addcart a, input[type=submit] a {
     color: rgba(255, 255, 255, 0.9); }
 
 .button {
@@ -274,13 +274,33 @@ button, input[type=submit], .btn-addcart {
     background-color: #daa84d; }
 
 .update-btn {
-  border: 1px solid #b90914;
+  background: #b90914;
+  border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 5px;
-  padding: 5px;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 700;
+  box-shadow: 0 1px 6px rgba(33, 33, 33, 0.54);
+  /*margin: .4em;*/
+  padding: .4em 1.5em .4em 1.5em;
+  -webkit-appearence: none;
+  appearance: none;
+  white-space: nowrap;
   margin-top: 1rem;
-  background-color: transparent;
-  text-align: center;
-  white-space: nowrap; }
+  background-color: #b3c1c2; }
+  .update-btn:hover {
+    background: #70050c;
+    /*color: $text-light;*/ }
+  .update-btn:active {
+    background: #6d8788;
+    box-shadow: none; }
+  .update-btn a {
+    color: rgba(255, 255, 255, 0.9); }
+  .update-btn a {
+    color: rgba(51, 59, 61, 0.9); }
+  .update-btn:hover {
+    background-color: #728492; }
   @media (min-width: 43em) {
     .update-btn {
       margin-top: 0; } }
@@ -308,9 +328,6 @@ label {
   font-size: .9rem; }
 
 input[type=submit] {
-  /*margin-left: -0.5rem;*/ }
-
-.btn-addcart {
   /*margin-left: -0.5rem;*/ }
 
 select {

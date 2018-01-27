@@ -46,14 +46,17 @@
 <section class="cart-discount">
   <label for="coupon">Enter discount code</label>
   <div class="input-discount">
-    <input type="text" id="coupon" name="coupon" value="{{ coupon_code }}" placeholder="Discount code" />
-    <div class="update-btn"><a href="#" data-ajax-handler="shop:cart" data-ajax-update="#cart-content=partial-cart, #mini-cart=shop-minicart">
-    <span class="large-icon">⟳</span> Update cart</a></div>
+    <input type="text" id="coupon" name="coupon" value="{{ coupon_code }}" placeholder="Discount code" />    
   </div>
 </section>
-<h4>Subtotal: {{ totals.total|currency }}</h4>
-<button><a href="{{ site_url('shop') }}">Continue shopping</a></button>
-<button class="checkout-btn"><a href="{{ site_url('/checkout') }}">Checkout &raquo;</a></button>
+<section class="cart-total-group">
+  <h4>Subtotal: {{ totals.total|currency }}</h4>
+  <div class="cart-button-group">
+    <button class="update-btn"><a href="#" data-ajax-handler="shop:cart" data-ajax-update="#cart-content=partial-cart, #mini-cart=shop-minicart"> Update cart</a></button>
+    <button><a href="{{ site_url('shop') }}">Continue shopping</a></button>
+    <button class="checkout-btn"><a href="{{ site_url('/checkout') }}">Checkout &raquo;</a></button>
+  </div>
+</section>
 
 	{% if totals.discountTotal > 0 %}
 		<h4><strong>Coupon discount:</strong> {{ totals.discountTotal|currency }}</h4>
