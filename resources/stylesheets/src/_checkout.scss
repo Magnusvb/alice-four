@@ -54,3 +54,62 @@
     /*width: 50%;*/
   }
 }
+
+.input-discount {
+  /*border: 1px solid tomato;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include breakpoint($medium) {
+    flex-direction: row;
+  }
+  #coupon {
+    flex: 0 0 60%;
+    max-width: 20rem;
+  }
+  .update-btn {
+    flex: 0;
+  }
+}
+
+/*----------------------- CHECKOUT -------------------*/
+.checkout-info {
+  /*border: 1px solid lime;*/
+  margin-bottom: 1rem;
+}
+
+.checkout-info-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .5rem;
+
+  .update-btn {
+    /*display: inline-block;*/
+    flex: 1 1 auto;
+  }
+
+  input,
+  textarea,
+  select {
+    flex: 1 1 70%;
+  }
+
+  select {
+    margin-right: 0;
+    max-width: 100%;
+
+    @include breakpoint($small) {
+      max-width: 70%;
+      overflow: hidden;
+    }
+  }
+
+  label {
+    flex: 1 1 30%;
+  }
+
+  @include breakpoint($small) {
+    flex-direction: row;
+    align-items: center;
+  }
+}

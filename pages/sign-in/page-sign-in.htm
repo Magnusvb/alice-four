@@ -62,11 +62,15 @@ url: /sign-in
       <input name="signup[password_confirmation]" id="signup[password_confirmation]" type="password"/>
     	<span class="error"></span>
     </div>
+    <div class="input-component">
+      <p>You can always change your password later.</p>
+    </div>
   	<input type="hidden" name="autologin" value="1" />
   	<input type="hidden" name="redirect" value="{{ site_url('registered') }}"/>
   	<span class="right-button">
       <input type="submit" value="Sign Up"/>
     </span>
   {{ close_form() }}
-  </section></div>
+  </section>
+  </div>
 </div>

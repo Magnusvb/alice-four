@@ -1,7 +1,7 @@
 input,
 textarea,
 select {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: $fontfamily;
 }
 
@@ -20,7 +20,7 @@ textarea {
 
 label {
   margin-right: .3rem;
-  /*text-transform: uppercase;*/
+  /*margin-top: .4rem;*/
   font-size: .9rem;
 }
 
@@ -51,24 +51,4 @@ select {
 
 .qty-field {
   width: 5rem;
-}
-
-.input-discount {
-  /*border: 1px solid tomato;*/
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @include breakpoint($medium) {
-    flex-direction: row;
-  }
-
-  #coupon {
-    flex: 0 0 60%;
-    max-width: 20rem;
-  }
-
-  .update-btn {
-    flex: 0;
-  }
 }
