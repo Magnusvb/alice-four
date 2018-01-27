@@ -7,7 +7,7 @@
 <section class="cart">
 
   <div class="cart-item cart-image">
-    <p><a href="/product/{{ item.product.url_name }}"><img src="{{ item.product.images.first.thumbnail(160, 160)|default('http://placehold.it/160x160') }}"/></a></p>
+    <a href="/product/{{ item.product.url_name }}"><img src="{{ item.product.images.first.thumbnail(160, 160)|default('http://placehold.it/160x160') }}"/></a>
   </div>
   <article class="cart-info">
     <div class="cart-item cart-title">

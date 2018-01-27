@@ -770,8 +770,8 @@ nav {
     .cart-image {
       flex: 1; } }
 
-.cart-item {
-  /*border: 1px solid lime;*/ }
+.cart-item h6 {
+  margin-top: 0; }
 
 .cart-remove {
   border-bottom: 1px solid #ebefef;
