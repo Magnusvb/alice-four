@@ -83,22 +83,34 @@
 }
 
 .cart-total-group {
-  /*border: 1px solid lime;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
 
   @include breakpoint($medium) {
+    align-content: center;
     flex-direction: row;
   }
 }
 
 .cart-button-group {
-  text-align: right;
+  margin-top: 1rem;
+  text-align: center;
 
   button {
-    margin-left: 1rem;
-    margin-top: .4rem;
+    margin-top: 1rem;
+
+    @include breakpoint($medium) {
+      margin-left: 1rem;
+      margin-top: 0;
+      margin-bottom: .6rem;
+    }
+  }
+
+  @include breakpoint($medium) {
+    margin-top: 0;
+    text-align: right;
   }
 }
 

@@ -813,19 +813,29 @@ nav {
     flex: 0; }
 
 .cart-total-group {
-  /*border: 1px solid lime;*/
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  text-align: center; }
   @media (min-width: 43em) {
     .cart-total-group {
+      align-content: center;
       flex-direction: row; } }
 
 .cart-button-group {
-  text-align: right; }
+  margin-top: 1rem;
+  text-align: center; }
   .cart-button-group button, .cart-button-group .btn-addcart, .cart-button-group input[type=submit] {
-    margin-left: 1rem;
-    margin-top: .4rem; }
+    margin-top: 1rem; }
+    @media (min-width: 43em) {
+      .cart-button-group button, .cart-button-group .btn-addcart, .cart-button-group input[type=submit] {
+        margin-left: 1rem;
+        margin-top: 0;
+        margin-bottom: .6rem; } }
+  @media (min-width: 43em) {
+    .cart-button-group {
+      margin-top: 0;
+      text-align: right; } }
 
 /*----------------------- CHECKOUT -------------------*/
 .checkout-info {
