@@ -726,20 +726,20 @@ nav {
       flex-direction: row; } }
 
 .login-forms-item {
-  margin: 0 1rem; }
+  flex: 1 1 auto;
+  margin: 0 2rem; }
   .login-forms-item .input-component {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem; }
+    margin: 1rem 0 1rem 0; }
     .login-forms-item .input-component label {
       flex: 1 1 40%; }
     .login-forms-item .input-component input {
-      /*font-size: 1rem;*/
       flex: 1 1 55%; }
     .login-forms-item .input-component span {
-      font-size: .7rem;
       flex: 1 1 auto;
+      font-size: .7rem;
       padding-left: .2rem; }
 
 .input-component:last-of-type {
@@ -748,8 +748,8 @@ nav {
 .right-button {
   display: block;
   margin-bottom: 2rem;
-  width: 99%;
-  text-align: right; }
+  text-align: right;
+  width: 99%; }
 
 .cart {
   /*border: 1px solid rebeccapurple;*/ }
@@ -784,9 +784,16 @@ nav {
 
 .cart-price {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-top: 1rem; }
   .cart-price h6 {
-    line-height: 1.5; }
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 0; }
+  .cart-price p {
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 0; }
 
 .cart-discount {
   margin-bottom: 2rem; }
