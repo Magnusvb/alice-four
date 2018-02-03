@@ -10,6 +10,7 @@ button {
 .checkout-btn {
   @include btn-basic;
   background-color: orange;
+  color: $text-dark;
 
   a {
     color: $text-dark;
@@ -24,18 +25,57 @@ button {
   @extend button;
 }
 
+.full-width-button {
+  display: flex;
+  justify-content: center;
+
+  * {
+    flex: 0;
+  }
+}
+
+.very-large-btn {
+  background-color: orange;
+  font-size: 2rem;
+  @include breakpoint($medium) {
+
+  }
+}
+
 .update-btn {
   @include btn-basic;
   margin-top: 1rem;
   background-color: $color-secondary;
-  
+
   a {
       color: $text-dark;
     }
-  
+
     &:hover {
       background-color: $color-primary;
     }
+
+  @include breakpoint($medium) {
+    margin-top: 0;
+  }
+}
+
+.ghost-btn {
+  border: 1px solid $color-secondary;
+  border-radius: 5px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding: .4em 1.5em .4em 1.5em;
+  background-color: #fff;
+
+  a {
+    color: $text-dark;
+  }
+
+  &:hover {
+    background-color: $color-secondary;
+  }
 
   @include breakpoint($medium) {
     margin-top: 0;

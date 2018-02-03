@@ -31,7 +31,8 @@
       </p>
     {% endfor %}
 
-    <h3><a href="#" data-ajax-handler="shop:checkout" data-ajax-update="#checkout-page=partial-checkout, #mini-cart=shop-minicart">Place order &amp; pay</a></h3>
+    <!--<h3><a href="#" data-ajax-handler="shop:checkout" data-ajax-update="#checkout-page=partial-checkout, #mini-cart=shop-minicart">Place order &amp; pay</a></h3>-->
+    <button class="checkout-btn" data-ajax-handler="shop:checkout" data-ajax-update="#checkout-page=partial-checkout, #mini-cart=shop-minicart">Place order &amp; pay</button>
 
   {% else %}
     <p>We are sorry, there are no shipping options available for your location.</p>

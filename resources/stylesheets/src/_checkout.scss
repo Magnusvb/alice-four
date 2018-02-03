@@ -115,6 +115,11 @@
 }
 
 /*----------------------- CHECKOUT -------------------*/
+.copy-info {
+  margin: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
 .checkout-info {
   /*border: 1px solid lime;*/
   margin-bottom: 1rem;
@@ -154,4 +159,31 @@
     flex-direction: row;
     align-items: center;
   }
+}
+
+.full-width-button {
+  text-align: center;
+}
+
+.payment-card-form {
+  width: 70%;
+
+  @include breakpoint($medium) {
+    width: 50%;
+  }
+}
+
+#payment_form {
+  .form {
+    li {
+      margin-bottom: 1.2rem;
+    }
+    label {
+      margin: 0.2rem 0 0.1rem 0;
+    }
+  }
+}
+
+.payment-method-radio {
+  margin: 1rem 0;
 }

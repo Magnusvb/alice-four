@@ -6,7 +6,7 @@
   {% if message %}
     <p>{{ message }}</p>
   {% else %}
-    <p>This payment method has no payment form.</p>    
+    <p>Please select a payment method.</p>
   {% endif %}
-  <p><a href="{{ site_url('shop') }}">Continue shopping</a></p>
+  <p>Or you can <a href="{{ site_url('shop') }}" >continue shopping</a></p>
 {% endif %}

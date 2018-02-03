@@ -9,14 +9,17 @@
     <label for="payment_method">Payment method</label>
     <!-- The payment form below (id="payment_form") automatically updates when the payment method is changed. See app.js for the implementation details. -->
     {{ open_form({'class': 'custom'}) }}
-      <select name="paymentMethodId" id="payment_method">
-        <option value=''> - </option>
+      <!--<select name="paymentMethodId" id="payment_method">
+        <option value=''> Select payment </option>
         {% for method in paymentMethods %}
             <option value="{{ method.id }}">{{ method.name }}</option>
         {% endfor %}
-      </select>
+      </select>-->
+       {% for method in paymentMethods %}
+        <input type="radio" name="paymentMethodId" id="payment_method" value="{{ method.id }}" class="payment-method-radio"> {{ method.name }} <br>
+        {% endfor %}
     </form>
-    <div id="payment_form">
+    <div id="payment_form" class="payment-card-form">
      {{ partial('partial-paymentform') }}
     </div>
     {% endif %}

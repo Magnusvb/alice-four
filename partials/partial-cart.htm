@@ -1,7 +1,7 @@
 <div class="cart-page">
 {% if itemCount %}
 <h1>{{ page.title }}</h1>
-{{ flash() }}
+
 
 {% for item in items %}
 <section class="cart">
@@ -46,7 +46,7 @@
 <section class="cart-discount">
   <label for="coupon">Enter discount code</label>
   <div class="input-discount">
-    <input type="text" id="coupon" name="coupon" value="{{ coupon_code }}" placeholder="Discount code" />    
+    <input type="text" id="coupon" name="coupon" value="{{ coupon_code }}" placeholder="Discount code" />
   </div>
 </section>
 <section class="cart-total-group">
@@ -57,6 +57,7 @@
     <button class="checkout-btn"><a href="{{ site_url('/checkout') }}">Checkout &raquo;</a></button>
   </div>
 </section>
+{{ flash() }}
 
 	{% if totals.discountTotal > 0 %}
 		<h4><strong>Coupon discount:</strong> {{ totals.discountTotal|currency }}</h4>

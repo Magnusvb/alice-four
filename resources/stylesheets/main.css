@@ -186,14 +186,21 @@ s {
 
 .success {
   font-size: .8rem;
-  background-color: #ebefef;
-  border: 1px solid #b3c1c2;
-  color: green;
+  background-color: #0da559;
+  border: 1px solid #02180d;
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.9);
   padding: 3px;
   text-align: center; }
 
 /*.error {
   font-size: .8rem;
+  background-color: lighten($color-secondary, 20%);
+  border: 1px solid $color-cta;
+  border-radius: 2px;
+  color: $color-cta;
+  padding: 3px;
+  text-align: center;
 }*/
 .large-icon {
   font-size: 1.3em; }
@@ -259,7 +266,8 @@ button, .btn-addcart, input[type=submit] {
   -webkit-appearence: none;
   appearance: none;
   white-space: nowrap;
-  background-color: orange; }
+  background-color: orange;
+  color: rgba(51, 59, 61, 0.9); }
   .checkout-btn:hover {
     background: #70050c;
     /*color: $text-light;*/ }
@@ -272,6 +280,16 @@ button, .btn-addcart, input[type=submit] {
     color: rgba(51, 59, 61, 0.9); }
   .checkout-btn:hover {
     background-color: #daa84d; }
+
+.full-width-button {
+  display: flex;
+  justify-content: center; }
+  .full-width-button * {
+    flex: 0; }
+
+.very-large-btn {
+  background-color: orange;
+  font-size: 2rem; }
 
 .update-btn {
   background: #b90914;
@@ -303,6 +321,22 @@ button, .btn-addcart, input[type=submit] {
     background-color: #728492; }
   @media (min-width: 43em) {
     .update-btn {
+      margin-top: 0; } }
+
+.ghost-btn {
+  border: 1px solid #b3c1c2;
+  border-radius: 5px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding: .4em 1.5em .4em 1.5em;
+  background-color: #fff; }
+  .ghost-btn a {
+    color: rgba(51, 59, 61, 0.9); }
+  .ghost-btn:hover {
+    background-color: #b3c1c2; }
+  @media (min-width: 43em) {
+    .ghost-btn {
       margin-top: 0; } }
 
 input,
@@ -457,7 +491,7 @@ nav {
 
 .mainmenu li {
   font-weight: bold;
-  line-height: 2; }
+  line-height: 2.5; }
 
 .menu-link {
   margin-left: 2rem; }
@@ -838,6 +872,11 @@ nav {
       text-align: right; } }
 
 /*----------------------- CHECKOUT -------------------*/
+.copy-info {
+  margin: 2rem 0;
+  text-align: center;
+  width: 100%; }
+
 .checkout-info {
   /*border: 1px solid lime;*/
   margin-bottom: 1rem; }
@@ -866,3 +905,21 @@ nav {
     .checkout-info-item {
       flex-direction: row;
       align-items: center; } }
+
+.full-width-button {
+  text-align: center; }
+
+.payment-card-form {
+  width: 70%; }
+  @media (min-width: 43em) {
+    .payment-card-form {
+      width: 50%; } }
+
+#payment_form .form li {
+  margin-bottom: 1.2rem; }
+
+#payment_form .form label {
+  margin: 0.2rem 0 0.1rem 0; }
+
+.payment-method-radio {
+  margin: 1rem 0; }

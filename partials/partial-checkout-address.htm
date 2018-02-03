@@ -77,8 +77,8 @@
       </div>
         <div class="checkout-info-item">
           <!-- See the onCopyBillingToShipping AJAX handler implementation on the Checkout page's AJAX tab -->
-          <div class="update-btn">
-            <a href="#" id="copy_billing_to_shipping">
+          <div class="copy-info">
+            <a href="#" id="copy_billing_to_shipping" class="ghost-btn">
               <span class="large-icon">⇵</span> Copy Billing Information</a>
           </div>
         </div>
@@ -154,8 +154,11 @@
     	</div>
   </section>
 
-	<!-- See the onSetBillingAndShippignInfo AJAX handler implementation on the Checkout page's AJAX tab -->
-	<h5 class="update-btn"><a href="#" data-ajax-handler="shop:checkout" data-ajax-update="#checkout-page=partial-checkout, #mini-cart=shop-minicart">Next step</a></h5>
+	<div class="full-width-button">
+    <!-- See the onSetBillingAndShippignInfo AJAX handler implementation on the Checkout page's AJAX tab -->
+  	<button class="checkout-btn" data-ajax-handler="shop:checkout" data-ajax-update="#checkout-page=partial-checkout, #mini-cart=shop-minicart">Next step</button>
+  </div>
+	<!--<h5 class="update-btn"><a href="#" data-ajax-handler="shop:checkout" data-ajax-update="#checkout-page=partial-checkout, #mini-cart=shop-minicart">Next step</a></h5>-->
 
 	<input type="hidden" name="step" value="billing_info,shipping_info"/>
   <input type="hidden" name="nextStep" value="shipping_method" />
