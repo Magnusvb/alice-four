@@ -187,3 +187,76 @@
 .payment-method-radio {
   margin: 1rem 0;
 }
+
+.recepie {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include breakpoint($small) {
+    width: 80%;
+  }
+}
+
+.recepie-item-title {
+  display: none;
+
+  @include breakpoint($small) {
+    display: block;
+    font-weight: 700;
+    /*border-bottom: 1px solid $color-primary;*/
+  }
+}
+
+.recepie-item-title_mobil {
+  font-weight: 700;
+  @include breakpoint($small) {
+    display: none;
+  }
+}
+
+.recepie-item {
+  border-bottom: 1px solid $color-secondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0;
+
+  .recepie-item-line {
+    flex: 1 1 0px;
+    margin: .2rem 0;
+  }
+
+  @include breakpoint($small) {
+    flex-direction: row;
+  }
+}
+
+.align-right {
+  text-align: right;
+}
+
+.recepie-summary {
+  margin-bottom: 2rem;
+  width: 100%;
+
+  @include breakpoint($small) {
+    width: 80%;
+  }
+}
+
+.recepie-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.recepie-total-item {
+  border-bottom: 1px solid $color-secondary;
+  flex: 1 1 auto;
+
+  &:last-of-type {
+    text-align: right;
+  }
+}

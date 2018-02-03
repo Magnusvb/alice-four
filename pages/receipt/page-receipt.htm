@@ -10,11 +10,28 @@ url: '/receipt/:paymenthash'
   {% if invoice %}
     <h1>Thanks For Your Order!</h1>
     <p>You're order number is <strong>{{ invoice.order.number }}</strong>. Look for a confirmation email soon. Questions?</p>
-    <p>Customer Service: support@lemonstand.com or 1-855-332-0555</p>
+    <p><strong>Customer Service</strong>: support@lemonstand.com or 1-855-332-0555</p>
     <p><strong>Order Date: </strong> {{ invoice.order.created_at.format('M jS, Y') }}</p>
     <p><strong>Payment method: </strong> {{ payment.guessPaymentMethod().name }}</p>
 
-    <table>
+    <ul class="recepie">
+      <li class="recepie-item recepie-title">
+        <span class="recepie-item-title">Product</span>
+        <span class="recepie-item-title align-right">Quantity</span>
+        <span class="recepie-item-title align-right">Total</span>
+      </li>
+       {% for shipment in invoice.shipments %}
+       {% for item in shipment.shipmentItems %}
+        <li class="recepie-item">
+          <span class="recepie-item-line"><span class="recepie-item-title_mobil">Product: </span>{{ item.product.name }}</span>
+          <span class="recepie-item-line align-right"><span class="recepie-item-title_mobil">Quantity: </span>{{ item.quantity|number_format(0) }}</span>
+          <span class="recepie-item-line align-right"><span class="recepie-item-title_mobil">Total: </span>{{ (item.quantity *item.pivot.price)|currency }}</span>
+        </li>
+       {% endfor %}
+       {% endfor %}
+    </ul>
+
+    <!--<table>
       <tr>
         <th><h2><strong>Product</strong></h2></th>
         <th><h2><strong>Qty</strong></h2></th>
@@ -29,20 +46,29 @@ url: '/receipt/:paymenthash'
         </tr>
       {% endfor %}
       {% endfor %}
-    </table>
+    </table>-->
 
-    {% if invoice.isPaid() %}
+      <section class="recepie-summary">
+        {% if invoice.isPaid() %}
+        {% if invoice.getDiscountTotal() > 0 %}
+          <div class="recepie-total">
+            <span class="recepie-total-item">Discount: </span><span class="recepie-total-item">{{ invoice.getDiscountTotal()|currency }}</span>
+          </div>
+        {% endif %}
+        <div class="recepie-total">
+          <span class="recepie-total-item">Subtotal: </span><span class="recepie-total-item">{{ invoice.subtotal|currency }}</span></div>
+        <div class="recepie-total">
+          <span class="recepie-total-item">Shipping: </span><span class="recepie-total-item">{{ invoice.total_shipping_quote|currency }}</span>
+        </div>
+        <div class="recepie-total">
+          <span class="recepie-total-item">Tax: </span><span class="recepie-total-item">{{ invoice.tax_total|currency }}</span>
+        </div>
+        <div class="recepie-total">
+          <span class="recepie-total-item">Total: </span><span class="recepie-total-item">{{ invoice.total|currency }}</span>
+        </div>
+      </section>
 
-
-      {% if invoice.getDiscountTotal() > 0 %}
-        <h3>Discount: {{ invoice.getDiscountTotal()|currency }}</h3>
-      {% endif %}
-      <h3>Subtotal: {{ invoice.subtotal|currency }}</h3>
-        <h3>Shipping: {{ invoice.total_shipping_quote|currency }}</h3>
-      <h3>Tax {{ invoice.tax_total|currency }}</h3>
-      <h2>Total {{ invoice.total|currency }}</h2>
-
-      <h3><a href="{{ site_url('shop') }}">Continue Shopping</a></h3>
+      <button><a href="{{ site_url('shop') }}">Continue Shopping &raquo;</a></button>
 
     {% else %}
       <h3><p><a href="{{ site_url('review/'~order.order_hash) }}">Place order</a></p></h3>
