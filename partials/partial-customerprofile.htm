@@ -166,9 +166,12 @@
       <span class="error"></span>
     </div>
     
-    <input type="submit" class="button next" value="Save"/>
-    <input type="hidden" name="flash" value="Your profile has been successfully updated."/>
-    <input type="hidden" name="redirect" value="{{ root_url('/profile') }}"/>
+    <div class="full-width-button">
+      <button class="button">Save new address</button>
+      <!--<input type="submit" class="button next" value="Save new address"/>-->
+      <input type="hidden" name="flash" value="Your profile has been successfully updated."/>
+      <input type="hidden" name="redirect" value="{{ root_url('/profile') }}"/>
+    </div>
     
     {{ close_form() }}
   </section>

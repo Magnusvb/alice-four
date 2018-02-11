@@ -12,6 +12,11 @@ textarea {
   border-radius: 5px;
   background-color: lighten($color-secondary, 20%);
   min-width: 0;
+  
+  &.error {
+    border: 1px solid $color-cta;
+    color: $text-dark;
+  }
 }
 
 .numberfield {

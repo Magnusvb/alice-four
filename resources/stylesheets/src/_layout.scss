@@ -99,11 +99,13 @@ nav {
 .customer-page,
 .cart-page,
 .checkout-page,
-.receipt-page {
+.receipt-page,
+.account-page {
   margin: 0 2rem 1rem 2rem;
 }
 
 .flash-message {
+  background-color: $trans-bkg;
   position: fixed;
   top: 0;
   left: 0;

@@ -193,15 +193,15 @@ s {
   padding: 3px;
   text-align: center; }
 
-.error {
+span.error {
   font-size: .8rem;
-  background-color: #ebefef;
-  border: 1px solid #b90914;
-  border-radius: 2px;
+  /*background-color: lighten($color-secondary, 20%);
+  border: 1px solid $color-cta;
+  border-radius: 2px;*/
   color: #b90914;
-  padding: 3px;
-  text-align: center;
-  overflow: hidden; }
+  /*padding: 3px;
+  text-align: center;*/
+  margin-left: 5px; }
 
 .large-icon {
   font-size: 1.3em; }
@@ -267,8 +267,8 @@ button, .btn-addcart, input[type=submit] {
   -webkit-appearence: none;
   appearance: none;
   white-space: nowrap;
-  background-color: orange;
-  color: rgba(51, 59, 61, 0.9); }
+  background-color: #008809;
+  color: rgba(255, 255, 255, 0.9); }
   .checkout-btn:hover {
     background: #70050c;
     /*color: $text-light;*/ }
@@ -278,9 +278,9 @@ button, .btn-addcart, input[type=submit] {
   .checkout-btn a {
     color: rgba(255, 255, 255, 0.9); }
   .checkout-btn a {
-    color: rgba(51, 59, 61, 0.9); }
+    color: rgba(255, 255, 255, 0.9); }
   .checkout-btn:hover {
-    background-color: #daa84d; }
+    background-color: #006d07; }
 
 .full-width-button {
   display: flex;
@@ -289,7 +289,7 @@ button, .btn-addcart, input[type=submit] {
     flex: 0; }
 
 .very-large-btn {
-  background-color: orange;
+  background-color: #008809;
   font-size: 2rem; }
 
 .update-btn {
@@ -353,6 +353,10 @@ textarea {
   border-radius: 5px;
   background-color: #ebefef;
   min-width: 0; }
+  input.error,
+  textarea.error {
+    border: 1px solid #b90914;
+    color: rgba(51, 59, 61, 0.9); }
 
 .numberfield {
   width: 5rem; }
@@ -523,10 +527,12 @@ nav {
 .customer-page,
 .cart-page,
 .checkout-page,
-.receipt-page {
+.receipt-page,
+.account-page {
   margin: 0 2rem 1rem 2rem; }
 
 .flash-message {
+  background-color: rgba(179, 193, 194, 0.4);
   position: fixed;
   top: 0;
   left: 0;
