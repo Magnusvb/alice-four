@@ -106,6 +106,7 @@ nav {
 
 .flash-message {
   background-color: $trans-bkg;
+  /*filter: blur(3px);*/
   position: fixed;
   top: 0;
   left: 0;

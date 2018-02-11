@@ -186,10 +186,11 @@ s {
 
 .success {
   font-size: .8rem;
-  background-color: #0da559;
-  border: 1px solid #02180d;
-  border-radius: 2px;
-  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(13, 165, 89, 0.5);
+  border-top: 1px solid rgba(2, 24, 13, 0.5);
+  border-bottom: 1px solid rgba(2, 24, 13, 0.5);
+  /*border-radius: 2px;*/
+  color: rgba(51, 59, 61, 0.9);
   padding: 3px;
   text-align: center; }
 
@@ -533,6 +534,7 @@ nav {
 
 .flash-message {
   background-color: rgba(179, 193, 194, 0.4);
+  /*filter: blur(3px);*/
   position: fixed;
   top: 0;
   left: 0;
