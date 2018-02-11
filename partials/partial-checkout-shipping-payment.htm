@@ -1,6 +1,7 @@
 {{ open_form({'class': 'custom'}) }}
  
   <h2>Delivery Method</h2>
+  <p>Please, select a shipping method.</p>
 
   {% if shippingOptions %}
 
@@ -32,7 +33,7 @@
     {% endfor %}
 
     <!--<h3><a href="#" data-ajax-handler="shop:checkout" data-ajax-update="#checkout-page=partial-checkout, #mini-cart=shop-minicart">Place order &amp; pay</a></h3>-->
-    <button class="checkout-btn" data-ajax-handler="shop:checkout" data-ajax-update="#checkout-page=partial-checkout, #mini-cart=shop-minicart">Place order &amp; pay</button>
+    <button class="checkout-btn" data-ajax-handler="shop:checkout" data-ajax-update="#checkout-page=partial-checkout, #mini-cart=shop-minicart">Place order and pay</button>
 
   {% else %}
     <p>We are sorry, there are no shipping options available for your location.</p>
