@@ -193,15 +193,16 @@ s {
   padding: 3px;
   text-align: center; }
 
-/*.error {
+.error {
   font-size: .8rem;
-  background-color: lighten($color-secondary, 20%);
-  border: 1px solid $color-cta;
+  background-color: #ebefef;
+  border: 1px solid #b90914;
   border-radius: 2px;
-  color: $color-cta;
+  color: #b90914;
   padding: 3px;
   text-align: center;
-}*/
+  overflow: hidden; }
+
 .large-icon {
   font-size: 1.3em; }
 
@@ -381,6 +382,69 @@ select {
 .qty-field {
   width: 5rem; }
 
+/*----------------------- CHECKOUT AND ACCOUNT -------------------*/
+.copy-info {
+  margin: 2rem 0;
+  text-align: center;
+  width: 100%; }
+
+.checkout-info,
+.account-info {
+  /*border: 1px solid lime;*/
+  margin-bottom: 1rem; }
+
+.checkout-info-item,
+.account-info-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .5rem; }
+  .checkout-info-item .update-btn,
+  .account-info-item .update-btn {
+    /*display: inline-block;*/
+    flex: 1 1 auto; }
+  .checkout-info-item input,
+  .checkout-info-item textarea,
+  .checkout-info-item select,
+  .account-info-item input,
+  .account-info-item textarea,
+  .account-info-item select {
+    flex: 1 1 70%; }
+  .checkout-info-item select,
+  .account-info-item select {
+    margin-right: 0;
+    max-width: 100%; }
+    @media (min-width: 33em) {
+      .checkout-info-item select,
+      .account-info-item select {
+        max-width: 70%;
+        overflow: hidden; } }
+  .checkout-info-item label,
+  .account-info-item label {
+    flex: 1 1 30%; }
+  @media (min-width: 33em) {
+    .checkout-info-item,
+    .account-info-item {
+      flex-direction: row;
+      align-items: center; } }
+
+.full-width-button {
+  text-align: center; }
+
+.payment-card-form {
+  width: 70%; }
+  @media (min-width: 43em) {
+    .payment-card-form {
+      width: 50%; } }
+
+#payment_form .form li {
+  margin-bottom: 1.2rem; }
+
+#payment_form .form label {
+  margin: 0.2rem 0 0.1rem 0; }
+
+.payment-method-radio {
+  margin: 1rem 0; }
+
 .container {
   border-left: 1px solid #b3c1c2;
   border-right: 1px solid #b3c1c2;
@@ -461,6 +525,13 @@ nav {
 .checkout-page,
 .receipt-page {
   margin: 0 2rem 1rem 2rem; }
+
+.flash-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%; }
 
 nav {
   background-color: #728492;
@@ -870,59 +941,6 @@ nav {
     .cart-button-group {
       margin-top: 0;
       text-align: right; } }
-
-/*----------------------- CHECKOUT -------------------*/
-.copy-info {
-  margin: 2rem 0;
-  text-align: center;
-  width: 100%; }
-
-.checkout-info {
-  /*border: 1px solid lime;*/
-  margin-bottom: 1rem; }
-
-.checkout-info-item {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: .5rem; }
-  .checkout-info-item .update-btn {
-    /*display: inline-block;*/
-    flex: 1 1 auto; }
-  .checkout-info-item input,
-  .checkout-info-item textarea,
-  .checkout-info-item select {
-    flex: 1 1 70%; }
-  .checkout-info-item select {
-    margin-right: 0;
-    max-width: 100%; }
-    @media (min-width: 33em) {
-      .checkout-info-item select {
-        max-width: 70%;
-        overflow: hidden; } }
-  .checkout-info-item label {
-    flex: 1 1 30%; }
-  @media (min-width: 33em) {
-    .checkout-info-item {
-      flex-direction: row;
-      align-items: center; } }
-
-.full-width-button {
-  text-align: center; }
-
-.payment-card-form {
-  width: 70%; }
-  @media (min-width: 43em) {
-    .payment-card-form {
-      width: 50%; } }
-
-#payment_form .form li {
-  margin-bottom: 1.2rem; }
-
-#payment_form .form label {
-  margin: 0.2rem 0 0.1rem 0; }
-
-.payment-method-radio {
-  margin: 1rem 0; }
 
 .recepie {
   display: flex;
