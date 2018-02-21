@@ -52,7 +52,7 @@
   
   p {
     display: none;
-    flex: 0 1 auto;
+    flex: 1 1 25%;
     
     @include breakpoint($large) {
       display: inline;
@@ -61,7 +61,7 @@
 }
 
 .order-list {
-  border: 1px solid lime;
+  /*border: 1px solid lime;*/
   display: flex;
   flex-direction: column;
   
@@ -72,7 +72,7 @@
 }
 
 .order-list-item {
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   
   span {
     display: inline-block;
@@ -83,11 +83,17 @@
     }
   }
   
-  &:nth-child(4) {
-    /*margin-bottom: 2rem;*/
-  }
-  
   @include breakpoint($large) {
     flex: 1 1 25%;
+  }
+}
+
+.order-list-total {
+  border-bottom: 1px solid $color-secondary;
+  padding-bottom: 0.5rem;
+  
+  @include breakpoint($large) {
+    border-bottom: none;
+    padding-bottom: inherit;
   }
 }

@@ -27,7 +27,7 @@ url: /orders
       <p class="order-list-item"><span class="mobile-title">Order #: </span><a href="{{ url }}">{{ order.number }}</a></p>
       <p class="order-list-item"><span class="mobile-title">Date: </span><a href="{{ url }}">{{ order.created_at.format('M jS, Y') }}</a></p>
       <p class="order-list-item"><span class="mobile-title">Status: </span><a href="{{ url }}">{{ order.orderStatus.name }}</a></p>
-      <p class="order-list-item"><span class="mobile-title">Total: </span><a href="{{ url }}">{{ order.total|currency }}</a></p>
+      <p class="order-list-item order-list-total"><span class="mobile-title">Total: </span><a href="{{ url }}">{{ order.total|currency }}</a></p>
       {% endfor %}
     </div>
   </section>
