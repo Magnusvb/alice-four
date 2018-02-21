@@ -43,3 +43,51 @@
   text-align: right;
   width: 99%;
 }
+
+/*Order list*/
+.order-list-title {
+  /*border: 1px solid purple;*/
+  display: flex;
+  justify-content: space-between;
+  
+  p {
+    display: none;
+    flex: 0 1 auto;
+    
+    @include breakpoint($large) {
+      display: inline;
+    }
+  }
+}
+
+.order-list {
+  border: 1px solid lime;
+  display: flex;
+  flex-direction: column;
+  
+  @include breakpoint($large) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.order-list-item {
+  border: 1px solid green;
+  
+  span {
+    display: inline-block;
+    width: 6rem;
+    
+    @include breakpoint($large) {
+      display: none;
+    }
+  }
+  
+  &:nth-child(4) {
+    /*margin-bottom: 2rem;*/
+  }
+  
+  @include breakpoint($large) {
+    flex: 1 1 25%;
+  }
+}
