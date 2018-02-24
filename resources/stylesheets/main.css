@@ -911,8 +911,13 @@ nav {
 .order-wrapper-item {
   flex: 1 1 auto; }
 
-.order-content p {
-  line-height: 1.2; }
+.order-content {
+  margin-bottom: 1rem; }
+  .order-content p {
+    line-height: 1.2; }
+
+.order-content-item.total {
+  padding-bottom: 1rem; }
 
 .cart {
   /*border: 1px solid rebeccapurple;*/ }

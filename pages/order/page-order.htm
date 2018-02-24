@@ -11,21 +11,21 @@ url: '/order/:orderId'
 
   <div class="order-wrapper">
     <section class="order-wrapper-item summarize">
-      <p><span class="article-label">Order number:</span> #{{ order.number }} </p>
+      <p><strong class="article-label">Order number:</strong> #{{ order.number }} </p>
       {% if order.invoices[0].payments().last().guessPaymentMethod() %}
-      <p><strong>Payment method: </strong> {{ order.invoices[0].payments().last().guessPaymentMethod().name }}</p>
+      <p><strong class="article-label">Payment method: </strong> {{ order.invoices[0].payments().last().guessPaymentMethod().name }}</p>
       {% endif %}
-      <p><strong>Order Date: </strong> {{ order.created_at.format('M jS, Y') }}</p>
+      <p><strong class="article-label">Order Date: </strong> {{ order.created_at.format('M jS, Y') }}</p>
       {% if order.total_discount %}
-      <p>Discount applied: <strong>{{ order.total_discount|currency }}</strong></p>
+      <p><strong class="article-label">Discount applied: </strong>{{ order.total_discount|currency }}</p>
       {% endif %}
-      <p>Subtotal: <strong>{{ order.subtotal_invoiced|currency }}</strong></p>
-      <p>Sales Tax: <strong>{{ order.total_sales_tax|currency }}</strong></p>
-      <p>Shipping: <strong>{{ order.total_shipping_quote|currency }}</strong></p>
+      <p><strong class="article-label">Subtotal:</strong> {{ order.subtotal_invoiced|currency }}</p>
+      <p><strong class="article-label">Sales Tax:</strong> {{ order.total_sales_tax|currency }}</p>
+      <p><strong class="article-label">Shipping:</strong> {{ order.total_shipping_quote|currency }}</p>
       {% if order.total_shipping_tax %}
-        <p>Shipping Taxes: <strong>{{ order.total_shipping_tax|currency }}</strong></p>
+        <p><strong class="article-label">Shipping Taxes:</strong> {{ order.total_shipping_tax|currency }}</p>
       {% endif %}
-      <p>Total: <strong>{{ order.total|currency }}</strong></p>
+      <p><strong class="article-label">Total:</strong> {{ order.total|currency }}</p>
       {% if order.payment_method.has_payment_form() and not order.payment_processed() %}
         <h3><a href="{{ root_url('/review/'~order.order_hash) }}">Pay the order</a></h3>
       {% endif %}
