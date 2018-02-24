@@ -95,17 +95,27 @@
 }
 
 // Old singel order
-#order-table {
-  border: 1px solid blue;
+.order-wrapper {
+  @include breakpoint($medium) {
+    display: flex;
+  }
 }
+
+.order-wrapper-item {
+  flex: 1 1 auto;
+}
+
 .summarize {
-  border: 1px solid tomato;
+  //border: 1px solid tomato;
 }
 
 .order-content {
-  border: 1px solid lightgreen;
+  //border: 1px solid lightgreen;
+  p {
+    line-height: 1.2;
+  }
 }
 
 .order-content-item {
-  border: 1px solid purple;
+  // border: 1px solid purple;
 }

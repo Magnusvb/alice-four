@@ -207,6 +207,9 @@ span.error {
 .large-icon {
   font-size: 1.3em; }
 
+.article-label {
+  color: rgba(33, 33, 33, 0.54); }
+
 /***************** BUTTONS ***********************/
 button, .btn-addcart, input[type=submit] {
   background: #b90914;
@@ -901,17 +904,15 @@ nav {
       border-bottom: none;
       padding-bottom: inherit; } }
 
-#order-table {
-  border: 1px solid blue; }
+@media (min-width: 43em) {
+  .order-wrapper {
+    display: flex; } }
 
-.summarize {
-  border: 1px solid tomato; }
+.order-wrapper-item {
+  flex: 1 1 auto; }
 
-.order-content {
-  border: 1px solid lightgreen; }
-
-.order-content-item {
-  border: 1px solid purple; }
+.order-content p {
+  line-height: 1.2; }
 
 .cart {
   /*border: 1px solid rebeccapurple;*/ }
