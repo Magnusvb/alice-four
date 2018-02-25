@@ -552,7 +552,7 @@ nav {
     nav a:hover {
       color: #b3c1c2; }
   nav .shopmenu {
-    margin: 1rem 0 1rem 2rem;
+    margin: 1rem 0 1rem 0;
     text-transform: uppercase; }
   nav .shopmenu-items {
     text-transform: initial;
@@ -574,9 +574,6 @@ nav {
 .mainmenu li {
   font-weight: bold;
   line-height: 2.5; }
-
-.menu-link {
-  margin-left: 2rem; }
 
 .customermenu {
   margin-top: 1rem;
