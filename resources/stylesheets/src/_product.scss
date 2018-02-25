@@ -1,19 +1,6 @@
 /*===================== Product page =======================*/
 #product-page {
-  /*border: 1px solid greenyellow;*/
   padding: 0 2rem;
-}
-
-.producttitle {
-  /*border: 1px solid pink;*/
-}
-
-.productprice {
-  /*border: 1px solid green;*/
-}
-
-.productratings {
-  /*border-top: 1px solid $color-cta;*/
 }
 
 .productattributes {
@@ -27,12 +14,8 @@
 }
 
 .productoptions {
-   /*border: 1px solid red;*/
-  // flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  /*justify-content: flex-start;*/
-  /*align-items: flex-end;*/
 
   @include breakpoint($medium) {
     flex-direction: row;
@@ -58,8 +41,7 @@
 }
 
 .productextras {
-  /*border: 1px solid blue;*/
-  /*height: 3rem;*/
+  
 }
 
 .productdetails {
@@ -69,10 +51,7 @@
 }
 
 .addtocart {
-	/*border: 1px solid purple;*/
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*align-items: flex-end;*/
+	// border: 1px solid purple;
   margin: 1rem auto;
   width: 90%;
 
@@ -88,16 +67,11 @@
 }
 
 .addtocart-item {
-  /*border: 1px solid tomato;*/
-  /*flex: 1 1 auto;*/
-  /*display: flex;*/
-  /*flex-wrap: column;*/
+  // border: 1px solid tomato;
   margin-bottom: 1rem;
 
   @include breakpoint($large) {
     align-items: flex-end;
-    /*display: flex;
-    flex-wrap: wrap;*/
   }
 }
 
@@ -125,8 +99,6 @@
 }
 
 .image-grid-item {
-  /*flex: 1 1 0px;*/
-  /*margin: 0 .3rem;*/
 
   @include breakpoint($medium) {
     flex: 1 1 0px;
@@ -141,7 +113,6 @@
 }
 
 .review-wrapper {
-  /*border: 1px solid tomato;*/
   
   @include breakpoint($large) {
     display: flex;
@@ -149,7 +120,6 @@
 }
 
 .review-item {
-  /*border: 1px solid orange;*/
   
   @include breakpoint($large) {
     margin-right: 2rem;
@@ -171,7 +141,6 @@
   }
   
   .error {
-    /*font-size: .8rem;*/
     margin-left: 3px;
   }
 }

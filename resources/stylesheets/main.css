@@ -702,17 +702,7 @@ nav {
 
 /*===================== Product page =======================*/
 #product-page {
-  /*border: 1px solid greenyellow;*/
   padding: 0 2rem; }
-
-.producttitle {
-  /*border: 1px solid pink;*/ }
-
-.productprice {
-  /*border: 1px solid green;*/ }
-
-.productratings {
-  /*border-top: 1px solid $color-cta;*/ }
 
 .productattributes {
   width: 90%;
@@ -723,11 +713,8 @@ nav {
       margin: inherit; } }
 
 .productoptions {
-  /*border: 1px solid red;*/
   display: flex;
-  flex-direction: column;
-  /*justify-content: flex-start;*/
-  /*align-items: flex-end;*/ }
+  flex-direction: column; }
   @media (min-width: 43em) {
     .productoptions {
       flex-direction: row;
@@ -744,19 +731,11 @@ nav {
   .add-button {
     /*margin-left: auto;*/ } }
 
-.productextras {
-  /*border: 1px solid blue;*/
-  /*height: 3rem;*/ }
-
 @media (min-width: 43em) {
   .productdetails {
     width: 70%; } }
 
 .addtocart {
-  /*border: 1px solid purple;*/
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*align-items: flex-end;*/
   margin: 1rem auto;
   width: 90%; }
   @media (min-width: 43em) {
@@ -769,16 +748,10 @@ nav {
       margin: 2rem auto; } }
 
 .addtocart-item {
-  /*border: 1px solid tomato;*/
-  /*flex: 1 1 auto;*/
-  /*display: flex;*/
-  /*flex-wrap: column;*/
   margin-bottom: 1rem; }
   @media (min-width: 53em) {
     .addtocart-item {
-      align-items: flex-end;
-      /*display: flex;
-    flex-wrap: wrap;*/ } }
+      align-items: flex-end; } }
 
 @media (min-width: 43em) {
   .pictureblock {
@@ -798,30 +771,23 @@ nav {
     .image-grid {
       flex-flow: column; } }
 
-.image-grid-item {
-  /*flex: 1 1 0px;*/
-  /*margin: 0 .3rem;*/ }
-  @media (min-width: 43em) {
-    .image-grid-item {
-      flex: 1 1 0px;
-      margin: .3rem; } }
+@media (min-width: 43em) {
+  .image-grid-item {
+    flex: 1 1 0px;
+    margin: .3rem; } }
 
 /*================== Review part ===============*/
 .product-review {
   padding: 0 2rem;
   margin-bottom: 2rem; }
 
-.review-wrapper {
-  /*border: 1px solid tomato;*/ }
-  @media (min-width: 53em) {
-    .review-wrapper {
-      display: flex; } }
+@media (min-width: 53em) {
+  .review-wrapper {
+    display: flex; } }
 
-.review-item {
-  /*border: 1px solid orange;*/ }
-  @media (min-width: 53em) {
-    .review-item {
-      margin-right: 2rem; } }
+@media (min-width: 53em) {
+  .review-item {
+    margin-right: 2rem; } }
 
 .review-item p {
   display: flex;
@@ -833,7 +799,6 @@ nav {
   .review-item p textarea {
     flex: 1 1 auto; }
   .review-item p .error {
-    /*font-size: .8rem;*/
     margin-left: 3px; }
 
 .rating {
