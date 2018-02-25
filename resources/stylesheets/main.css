@@ -727,9 +727,11 @@ nav {
     white-space: nowrap;
     margin-bottom: .4rem; }
 
-@media (min-width: 58em) {
-  .add-button {
-    /*margin-left: auto;*/ } }
+.add-button {
+  margin-top: 2rem; }
+  @media (min-width: 43em) {
+    .add-button {
+      margin-top: 1rem; } }
 
 @media (min-width: 43em) {
   .productdetails {
@@ -737,7 +739,8 @@ nav {
 
 .addtocart {
   margin: 1rem auto;
-  width: 90%; }
+  text-align: center;
+  width: 100%; }
   @media (min-width: 43em) {
     .addtocart {
       width: 100%; } }
@@ -745,7 +748,8 @@ nav {
     .addtocart {
       flex-direction: row;
       flex-wrap: wrap;
-      margin: 2rem auto; } }
+      margin: 2rem auto;
+      text-align: left; } }
 
 .addtocart-item {
   margin-bottom: 1rem; }
