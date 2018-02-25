@@ -14,7 +14,7 @@
   
   	<p>
   		<label for="contact_email">Your email</label>
-  		<input type="text" class="input-sm form-control" id="contact_email" name="fields[email]" value="" placeholder="Email address"/>
+  		<input type="email" class="input-sm form-control" id="contact_email" name="fields[email]" value="" placeholder="Email address"/>
     	<span class="error"></span>
   	</p>
   
@@ -35,9 +35,9 @@
   
   	<div class="rating">
       <span>
-      <label for="rating">Your rating</label>
+        <label for="rating">Your rating</label>
       </span>
-  		<span id="hate">☆</span><span id="dont-like">☆</span><span id="ok">☆</span><span id="like">☆</span><span id="love">☆</span>
+  		<span class="star" id="hate">☆</span><span class="star" id="dont-like">☆</span><span class="star" id="ok">☆</span><span class="star" id="like">☆</span><span class="star" id="love">☆</span>
   	</div>
   
   	<select style="display:none" id="item_rating" name="fields[item_rating]">
@@ -49,8 +49,10 @@
   		<option value="5">&starf;&starf;&starf;&starf;&starf;</option>
   	</select>
   	<span class="error"></span>
-  
-  	<input type="submit" value="Submit"/>
+  	<!--<input type="submit" value="Submit"/>-->
+    <div class="submit-button">
+      <button type="submit">Submit</button>
+    </div>
   	<input type="text" name="hp" value="" style="display: none"/>
   	<input type="hidden" name="fields[shop_customer_id]" value="{{customer.id}}"/>
   	<input type="hidden" name="fields[shop_product_id]" value="{{product.id}}"/>

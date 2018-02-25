@@ -178,6 +178,15 @@
 
 .rating {
   margin-bottom: 1rem;
+  
+  .star {
+    font-size: 1.6rem;
+    margin-right: 1rem;
+  }
+}
+
+.submit-button {
+  text-align: right;
 }
 
 .upsell-collection {

@@ -838,6 +838,12 @@ nav {
 
 .rating {
   margin-bottom: 1rem; }
+  .rating .star {
+    font-size: 1.6rem;
+    margin-right: 1rem; }
+
+.submit-button {
+  text-align: right; }
 
 .login-forms {
   display: flex;
