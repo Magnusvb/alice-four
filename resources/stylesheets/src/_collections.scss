@@ -2,15 +2,16 @@
   @include breakpoint($small) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    //justify-content: space-between;
   }
 }
 
 .collection-list_item {
+  //border: 1px solid lime;
   padding: 1rem;
 
   @include breakpoint($small) {
-    flex: 0 1 30%;
+    flex: 0 1 33%;
   }
 }
 
@@ -54,11 +55,12 @@
 
 .top-category-item {
   border-bottom: 1px solid lighten($color-secondary, 10%);
-  flex: 1 1 auto;
-  margin: 0 1rem;
+  flex: 1 1 20%;
+  margin: 0 .5rem;
   padding: .6rem;
 
   h6 {
+    font-size: 1.2rem;
     margin: 0;
   }
 
@@ -67,14 +69,25 @@
   }
 
   @include breakpoint($medium) {
-    border-left: 1px solid lighten($color-secondary, 10%);
+    //border-left: 1px solid lighten($color-secondary, 10%);
     border-bottom: none;
+  }
+}
+
+.have-child-menu h6 {
+  //border: 1px solid red;
+  display: flex;
+  
+  .micro {
+    margin-left: 2rem;
+    //margin-right: 1rem;
   }
 }
 
 .childmenu .top-category {
   border-bottom: none;
   flex-direction: column;
+  margin-top: 1rem;
 }
 
 .childmenu .top-category {
