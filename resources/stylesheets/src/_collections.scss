@@ -64,7 +64,8 @@
 
 .top-category-item {
   border-bottom: 1px solid lighten($color-secondary, 10%);
-  flex: 1 1 20%;
+  border-top: 1px solid lighten($color-secondary, 10%);
+  flex: 1 1 0px;
   margin: 0 .5rem;
   padding: .6rem;
 
@@ -88,8 +89,8 @@
   display: flex;
   
   .micro {
-    margin-left: 2rem;
-    //margin-right: 1rem;
+    //margin-left: 2rem;
+    margin-right: 1rem;
   }
 }
 
@@ -120,4 +121,8 @@
 
 .show {
   display: block;
+}
+
+.category-page * ul {
+  border: aqua 1px solid;
 }

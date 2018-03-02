@@ -19,11 +19,6 @@ $headline-fontfamily: "SF UI Display", -apple-system, BlinkMacSystemFont, "Aveni
 html {
   box-sizing: border-box; }
 
-body {
-  height: 100%;
-  padding: 0;
-  margin: 0; }
-
 *,
 *::after,
 *::before {
@@ -32,7 +27,11 @@ body {
 body {
   background-color: #fff;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  /* background-color: $text-dark; */
+  height: 100%;
+  padding: 0;
+  margin: 0; }
 
 img {
   max-width: 100%;
@@ -176,12 +175,13 @@ s {
   line-height: 1.8; }
 
 .micro {
+  background-color: #fff;
   border: 1px solid #b3c1c2;
   border-radius: 2px;
   cursor: pointer;
   font-size: .8em;
   color: rgba(33, 33, 33, 0.54);
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   padding: 0 .3rem; }
 
 .success {
@@ -465,18 +465,21 @@ select {
     .container {
       flex-direction: row; } }
 
-@media (min-width: 43em) {
-  header {
-    border-right: 1px solid #b3c1c2;
-    /*margin-right: 2rem;*/
-    flex: none;
-    width: 25%; } }
+header {
+  /* background-color: $color-bodybg; */ }
+  @media (min-width: 43em) {
+    header {
+      border-right: 1px solid #b3c1c2;
+      /*margin-right: 2rem;*/
+      flex: none;
+      width: 25%; } }
 
 main {
+  /* background-color: $color-bodybg; */
   flex: 5 1 75%; }
   @media (min-width: 43em) {
     main {
-      box-shadow: -1px 0 10px rgba(0, 0, 0, 0.2); } }
+      box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2); } }
 
 .homebanner {
   padding: 0; }
@@ -519,7 +522,8 @@ nav {
   margin: 0 1rem; }
   @media (min-width: 53em) {
     .shop-intro {
-      width: 80%; } }
+      width: 80%;
+      margin: auto; } }
   @media (min-width: 75em) {
     .shop-intro {
       width: 70%; } }
@@ -660,7 +664,8 @@ nav {
 
 .top-category-item {
   border-bottom: 1px solid #cfd8d8;
-  flex: 1 1 20%;
+  border-top: 1px solid #cfd8d8;
+  flex: 1 1 0px;
   margin: 0 .5rem;
   padding: .6rem; }
   .top-category-item h6 {
@@ -675,7 +680,7 @@ nav {
 .have-child-menu h6 {
   display: flex; }
   .have-child-menu h6 .micro {
-    margin-left: 2rem; }
+    margin-right: 1rem; }
 
 .childmenu .top-category {
   border-bottom: none;
@@ -697,6 +702,9 @@ nav {
 
 .show {
   display: block; }
+
+.category-page * ul {
+  border: aqua 1px solid; }
 
 /*===================== Product page =======================*/
 #product-page {
