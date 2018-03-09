@@ -703,8 +703,17 @@ nav {
 .show {
   display: block; }
 
-.category-page * ul {
-  border: aqua 1px solid; }
+.pagination > ul {
+  display: flex;
+  justify-content: center; }
+  .pagination > ul > li {
+    flex: 0 1 auto;
+    margin: 0 1rem; }
+    .pagination > ul > li.active {
+      background-color: #ebefef;
+      border-radius: 3px; }
+  .pagination > ul > li > a {
+    padding: 8px; }
 
 /*===================== Product page =======================*/
 #product-page {

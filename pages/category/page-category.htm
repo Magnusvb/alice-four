@@ -57,7 +57,9 @@ url: '/category/:urlName@/:page?'
   				</li>
   			{% endfor %}
   		</ul>
-  		{% navigation %}
+  		<div class="pagination">
+        {% navigation %}
+      </div>
   	{% endpaginate %}
 
   {% endif %}

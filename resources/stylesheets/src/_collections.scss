@@ -123,6 +123,25 @@
   display: block;
 }
 
-.category-page * ul {
-  border: aqua 1px solid;
+.pagination > ul {
+  // border: aqua 1px solid;
+  display: flex;
+  justify-content: center;
+  
+  & > li {
+    // border: 1px solid green;
+    flex: 0 1 auto;
+    margin: 0 1rem;
+    
+    &.active {
+      //border: 1px solid $color-secondary;
+      background-color: lighten($color-secondary, 20%);
+      border-radius: 3px;
+    }
+  }
+  
+  & > li > a {
+    // border: 1px solid #333;
+    padding: 8px;
+  }
 }
