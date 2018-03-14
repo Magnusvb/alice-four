@@ -7,8 +7,13 @@ name: 'Blog Post'
 url: /blog/:slug
 ---
 <section class="blog-page">
-    <h1>{{ post.title }}</h1>
-    <strong>In {{ post.type }} | {{ post.published_on | date("F j, Y") }}</strong> 
-    {{ post.body | unescape }}
-    <p>– {{ post.author_name }}</p>
+  <h1>{{ post.title }}</h1>
+  {% if post.featured_image %}
+    <img src="{{ post.featured_image.thumbnail('auto', 'auto') }}" alt="{{ post.title }}">
+  {% endif %}
+  <p>
+    <strong>In {{ post.type }} | {{ post.published_on | date("F j, Y") }}</strong>
+  </p>
+  {{ post.body | unescape }}
+  <p><em>– {{ post.author_name }}</em></p>
 </section>

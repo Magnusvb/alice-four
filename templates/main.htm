@@ -27,7 +27,13 @@ description: 'Default Template'
 
     <style>
       button {
-        background-color: {{ theme.buttonColor }}:
+        background: {{ theme.buttonColor }};
+      }
+      nav {
+        background-color: {{ theme.primaryColor }};
+      }
+      h1 {
+        color: {{ theme.primaryColor }};
       }
     </style>
 
@@ -61,7 +67,7 @@ description: 'Default Template'
             {% endtree %}
           </li>
           {% if customer %}
-            
+
             <li class="customermenu">
               Welcome, {{ customer.first_name }}<br>
               <a href="/profile">Your Account</a>

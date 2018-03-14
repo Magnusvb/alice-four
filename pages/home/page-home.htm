@@ -12,42 +12,15 @@ url: /
 
 <section>
   <article class="shop-intro">
-    <h1>{{ theme.homeHeadline }}</h1>
-    <p class="intro">{{ theme.homeIntro }}</p>
+    {{ content_block('homepage-intro') }}
     <div class="shopnow-button">
       <button><a href="/shop">Shop Now &raquo;</a></button>
     </div>
   </article>
 
-  <!--<article class="featured-collection">
-    <h4>Developers favorites</h4>
-    {% set featuredCollection = 'display'|collection %}
-    {% paginate featuredCollection.products by 3 %}
-      <ul class="collection-list">
-      {% for product in pagination.items %}
-        {% set on_sale = product.onSale %}
-
-        <li class="collection-list_item">
-          <figure>
-            <a href="/product/{{ product.url_name }}"><img src="{{ product.images.first.thumbnail('400', '400')|default('http://placehold.it/400x400') }}" alt="{{ product.images.first.description }}" title="{{ product.images.first.title }}"/></a>
-            <figcaption class="xproductname-price">
-              <h6 class="product-name"><a href="/product/{{ product.url_name }}">{{ product.name }}</a></h6>
-              <h5>{{ product.price|currency }}</h5>
-              {% if on_sale %}
-                <h5 class="salesprice">{{ product.fullPrice|currency }}</h5>
-              {% endif %}
-            </figcaption>
-          </figure>
-        </li>
-
-      {% endfor %}
-      </ul>
-    {% endpaginate %}
-  </article>-->
-  
   <article class="featured-products">
       <h4>Developers favorites</h4>
-      
+
       <section class="productlist">
         {% set featuredCollection = 'display'|collection %}
         {% paginate featuredCollection.products by 3 %}
