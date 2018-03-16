@@ -107,16 +107,45 @@ nav {
 .not-found-page,
 .blog-page,
 .contact-page {
-  margin: 0 2rem 1rem 2rem;
+  margin: 0 2em 1em 2em;
 }
 
-.blog-page {
-  margin-top: 2rem;
+.blog-page-list {
+  margin: 2em 2em 1em 2em;
+  width: 60%;
+}
+
+.blog-page-post {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($medium) {
+    flex-direction: row;
+  }
+
+  .blog-page-post-image {
+    flex: auto;
+    order: -1;
+    margin-top: 1rem;
+
+    @include breakpoint($medium) {
+      flex: 1 1 30%;
+      order: initial;
+    }
+  }
+
+  .blog-page-post-text {
+    flex: auto;
+    margin-right: 2rem;
+
+    @include breakpoint($medium) {
+      flex: 1 1 70%;
+    }
+  }
 }
 
 .flash-message {
   background-color: $trans-bkg;
-  /*filter: blur(3px);*/
   position: fixed;
   top: 0;
   left: 0;

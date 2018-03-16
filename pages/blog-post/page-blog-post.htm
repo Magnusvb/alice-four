@@ -8,12 +8,18 @@ url: /blog/:slug
 ---
 <section class="blog-page">
   <h1>{{ post.title }}</h1>
-  {% if post.featured_image %}
-    <img src="{{ post.featured_image.thumbnail('auto', 'auto') }}" alt="{{ post.title }}">
-  {% endif %}
-  <p>
-    <strong>In {{ post.type }} | {{ post.published_on | date("F j, Y") }}</strong>
-  </p>
-  {{ post.body | unescape }}
-  <p><em>– {{ post.author_name }}</em></p>
+  <div class="blog-page-post">
+    <div class="blog-page-post-text">
+      <p>
+        <strong>In {{ post.type }} | {{ post.published_on | date("F j, Y") }}</strong>
+      </p>
+      {{ post.body | unescape }}
+      <p><em>– {{ post.author_name }}</em></p>
+    </div>
+    <div class="blog-page-post-image">{% if post.featured_image %}
+      <img src="{{ post.featured_image.thumbnail('auto', 'auto') }}" alt="{{ post.title }}">
+      {% endif %}
+    </div>
+  </div>
+  <p><a href="/blog">← Back to the Blog</a></p>
 </section>

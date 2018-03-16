@@ -6,8 +6,8 @@ published: true
 name: Blog
 url: /blog
 ---
-<section class="blog-page">
-    
+<section class="blog-page-list">
+
     {% set publishedPosts = 0 %}
     {% for post in archives %}
         {% if post.status == "published" %}
