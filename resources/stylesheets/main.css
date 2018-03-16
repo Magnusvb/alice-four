@@ -184,6 +184,7 @@ s {
   cursor: pointer;
   font-size: .8em;
   color: rgba(33, 33, 33, 0.54);
+  margin-right: 1rem;
   width: 1.2rem; }
 
 .success {
@@ -697,6 +698,7 @@ nav {
   margin: 0 .5rem;
   padding: .6rem; }
   .top-category-item h6 {
+    display: flex;
     font-size: 1.2rem;
     margin: 0; }
   .top-category-item:last-of-type {
@@ -707,8 +709,6 @@ nav {
 
 .have-child-menu h6 {
   display: flex; }
-  .have-child-menu h6 .micro {
-    margin-right: 1rem; }
 
 .childmenu .top-category {
   border-bottom: none;
