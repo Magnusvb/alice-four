@@ -381,7 +381,7 @@ select {
   border: 1px solid rgba(33, 33, 33, 0.54);
   background-color: #ebefef;
   background-image: url("../images/select-arrow-gray-2.png");
-  background-position: center right 1em;
+  background-position: center right 0.3em;
   background-size: 10px;
   background-repeat: no-repeat;
   padding: .3rem;
