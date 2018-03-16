@@ -59,25 +59,6 @@ url: '/shop/:page?'
   			{% endfor %}
   		</ul>
   	</div>
-  	
-  	<!--{% set count = 0 %}
-    {% set prev = '' %}
-    {% set next = '' %}
-    {% for categoryProduct in product.categories.first().products() if count < 2 %}
-      {% if count == 1 %}
-        {% set next = categoryProduct.url_name %}
-        {% set count = count + 1 %}
-      {% endif %}
-      {% if categoryProduct.id == product.id %}
-        {% set count = count + 1 %}
-      {% endif %}
-      {% if count == 0 %}
-        {% set prev = categoryProduct.url_name %}
-      {% endif %}
-    {% endfor %}
-    
-    <a href="{{ prev }}">Previous</a>
-    <a href="{{ next }}">Next</a> -->
 
   	<div class="pagination">
       {% navigation %}

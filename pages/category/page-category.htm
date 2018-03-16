@@ -29,10 +29,11 @@ url: '/category/:urlName@/:page?'
   <h1>{{ category.name }}</h1>
 
   {% if not category %}
-
   	<h2>Category not found</h2>
-  	<p>We are sorry, the requested category was not found.</p>
-
+  	<h5>We are sorry, the requested category was not found.</h5>
+  {% elseif category.products_count == 0 %}
+    <h5>Sorry, but no products found in this category.</h5>
+    <p>Select another category, do a search or go back to the homepage.</p>
   {% else %}
 
   	{% paginate products by 9 %}
