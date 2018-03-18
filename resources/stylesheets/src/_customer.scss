@@ -1,5 +1,7 @@
 .profile-wrapper {
-  width: 60%;
+  @include breakpoint($big) {
+    width: 60%;
+  }
 }
 
 .login-forms {

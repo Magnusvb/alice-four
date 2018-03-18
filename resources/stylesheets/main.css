@@ -285,7 +285,7 @@ button, .btn-addcart, input[type=submit] {
 
 .full-width-button {
   display: flex;
-  justify-content: center; }
+  justify-content: flex-end; }
   .full-width-button * {
     flex: 0; }
 
@@ -391,7 +391,8 @@ select {
 .copy-info {
   margin: 2rem 0;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  white-space: nowrap; }
 
 .checkout-info,
 .account-info {
@@ -854,8 +855,9 @@ nav {
 .submit-button {
   text-align: right; }
 
-.profile-wrapper {
-  width: 60%; }
+@media (min-width: 75em) {
+  .profile-wrapper {
+    width: 60%; } }
 
 .login-forms {
   display: flex;
