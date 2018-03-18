@@ -608,8 +608,7 @@ nav {
   line-height: 2.5; }
 
 .customermenu {
-  margin-top: 1rem;
-  margin-left: 2rem; }
+  margin-top: 2rem; }
 
 .search {
   display: flex;
@@ -854,6 +853,9 @@ nav {
 
 .submit-button {
   text-align: right; }
+
+.profile-wrapper {
+  width: 60%; }
 
 .login-forms {
   display: flex;

@@ -63,8 +63,11 @@ description: 'Default Template'
             </ul>
             {% endtree %}
           </li>
-          {% if customer %}
+          <li class="menu-link"><a href="/blog">Blog</a></li>
+          <li class="menu-link" id="mini-cart">{{ partial('shop-minicart') }}</li>
+          <li class="menu-link"><a href="{{ site_url('/checkout') }}">Checkout</a></li>
 
+          {% if customer %}
             <li class="customermenu">
               Welcome, {{ customer.first_name }}<br>
               <a href="/profile">Your Account</a>
@@ -82,9 +85,7 @@ description: 'Default Template'
               <a href="/sign-in">Login</a>
             </li>
           {% endif %}
-          <li class="menu-link"><a href="/blog">Blog</a></li>
-          <li class="menu-link" id="mini-cart">{{ partial('shop-minicart') }}</li>
-          <li><a href="{{ site_url('/checkout') }}">Checkout</a></li>
+          
         </ul>
       </nav>
     </header>
