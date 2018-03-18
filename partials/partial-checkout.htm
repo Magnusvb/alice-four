@@ -1,4 +1,4 @@
-<div class="checkout-page">
+
   {% if step == 'billing_info' %}
     {{ partial('partial-checkout-address') }}
   {% elseif step == 'shipping_method' %}
@@ -6,4 +6,3 @@
   {% elseif step == 'pay' %}
     {{ partial('partial-checkout-pay') }}
   {% endif %}
-</div>

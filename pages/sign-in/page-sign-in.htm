@@ -11,7 +11,7 @@ url: /sign-in
 
   <!-- Login section -->
   <div class="login-forms">
-    <section class="login-forms-item">
+    <section class="login-forms-item login-customer">
     {{ open_form({'data-ajax-handler': 'shop:onLogin', 'data-validation-message' : ''}) }}
     	<h4>Login</h4>
     	<div class="input-component">
@@ -28,7 +28,7 @@ url: /sign-in
         <input type="submit" value="Sign In"/>
       </span>
     	<input type="hidden" name="redirect" value="{{ site_url(root_url('/')) }}"/>
-      <h5><a href="{{ site_url('/password-restore') }}">Forgot password?</a></h5>
+      <p><a href="{{ site_url('/password-restore') }}">Forgot your password?</a></p>
     {{ close_form() }}
     </section>
 
@@ -51,7 +51,8 @@ url: /sign-in
       <input id="signup[email]" type="text" name="signup[email]" class="text required"/>
     	<span class="error"></span>
     </div>
-    <input type="checkbox" name="accepts_marketing" />Receive promotional emails
+    <label for="accepts_marketing">Receive promotional emails</label>
+    <input type="checkbox" name="accepts_marketing" />
   	<div class="input-component">
       <label for="signup[password]">Password * </label>
       <input name="signup[password]" id="signup[password]" type="password" class="text required"/>

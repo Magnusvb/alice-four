@@ -153,33 +153,39 @@
     </section>
 
     <!-- related products -->
-    {% if product.related.count %}
-    <hr>
-    <h3>You Might be Into These</h3>
-    <article class="upsell-collection">
-      <ul class="collection-list">
-        {% for product in product.related %}
-          {% set page_url = '/product/' ~ product.url_name %}
-          {% set on_sale = product.onSale %}
-          <li class="xproduct collection-list_item">
-            <figure>
-              <a href="{{ page_url }}">
-              <img src="{{ product.images.first.thumbnail(400, 400)|default('http://placehold.it/400x400') }}" alt="{{ product.images.first.description }}" title="{{ product.images.first.title }}"/>
-              </a>
-              <figcaption class="xproductname-price">
-                <h6 class="product-name">
-                  <a href="/product/{{ product.url_name }}">{{ product.name }}</a>
-                </h6>
-                <h5>{{ product.price|currency }}</h5>
-                {% if on_sale %}
-                <h5 class="salesprice">{{ product.fullPrice|currency }}</h5>
-                {% endif %}
-              </figcaption>
-            </figure>
-          </li>
-        {% endfor %}
-      </ul>
-    </article>
-    {% endif %}
+    <div class="page-section">
+      {% if product.related.count %}
+      <h3>You Might be Into These</h3>
+      <article class="upsell-collection">
+        <ul class="collection-list">
+          {% for product in product.related %}
+            {% set page_url = '/product/' ~ product.url_name %}
+            {% set on_sale = product.onSale %}
+            <li class="xproduct collection-list_item">
+              <figure>
+                <a href="{{ page_url }}">
+                <img src="{{ product.images.first.thumbnail(400, 400)|default('http://placehold.it/400x400') }}" alt="{{ product.images.first.description }}" title="{{ product.images.first.title }}"/>
+                </a>
+              </figure>
+              <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+							{% if product.enabled %}
+								<link itemprop="availability" href="http://schema.org/InStock" />
+								<meta itemprop="priceCurrency" content="USD" /> <!-- Should get currency code through variable -->
+								<meta itemprop="price" content="{{ product.price }}" />
+								<h5>{{ product.price|currency }}
+								{% if on_sale %}
+									<s>{{ product.fullPrice|currency }}</s>
+								{% endif %}
+							</h5>
+							{% else %}
+							<link itemprop="availability" href="http://schema.org/OutOfStock"/>
+							{% endif %}
+							</div>
+            </li>
+          {% endfor %}
+        </ul>
+      </article>
+      {% endif %}
+    </div>
 
   </div>

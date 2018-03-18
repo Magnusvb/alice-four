@@ -33,7 +33,7 @@ url: '/category/:urlName@/:page?'
   	<h5>We are sorry, the requested category was not found.</h5>
   {% elseif category.products_count == 0 %}
     <h5>Sorry, but no products found in this category.</h5>
-    <p>Select another category, do a search or go back to the homepage.</p>
+    <p>Select another category, do a search or go back to the <a href="/">homepage</a>.</p>
   {% else %}
 
   	{% paginate products by 9 %}

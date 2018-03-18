@@ -66,9 +66,8 @@
 .success {
   font-size: .8rem;
   background-color: $color-success;
-  border-top: 1px solid darken($color-success, 30%);
-  border-bottom: 1px solid darken($color-success, 30%);
-  /*border-radius: 2px;*/
+  border: 1px solid darken($color-success, 20%);
+  border-radius: 2px;
   color: $text-dark;
   padding: 3px;
   text-align: center;
@@ -76,12 +75,7 @@
 
 span.error {
   font-size: .8rem;
-  /*background-color: lighten($color-secondary, 20%);
-  border: 1px solid $color-cta;
-  border-radius: 2px;*/
   color: $color-cta;
-  /*padding: 3px;
-  text-align: center;*/
   margin-left: 5px;
 }
 
