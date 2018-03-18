@@ -150,6 +150,43 @@ nav {
   }
 }
 
+// Contact form page
+.contact-form {
+  @include breakpoint($large) {
+    display: flex;
+  }
+}
+
+.contact-form-item {
+  // border: 1px solid pink;
+  @include breakpoint($large) {
+    margin-right: 2rem;
+  }
+}
+
+.contact-form-item p {
+  display: flex;
+  align-items: flex-start;
+
+  label {
+    flex: 1 1 4rem;
+    white-space: nowrap;
+  }
+
+  input,
+  textarea {
+    flex: 1 1 auto;
+  }
+
+  .error {
+    margin-left: 3px;
+  }
+}
+
+.submit-button {
+  text-align: right;
+}
+
 .flash-message {
   background-color: $trans-bkg;
   position: fixed;

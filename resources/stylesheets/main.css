@@ -387,6 +387,20 @@ select {
 .qty-field {
   width: 5rem; }
 
+.input-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 1rem 0; }
+  .input-component label {
+    flex: 1 1 40%; }
+  .input-component input {
+    flex: 1 1 55%; }
+  .input-component span {
+    flex: 1 1 auto;
+    font-size: .7rem;
+    padding-left: .2rem; }
+
 /*----------------------- CHECKOUT AND ACCOUNT -------------------*/
 .copy-info {
   margin: 2rem 0;
@@ -568,6 +582,29 @@ nav {
     @media (min-width: 43em) {
       .blog-page-post .blog-page-post-text {
         flex: 1 1 70%; } }
+
+@media (min-width: 53em) {
+  .contact-form {
+    display: flex; } }
+
+@media (min-width: 53em) {
+  .contact-form-item {
+    margin-right: 2rem; } }
+
+.contact-form-item p {
+  display: flex;
+  align-items: flex-start; }
+  .contact-form-item p label {
+    flex: 1 1 4rem;
+    white-space: nowrap; }
+  .contact-form-item p input,
+  .contact-form-item p textarea {
+    flex: 1 1 auto; }
+  .contact-form-item p .error {
+    margin-left: 3px; }
+
+.submit-button {
+  text-align: right; }
 
 .flash-message {
   background-color: rgba(179, 193, 194, 0.4);
@@ -870,19 +907,6 @@ nav {
 
 .login-forms-item {
   flex: 1 1 auto; }
-  .login-forms-item .input-component {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem 0 1rem 0; }
-    .login-forms-item .input-component label {
-      flex: 1 1 40%; }
-    .login-forms-item .input-component input {
-      flex: 1 1 55%; }
-    .login-forms-item .input-component span {
-      flex: 1 1 auto;
-      font-size: .7rem;
-      padding-left: .2rem; }
   @media (min-width: 75em) {
     .login-forms-item {
       margin: 0 2rem; } }
