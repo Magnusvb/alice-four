@@ -71,11 +71,11 @@
   }
 
   &:last-of-type {
-    border-bottom: none;
+    border-bottom: 0;
   }
 
   @include breakpoint($medium) {
-    border-bottom: none;
+    border-bottom: 0;
   }
 }
 
@@ -94,8 +94,12 @@
     border: 0;
     box-shadow: none;
     flex: 1;
-    margin-bottom: 0;
-    padding: .3rem 0;
+    margin-bottom: 1em;
+    padding: .3em 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
 
     h6 {
       font-size: 1.1em;

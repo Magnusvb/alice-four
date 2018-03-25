@@ -49,14 +49,14 @@ nav {
   margin-top: 2rem;
 }
 
-.search {
+.search-component {
   display: flex;
   justify-content: center;
   flex-direction: column;
 
   @include breakpoint($small) {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 
   @include breakpoint($medium) {
@@ -69,17 +69,19 @@ nav {
   }
 
   .field {
-    flex: 1 1 0px;
+    flex: 3 1 60%;
     max-width: 100%;
   }
 }
 
 .submit {
-  flex-basis: auto;
+  line-height: 1.2;
+  flex: 0 0 auto;
   margin: 1rem auto;
 
   @include breakpoint($small) {
     margin: 0;
+    margin-left: -1rem;
   }
 
   @include breakpoint($medium) {

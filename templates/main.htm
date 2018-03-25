@@ -60,8 +60,10 @@ description: 'Default Template'
         <ul class="mainmenu">
           <li class="searchfield">
             {{ open_form({'class': 'search', 'method': 'get', 'action': site_url('search')}) }}
-              <input type="text" class="field search-item" name="query" value="{{query|unescape}}" placeholder="Search store&hellip;"/>
-              <button type="submit" value="Search" class="submit search-item">Search</button>
+              <div class="search-component">
+                <input type="text" class="field search-item" name="query" value="{{query|unescape}}" placeholder="Search store&hellip;"/>
+                <button type="submit" value="Search" class="submit search-item">Search</button>
+              </div>
             {{ close_form() }}
           </li>
           <li class="shopmenu">
