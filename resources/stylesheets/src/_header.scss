@@ -45,13 +45,8 @@ nav {
   }
 }
 
-.menu-link {
-  // margin-left: 2rem;
-}
-
 .customermenu {
   margin-top: 2rem;
-  // margin-left: 2rem;
 }
 
 .search {
@@ -80,15 +75,11 @@ nav {
 }
 
 .submit {
-  /*flex: none;*/
-  /*width: 50%;*/
   flex-basis: auto;
   margin: 1rem auto;
 
   @include breakpoint($small) {
     margin: 0;
-    /*width: 30%;*/
-    /*flex-basis: auto;*/
   }
 
   @include breakpoint($medium) {

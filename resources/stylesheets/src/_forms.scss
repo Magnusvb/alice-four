@@ -31,7 +31,6 @@ label {
 
 input[type=submit] {
   @extend button;
-  /*margin-left: -0.5rem;*/
 }
 
 select {
@@ -75,7 +74,7 @@ select {
   }
 }
 
-/*----------------------- CHECKOUT AND ACCOUNT -------------------*/
+//----------------------- CHECKOUT AND ACCOUNT -------------------
 .copy-info {
   margin: 2rem 0;
   text-align: center;
@@ -84,7 +83,6 @@ select {
 }
 .checkout-info,
 .account-info {
-  // border: 1px solid lime;
   margin-bottom: 1rem;
 }
 
@@ -95,7 +93,6 @@ select {
   margin-bottom: .5rem;
 
   .update-btn {
-    /*display: inline-block;*/
     flex: 1 1 auto;
   }
 

@@ -13,22 +13,18 @@
 }
 
 header {
-  /* background-color: $color-bodybg; */
-
   @include breakpoint($small) {
 
   }
 
   @include breakpoint($medium) {
     border-right: 1px solid $color-secondary;
-    /*margin-right: 2rem;*/
     flex: none;
     width: 25%;
   }
 }
 
 main {
-  /* background-color: $color-bodybg; */
   flex: 5 1 75%;
 
   @include breakpoint($medium) {
@@ -158,7 +154,6 @@ nav {
 }
 
 .contact-form-item {
-  // border: 1px solid pink;
   @include breakpoint($large) {
     margin-right: 2rem;
   }

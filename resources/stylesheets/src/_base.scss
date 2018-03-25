@@ -11,7 +11,6 @@ body {
   background-color: $color-bodybg;
   font-family: $fontfamily;
   font-size: 16px;
-  /* background-color: $text-dark; */
   height: 100%;
   padding: 0;
   margin: 0;
@@ -96,12 +95,7 @@ h6 {
 
 a {
   color: $color-links;
-  /*border-bottom: 1px solid lighten($color-primary, 50%);*/
   text-decoration: none;
-}
-
-a:hover {
-  /*color: $color-primary;*/
 }
 
 ul {
