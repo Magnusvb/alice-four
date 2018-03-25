@@ -12,7 +12,7 @@ customFields:
     bannerImage: { type: image, title: 'Homepage banner', default: '@images/banner-placeholder.png', comment: 'Upload the homepage banner. Width: 1380px, maxheight: 650px' }
     primaryColor: { type: color, title: 'Primary color', default: '#728492', comment: 'Color used for the background of the navigation block and for headlines.' }
     secondaryColor: { type: color, title: 'Secondary color', default: '#b3c1c2', comment: 'Color used for secondary menu, background for input fields and old prices.' }
-    buttonColor: { type: color, title: 'Button color', default: '#b90914', comment: 'Color used for CTA buttons and links.' }
+    buttonColor: { type: color, title: 'Links / Button color', default: '#b90914', comment: 'Color used for CTA buttons and links.' }
     facebookUrl: { type: text, title: 'Facebook URL', default: 'http://facebook.com/lemonstand' }
     twitterUrl: { type: text, title: 'Twitter URL', default: 'http://twitter.com/lemonstand' }
     linkedInUrl: { type: text, title: 'LinkedIn URL', default: 'http://www.linkedin.com/company/lemonstand' }

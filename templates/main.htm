@@ -19,19 +19,24 @@ description: 'Default Template'
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="/cms/core.css">
-    <link rel="stylesheet" type="text/css" href="{{ 'stylesheets/main.css'|theme_resource }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'stylesheets/main.min.css'|theme_resource }}">
 
     <script type="text/javascript" src="{{ 'scripts/jquery.js'|theme_resource }}"></script>
     <script type="text/javascript" src="{{ 'scripts/app.js'|theme_resource }}"></script>
     <script type="text/javascript" src="/cms/core.js"></script>
 
     <style>
+    {% if theme.buttonColor %}
       button {
         background: {{ theme.buttonColor }};
       }
+    {% endif %}
+
+    {% if theme.primaryColor %}
       nav {
         background-color: {{ theme.primaryColor }};
       }
+    {% endif %}
     </style>
 
   </head>
@@ -85,7 +90,7 @@ description: 'Default Template'
               <a href="/sign-in">Login</a>
             </li>
           {% endif %}
-          
+
         </ul>
       </nav>
     </header>
