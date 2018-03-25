@@ -37,6 +37,15 @@ description: 'Default Template'
         background-color: {{ theme.primaryColor }};
       }
     {% endif %}
+
+    {% if theme.secondaryColor %}
+      .container,
+      .page-section
+      header,
+      footer {
+        border-color: {{ theme.secondaryColor}};
+      }
+    {% endif %}
     </style>
 
   </head>

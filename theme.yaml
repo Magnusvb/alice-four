@@ -9,9 +9,9 @@ customFields:
     logoImage: { type: image, title: 'Logo Image', default: '@images/bones-logo.png', comment: 'Upload your logo! Recommended height of 37px.' }
     faviconImage: { type: image, title: 'Favicon Image', default: '@images/favicon.ico', comment: 'Upload your favicon! Recommended dimmensions of 16px by 16px. You must use a .png file.' }
     footerLogo: { type: image, title: 'Footer Logo', default: '@images/lemonstand-logo.png', comment: 'Upload your footer logo! Recommended height of 40px.' }
-    bannerImage: { type: image, title: 'Homepage banner', default: '@images/banner-placeholder.png', comment: 'Upload the homepage banner. Width: 1380px, maxheight: 650px' }
+    bannerImage: { type: image, title: 'Homepage banner', default: '@images/banner-placeholder.png', comment: 'Upload the homepage banner. Width: 1440px, height (max): 650px' }
     primaryColor: { type: color, title: 'Primary color', default: '#728492', comment: 'Color used for the background of the navigation block and for headlines.' }
-    secondaryColor: { type: color, title: 'Secondary color', default: '#b3c1c2', comment: 'Color used for secondary menu, background for input fields and old prices.' }
+    secondaryColor: { type: color, title: 'Secondary color', default: '#b3c1c2', comment: 'Color used for borders.' }
     buttonColor: { type: color, title: 'Links / Button color', default: '#b90914', comment: 'Color used for CTA buttons and links.' }
     facebookUrl: { type: text, title: 'Facebook URL', default: 'http://facebook.com/lemonstand' }
     twitterUrl: { type: text, title: 'Twitter URL', default: 'http://twitter.com/lemonstand' }
