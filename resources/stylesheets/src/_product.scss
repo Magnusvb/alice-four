@@ -24,7 +24,6 @@
 }
 
 .productoptions-item {
-  // border: 1px solid blue;
   flex: 0 1 auto;
   margin-right: 1rem;
   margin-bottom: 1em;
@@ -41,13 +40,6 @@
   @include breakpoint($medium) {
     margin-top: 1rem;
   }
-  @include breakpoint($large-big) {
-    // margin-top: 0;
-  }
-}
-
-.productextras {
-
 }
 
 .productdetails {
@@ -57,7 +49,6 @@
 }
 
 .addtocart {
-	// border: 1px solid purple;
   margin: 1rem auto;
   text-align: center;
   width: 100%;
@@ -75,7 +66,6 @@
 }
 
 .addtocart-item {
-  // border: 1px solid tomato;
   margin-bottom: 1rem;
 
   @include breakpoint($large) {
@@ -114,7 +104,7 @@
   }
 }
 
-/*================== Review part ===============*/
+//================== Review part ===============
 .product-review {
   padding: 0 2rem;
   margin-bottom: 2rem;

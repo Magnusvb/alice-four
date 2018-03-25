@@ -1,22 +1,13 @@
 // Collection page navigation
-.category-page ul {
-  // border: 1px solid blue;
-}
-
-.page-navigation-item {
-
-}
 
 .collection-list {
   @include breakpoint($small) {
     display: flex;
     flex-wrap: wrap;
-    //justify-content: space-between;
   }
 }
 
 .collection-list_item {
-  //border: 1px solid lime;
   padding: 1rem;
 
   @include breakpoint($small) {
@@ -120,24 +111,20 @@
 }
 
 .pagination > ul {
-  // border: aqua 1px solid;
   display: flex;
   justify-content: center;
 
   & > li {
-    // border: 1px solid green;
     flex: 0 1 auto;
     margin: 0 1rem;
 
     &.active {
-      //border: 1px solid $color-secondary;
       background-color: lighten($color-secondary, 20%);
       border-radius: 3px;
     }
   }
 
   & > li > a {
-    // border: 1px solid #333;
     padding: 8px;
   }
 }
