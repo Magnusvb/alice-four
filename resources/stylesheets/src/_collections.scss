@@ -4,6 +4,7 @@
   @include breakpoint($small) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -11,7 +12,9 @@
   padding: 1rem;
 
   @include breakpoint($small) {
-    flex: 0 1 33%;
+    flex: 0 1 30%;
+    padding: 0;
+    margin-bottom: 1em;
   }
 }
 
@@ -32,8 +35,8 @@
 }
 
 .productlist-item {
-  flex: 0 1 33%;
-  padding: 2rem;
+  flex: 0 1 30%;
+  // padding: 2rem;
 }
 
 .topmenu-category {

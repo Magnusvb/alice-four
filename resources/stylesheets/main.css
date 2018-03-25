@@ -653,13 +653,16 @@ nav {
 @media (min-width: 33em) {
   .collection-list {
     display: flex;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+    justify-content: space-between; } }
 
 .collection-list_item {
   padding: 1rem; }
   @media (min-width: 33em) {
     .collection-list_item {
-      flex: 0 1 33%; } }
+      flex: 0 1 30%;
+      padding: 0;
+      margin-bottom: 1em; } }
 
 .productname-price {
   display: flex;
@@ -675,8 +678,7 @@ nav {
       justify-content: space-between; } }
 
 .productlist-item {
-  flex: 0 1 33%;
-  padding: 2rem; }
+  flex: 0 1 30%; }
 
 .top-category {
   border-bottom: 1px solid #cfd8d8;
@@ -837,7 +839,7 @@ nav {
   display: flex;
   align-items: flex-start; }
   .review-item p label {
-    flex: 1 1 4rem;
+    flex: 1 1 5rem;
     white-space: nowrap; }
   .review-item p input,
   .review-item p textarea {
