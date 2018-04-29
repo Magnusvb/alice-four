@@ -10,7 +10,7 @@ textarea {
   padding: .3rem;
   border: 1px solid $text-medium;
   border-radius: 5px;
-  background-color: lighten($color-secondary, 20%);
+  background-color: lighten($color-secondary, 25%);
   min-width: 0;
 
   &.error {
@@ -37,8 +37,8 @@ select {
   -webkit-appearance: none;
   box-shadow: none;
   border: 1px solid $text-medium;
-  background-color: lighten($color-secondary, 20%);
-  background-image: url('../images/select-arrow-gray-3.png');
+  background-color: lighten($color-secondary, 25%);
+  background-image: url('../images/select-arrow-gray-4.png');
   background-position: center right 0.3em;
   background-size: 10px;
   background-repeat: no-repeat;
