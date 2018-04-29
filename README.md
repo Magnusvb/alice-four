@@ -5,7 +5,7 @@
 Created by: Magnus von Bromsen (Twitter: @magnus_vb)
 This work is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License http://creativecommons.org/licenses/by-nd/4.0/
 
-A Back to Basic design with the menu on the left side. Upgraded with a modern design touch as a lot of white space, large buttons and text. The colors are configurable from the admin. Suitable for stores with 4-6 categories – and will put your products in the front.
+A Back to Basic design with the menu on the left side. Upgraded with a modern design elements like a lot of white space, large buttons and text. The colors are configurable from the admin. Suitable for stores with 4-6 categories – and will put your products in the front.
 
 [Demo store available here](https://kattgodis.lemonstand.com)
 
