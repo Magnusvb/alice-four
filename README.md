@@ -1,26 +1,24 @@
-# Alice Four - A LemonStand theme
+# Alice Four - a free LemonStand theme
 
-## Running Gulp
+## Alice Four is a responsive theme for [LemonStand eCommerce](https://lemonstand.com).
 
-Gulp is a simple build system for web things. It automates compiling Sass, minifying files, and so on.
+Created by: Magnus von Bromsen (Twitter: @magnus_vb)
+This work is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License http://creativecommons.org/licenses/by-nd/4.0/
 
-1. Install Node.js (https://nodejs.org)
-2. Install Gulp: `npm install -g gulp`
-3. Gulp!
+1. Download or clone
+2. Follow the instructions at Lemonstand for [importing a theme](https://docs.lemonstand.com/themes/creating-themes)
 
-## Node Modules
+## Create widgets
 
-* gulp (https://www.npmjs.com/package/gulp)
-* gulp-sass (https://www.npmjs.com/package/gulp-sass)
-* node-bourbon (https://www.npmjs.com/package/node-bourbon)
-* node-neat (https://www.npmjs.com/package/node-neat)
-* gulp-minify-css (https://www.npmjs.com/package/gulp-minify-css)
-* gulp-jshint (https://www.npmjs.com/package/jshint)
-* gulp-concat (https://www.npmjs.com/package/concat)
-* gulp-uglify (https://www.npmjs.com/package/gulp-uglify)
-* gulp-rename (https://www.npmjs.com/package/gulp-rename)
-* glup-notify (https://www.npmjs.com/package/gulp-notify)
+You need to create these widgets. [Read more here](https://docs.lemonstand.com/themes/widget-blocks)
+1. About page (code: about-text)
+2. Contact page (code: contact-text)
+3. Privacy page (code: privacy-text)
+4. Homepage intro (code: homepage-intro)
+
+If you need customising of the theme, please contact me at magnus@studioalice.se
 
 ---
 
+[Studio Alice](https://studioalice.se) |
 [LemonStand.com](https://lemonstand.com) | [LemonStand Docs](https://docs.lemonstand.com)
