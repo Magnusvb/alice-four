@@ -1,21 +1,21 @@
 {
-  "name": "lscloud-theme-bones",
+  "name": "alice-four-theme",
   "version": "1.0.0",
-  "description": "A base them for LemonStand 2",
+  "description": "A free theme for LemonStand",
   "main": "theme.yaml",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/lemonstand/lscloud-theme-bones.git"
+    "url": "git://github.com/Magnusvb/alice-four.git"
   },
-  "author": "LemonStand",
-  "license": "MIT",
+  "author": "Studio Alice",
+  "license": "CC BY-ND 4.0",
   "bugs": {
-    "url": "https://github.com/lemonstand/lscloud-theme-bones/issues"
+    "url": "https://github.com/Magnusvb/alice-four/issues"
   },
-  "homepage": "https://github.com/lemonstand/lscloud-theme-bones#readme",
+  "homepage": "https://github.com/Magnusvb/alice-four/blob/master/README.md",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "browserslist": "last 3 versions",
